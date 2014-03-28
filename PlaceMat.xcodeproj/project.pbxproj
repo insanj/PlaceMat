@@ -13,12 +13,17 @@
 		9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE51218E614B700E27AC2 /* InfoPlist.strings */; };
 		9E6DE51618E614B700E27AC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE51518E614B700E27AC2 /* main.m */; };
 		9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */; };
-		9E6DE51C18E614B700E27AC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE51B18E614B700E27AC2 /* Images.xcassets */; };
 		9E6DE52318E614B700E27AC2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE52218E614B700E27AC2 /* XCTest.framework */; };
 		9E6DE52418E614B700E27AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50918E614B700E27AC2 /* Foundation.framework */; };
 		9E6DE52518E614B700E27AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50D18E614B700E27AC2 /* UIKit.framework */; };
 		9E6DE52D18E614B700E27AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */; };
 		9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */; };
+		9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649118E6174300B9A095 /* MURNavigationController.m */; };
+		9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649418E617E200B9A095 /* MURProfileViewController.m */; };
+		9EFA649818E6180300B9A095 /* MURTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649718E6180300B9A095 /* MURTheme.m */; };
+		9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */; };
+		9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFA64A518E61E7100B9A095 /* Images.xcassets */; };
+		9EFA64AB18E61ED100B9A095 /* Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EFA64AA18E61ED100B9A095 /* Profile@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +47,21 @@
 		9E6DE51718E614B700E27AC2 /* PlaceMat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlaceMat-Prefix.pch"; sourceTree = "<group>"; };
 		9E6DE51818E614B700E27AC2 /* MURAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MURAppDelegate.h; sourceTree = "<group>"; };
 		9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MURAppDelegate.m; sourceTree = "<group>"; };
-		9E6DE51B18E614B700E27AC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E6DE52118E614B700E27AC2 /* PlaceMatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceMatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6DE52218E614B700E27AC2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9E6DE52A18E614B700E27AC2 /* PlaceMatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlaceMatTests-Info.plist"; sourceTree = "<group>"; };
 		9E6DE52C18E614B700E27AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceMatTests.m; sourceTree = "<group>"; };
+		9EFA649018E6174300B9A095 /* MURNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURNavigationController.h; sourceTree = "<group>"; };
+		9EFA649118E6174300B9A095 /* MURNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURNavigationController.m; sourceTree = "<group>"; };
+		9EFA649318E617E200B9A095 /* MURProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURProfileViewController.h; sourceTree = "<group>"; };
+		9EFA649418E617E200B9A095 /* MURProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURProfileViewController.m; sourceTree = "<group>"; };
+		9EFA649618E6180300B9A095 /* MURTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURTheme.h; sourceTree = "<group>"; };
+		9EFA649718E6180300B9A095 /* MURTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURTheme.m; sourceTree = "<group>"; };
+		9EFA649918E61B2200B9A095 /* MURBarSwitcherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURBarSwitcherItem.h; sourceTree = "<group>"; };
+		9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURBarSwitcherItem.m; sourceTree = "<group>"; };
+		9EFA64A518E61E7100B9A095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9EFA64AA18E61ED100B9A095 /* Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Profile@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +123,16 @@
 			children = (
 				9E6DE51818E614B700E27AC2 /* MURAppDelegate.h */,
 				9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */,
-				9E6DE51B18E614B700E27AC2 /* Images.xcassets */,
+				9EFA649618E6180300B9A095 /* MURTheme.h */,
+				9EFA649718E6180300B9A095 /* MURTheme.m */,
+				9EFA649918E61B2200B9A095 /* MURBarSwitcherItem.h */,
+				9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */,
+				9EFA649018E6174300B9A095 /* MURNavigationController.h */,
+				9EFA649118E6174300B9A095 /* MURNavigationController.m */,
+				9EFA649318E617E200B9A095 /* MURProfileViewController.h */,
+				9EFA649418E617E200B9A095 /* MURProfileViewController.m */,
+				9EFA64A918E61ED100B9A095 /* Switcher */,
+				9EFA64A518E61E7100B9A095 /* Images.xcassets */,
 				9E6DE51018E614B700E27AC2 /* Supporting Files */,
 			);
 			path = PlaceMat;
@@ -142,6 +165,14 @@
 				9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EFA64A918E61ED100B9A095 /* Switcher */ = {
+			isa = PBXGroup;
+			children = (
+				9EFA64AA18E61ED100B9A095 /* Profile@2x.png */,
+			);
+			path = Switcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +223,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = MonicUR;
 				TargetAttributes = {
+					9E6DE50518E614B700E27AC2 = {
+						DevelopmentTeam = 24X8MVUSCN;
+					};
 					9E6DE52018E614B700E27AC2 = {
 						TestTargetID = 9E6DE50518E614B700E27AC2;
 					};
@@ -220,8 +254,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EFA64AB18E61ED100B9A095 /* Profile@2x.png in Resources */,
 				9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */,
-				9E6DE51C18E614B700E27AC2 /* Images.xcassets in Resources */,
+				9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6DE51618E614B700E27AC2 /* main.m in Sources */,
+				9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */,
+				9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */,
+				9EFA649818E6180300B9A095 /* MURTheme.m in Sources */,
+				9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */,
 				9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,9 +399,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,9 +414,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,6 +483,7 @@
 				9E6DE53418E614B700E27AC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E6DE53518E614B700E27AC2 /* Build configuration list for PBXNativeTarget "PlaceMatTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +492,7 @@
 				9E6DE53718E614B700E27AC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

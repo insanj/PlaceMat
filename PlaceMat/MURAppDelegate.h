@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MURNavigationController.h"
+#import "MURProfileViewController.h"
 
 @interface MURAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MURNavigationController *navigationController;
 
 @end

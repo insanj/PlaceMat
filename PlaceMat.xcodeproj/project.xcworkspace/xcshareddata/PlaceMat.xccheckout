@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F5661A86-E005-42C2-AC02-D28081DE2DD8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PlaceMat</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4C2C2ADE-1FE9-4300-B340-7334B5EA091A</key>
+		<string>https://github.com/insanj/PlaceMat.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PlaceMat.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4C2C2ADE-1FE9-4300-B340-7334B5EA091A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/insanj/PlaceMat.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4C2C2ADE-1FE9-4300-B340-7334B5EA091A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4C2C2ADE-1FE9-4300-B340-7334B5EA091A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PlaceMat</string>
+		</dict>
+	</array>
+</dict>
+</plist>
