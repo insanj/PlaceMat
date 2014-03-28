@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E6DE50A18E614B700E27AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50918E614B700E27AC2 /* Foundation.framework */; };
+		9E6DE50C18E614B700E27AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */; };
+		9E6DE50E18E614B700E27AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50D18E614B700E27AC2 /* UIKit.framework */; };
+		9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE51218E614B700E27AC2 /* InfoPlist.strings */; };
+		9E6DE51618E614B700E27AC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE51518E614B700E27AC2 /* main.m */; };
+		9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */; };
+		9E6DE51C18E614B700E27AC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE51B18E614B700E27AC2 /* Images.xcassets */; };
+		9E6DE52318E614B700E27AC2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE52218E614B700E27AC2 /* XCTest.framework */; };
+		9E6DE52418E614B700E27AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50918E614B700E27AC2 /* Foundation.framework */; };
+		9E6DE52518E614B700E27AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50D18E614B700E27AC2 /* UIKit.framework */; };
+		9E6DE52D18E614B700E27AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */; };
+		9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E6DE52618E614B700E27AC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E6DE4FE18E614B700E27AC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E6DE50518E614B700E27AC2;
+			remoteInfo = PlaceMat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9E6DE50618E614B700E27AC2 /* PlaceMat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceMat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6DE50918E614B700E27AC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9E6DE50D18E614B700E27AC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9E6DE51118E614B700E27AC2 /* PlaceMat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlaceMat-Info.plist"; sourceTree = "<group>"; };
+		9E6DE51318E614B700E27AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9E6DE51518E614B700E27AC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E6DE51718E614B700E27AC2 /* PlaceMat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlaceMat-Prefix.pch"; sourceTree = "<group>"; };
+		9E6DE51818E614B700E27AC2 /* MURAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MURAppDelegate.h; sourceTree = "<group>"; };
+		9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MURAppDelegate.m; sourceTree = "<group>"; };
+		9E6DE51B18E614B700E27AC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9E6DE52118E614B700E27AC2 /* PlaceMatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceMatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6DE52218E614B700E27AC2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9E6DE52A18E614B700E27AC2 /* PlaceMatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlaceMatTests-Info.plist"; sourceTree = "<group>"; };
+		9E6DE52C18E614B700E27AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceMatTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E6DE50318E614B700E27AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6DE50C18E614B700E27AC2 /* CoreGraphics.framework in Frameworks */,
+				9E6DE50E18E614B700E27AC2 /* UIKit.framework in Frameworks */,
+				9E6DE50A18E614B700E27AC2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6DE51E18E614B700E27AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6DE52318E614B700E27AC2 /* XCTest.framework in Frameworks */,
+				9E6DE52518E614B700E27AC2 /* UIKit.framework in Frameworks */,
+				9E6DE52418E614B700E27AC2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E6DE4FD18E614B700E27AC2 = {
+			isa = PBXGroup;
+			children = (
+				9E6DE50F18E614B700E27AC2 /* PlaceMat */,
+				9E6DE52818E614B700E27AC2 /* PlaceMatTests */,
+				9E6DE50818E614B700E27AC2 /* Frameworks */,
+				9E6DE50718E614B700E27AC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E6DE50718E614B700E27AC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E6DE50618E614B700E27AC2 /* PlaceMat.app */,
+				9E6DE52118E614B700E27AC2 /* PlaceMatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E6DE50818E614B700E27AC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E6DE50918E614B700E27AC2 /* Foundation.framework */,
+				9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */,
+				9E6DE50D18E614B700E27AC2 /* UIKit.framework */,
+				9E6DE52218E614B700E27AC2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E6DE50F18E614B700E27AC2 /* PlaceMat */ = {
+			isa = PBXGroup;
+			children = (
+				9E6DE51818E614B700E27AC2 /* MURAppDelegate.h */,
+				9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */,
+				9E6DE51B18E614B700E27AC2 /* Images.xcassets */,
+				9E6DE51018E614B700E27AC2 /* Supporting Files */,
+			);
+			path = PlaceMat;
+			sourceTree = "<group>";
+		};
+		9E6DE51018E614B700E27AC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E6DE51118E614B700E27AC2 /* PlaceMat-Info.plist */,
+				9E6DE51218E614B700E27AC2 /* InfoPlist.strings */,
+				9E6DE51518E614B700E27AC2 /* main.m */,
+				9E6DE51718E614B700E27AC2 /* PlaceMat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E6DE52818E614B700E27AC2 /* PlaceMatTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */,
+				9E6DE52918E614B700E27AC2 /* Supporting Files */,
+			);
+			path = PlaceMatTests;
+			sourceTree = "<group>";
+		};
+		9E6DE52918E614B700E27AC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E6DE52A18E614B700E27AC2 /* PlaceMatTests-Info.plist */,
+				9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E6DE50518E614B700E27AC2 /* PlaceMat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E6DE53218E614B700E27AC2 /* Build configuration list for PBXNativeTarget "PlaceMat" */;
+			buildPhases = (
+				9E6DE50218E614B700E27AC2 /* Sources */,
+				9E6DE50318E614B700E27AC2 /* Frameworks */,
+				9E6DE50418E614B700E27AC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaceMat;
+			productName = PlaceMat;
+			productReference = 9E6DE50618E614B700E27AC2 /* PlaceMat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9E6DE52018E614B700E27AC2 /* PlaceMatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E6DE53518E614B700E27AC2 /* Build configuration list for PBXNativeTarget "PlaceMatTests" */;
+			buildPhases = (
+				9E6DE51D18E614B700E27AC2 /* Sources */,
+				9E6DE51E18E614B700E27AC2 /* Frameworks */,
+				9E6DE51F18E614B700E27AC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E6DE52718E614B700E27AC2 /* PBXTargetDependency */,
+			);
+			name = PlaceMatTests;
+			productName = PlaceMatTests;
+			productReference = 9E6DE52118E614B700E27AC2 /* PlaceMatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E6DE4FE18E614B700E27AC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MUR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = MonicUR;
+				TargetAttributes = {
+					9E6DE52018E614B700E27AC2 = {
+						TestTargetID = 9E6DE50518E614B700E27AC2;
+					};
+				};
+			};
+			buildConfigurationList = 9E6DE50118E614B700E27AC2 /* Build configuration list for PBXProject "PlaceMat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9E6DE4FD18E614B700E27AC2;
+			productRefGroup = 9E6DE50718E614B700E27AC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E6DE50518E614B700E27AC2 /* PlaceMat */,
+				9E6DE52018E614B700E27AC2 /* PlaceMatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E6DE50418E614B700E27AC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */,
+				9E6DE51C18E614B700E27AC2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6DE51F18E614B700E27AC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6DE52D18E614B700E27AC2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E6DE50218E614B700E27AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6DE51618E614B700E27AC2 /* main.m in Sources */,
+				9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6DE51D18E614B700E27AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E6DE52718E614B700E27AC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E6DE50518E614B700E27AC2 /* PlaceMat */;
+			targetProxy = 9E6DE52618E614B700E27AC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9E6DE51218E614B700E27AC2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E6DE51318E614B700E27AC2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E6DE52C18E614B700E27AC2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E6DE53018E614B700E27AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E6DE53118E614B700E27AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E6DE53318E614B700E27AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
+				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9E6DE53418E614B700E27AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
+				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9E6DE53618E614B700E27AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlaceMat.app/PlaceMat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PlaceMatTests/PlaceMatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9E6DE53718E614B700E27AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlaceMat.app/PlaceMat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
+				INFOPLIST_FILE = "PlaceMatTests/PlaceMatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E6DE50118E614B700E27AC2 /* Build configuration list for PBXProject "PlaceMat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E6DE53018E614B700E27AC2 /* Debug */,
+				9E6DE53118E614B700E27AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E6DE53218E614B700E27AC2 /* Build configuration list for PBXNativeTarget "PlaceMat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E6DE53318E614B700E27AC2 /* Debug */,
+				9E6DE53418E614B700E27AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9E6DE53518E614B700E27AC2 /* Build configuration list for PBXNativeTarget "PlaceMatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E6DE53618E614B700E27AC2 /* Debug */,
+				9E6DE53718E614B700E27AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E6DE4FE18E614B700E27AC2 /* Project object */;
+}
