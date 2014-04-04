@@ -15,7 +15,7 @@
 	
 	self.title = @"Profile";
 	self.view.backgroundColor = [MURTheme backgroundColor];
-	self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithName:@"Profile"];
+	self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initForDefaultSwitcher];
 }
 
 - (void)didReceiveMemoryWarning {

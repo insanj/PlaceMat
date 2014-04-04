@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MURBarSwitcherItem : UIBarButtonItem
+@interface MURBarSwitcherItem : UIBarButtonItem {
+	UIButton *_profile, *_dining, *_social, *_settings;
+	UIDynamicAnimator *_animator;
+}
 
-@property (nonatomic, retain) NSString *name;
-
-- (instancetype)initWithName:(NSString *)given;
+- (instancetype)initForDefaultSwitcher;
 
 @end
