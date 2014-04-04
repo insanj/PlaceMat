@@ -11,8 +11,10 @@
 @interface MURBarSwitcherItem : UIBarButtonItem {
 	UIButton *_profile, *_dining, *_social, *_settings;
 	UIDynamicAnimator *_animator;
+	UINavigationController *_controller;
 }
 
-- (instancetype)initForDefaultSwitcher;
+
+- (instancetype)initWithNavigationController:(UINavigationController *)arg1;
 
 @end

@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 MonicUR. All rights reserved.
 //
 
-#import "MURProfileViewController.h"
+#import "MURDiningViewController.h"
 
-@implementation MURProfileViewController
+@implementation MURDiningViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
 	
-	self.title = @"Profile";
+	self.title = @"Dining";
 	self.view.backgroundColor = [MURTheme backgroundColor];
 	self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithNavigationController:self.navigationController];
 }
