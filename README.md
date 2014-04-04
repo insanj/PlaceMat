@@ -5,7 +5,7 @@ Minimal, social, practical dining. High-fidelity prototype for Spring 2014, *DMS
 
 MonicUR is Maggie Curtis, [David Libbey](https://github.com/dlibbey), Jessica Sheng, [Julian Weiss](http://github.com/insanj), and [Louise Lu Yi](https://github.com/ylu19).
 
-![](Screenshots/latest.gif)
+![](Screenshots/442014.gif)
 
 ---------------------------------------	
 [Creative Commons Attribution-NonCommercial 3.0 United States License](http://creativecommons.org/licenses/by-nc/3.0/us/) as of 2014:
