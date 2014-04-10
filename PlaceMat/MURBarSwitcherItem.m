@@ -13,7 +13,7 @@
 
 #define SNAP_DAMPING 0.4
 #define BUBBLE_SEPARATION 10.0
-#define DEFAULT_IMAGE_SIZE (CGSize){30.0, 30.0}
+#define DEFAULT_IMAGE_SIZE (CGSize){33.0, 33.0}
 
 @implementation MURBarSwitcherItem
 
@@ -49,6 +49,15 @@
 	CGPoint origin = [actingBox convertPoint:self.customView.frame.origin fromView:self.customView.superview];
 	CGRect frame = CGRectMake(origin.x, origin.y, self.customView.frame.size.width, self.customView.frame.size.height);
 	
+	// First, add the back overlay (like in CC).
+	_overlay = [[UIButton alloc] initWithFrame:actingBox.frame];
+	_overlay.backgroundColor = [UIColor darkGrayColor];
+	_overlay.alpha = 0.0;
+	[_overlay addTarget:self action:@selector(suckBalloons) forControlEvents:UIControlEventTouchUpInside];
+	
+	[actingBox addSubview:_overlay];
+	
+	// Then, create the individual switcher buttons, and initialize them
 	_profile = [[UIButton alloc] initWithFrame:frame];
 	_dining = [[UIButton alloc] initWithFrame:frame];
 
@@ -65,16 +74,36 @@
 	_profile.tag = 0;
 	_dining.tag = _profile.tag + 1;
 	
-	[actingBox addSubview:_profile];
-	[actingBox addSubview:_dining];
-	
 	CGRect profileSnapFrame = _profile.frame;
 	profileSnapFrame.origin.y += _profile.frame.size.height + BUBBLE_SEPARATION;
 		
 	CGRect diningSnapFrame = profileSnapFrame;
 	diningSnapFrame.origin.y += _dining.frame.size.height + BUBBLE_SEPARATION;
 	
+	// Create a nice switcher backing view
+	CGRect switcherBackFrame = frame;
+	switcherBackFrame.origin.y -= 5.0;
+	switcherBackFrame.size.width += 10.0;
+	switcherBackFrame.origin.x -= 5.0;
+	switcherBackFrame.size.height = switcherBackFrame.origin.y + (diningSnapFrame.origin.y + diningSnapFrame.size.height) - 15.0;
+	
+	_switcherBack = [[UIView alloc] initWithFrame:switcherBackFrame];
+	_switcherBack.backgroundColor = [UIColor lightGrayColor];
+	_switcherBack.layer.masksToBounds = YES;
+	_switcherBack.layer.cornerRadius = 7.0;
+	_switcherBack.alpha = 0.0;
+	_switcherBack.userInteractionEnabled = NO;
+	
+	// Add the switcher buttons to the overlay (so they look as if they come from bar button)
+	[_overlay addSubview:_switcherBack];
+	
+	[actingBox addSubview:_profile];
+	[actingBox addSubview:_dining];
+	
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:SNAP_DAMPING initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+		[_switcherBack setAlpha:1.0];
+		[_overlay setAlpha:0.25];
+		
 		[_profile setAlpha:1.0];
 		[_dining setAlpha:1.0];
 		
@@ -100,9 +129,15 @@
 		
 		[_profile setAlpha:0.0];
 		[_dining setAlpha:0.0];
+		
+		[_switcherBack setAlpha:0.0];
+		[_overlay setAlpha:0.0];
 	} completion:^(BOOL finished){
 		[_profile removeFromSuperview];
 		[_dining removeFromSuperview];
+		
+		[_switcherBack removeFromSuperview];
+		[_overlay removeFromSuperview];
 	}];
 	
 	[(UIButton *)self.customView addTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];

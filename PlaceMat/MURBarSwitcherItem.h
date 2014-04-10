@@ -12,6 +12,9 @@
 	UIButton *_profile, *_dining, *_social, *_settings;
 	UIDynamicAnimator *_animator;
 	UINavigationController *_controller;
+	
+	UIButton *_overlay;
+	UIView *_switcherBack;
 }
 
 
