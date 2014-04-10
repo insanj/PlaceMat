@@ -85,7 +85,7 @@
 	switcherBackFrame.origin.y -= 5.0;
 	switcherBackFrame.size.width += 10.0;
 	switcherBackFrame.origin.x -= 5.0;
-	switcherBackFrame.size.height = switcherBackFrame.origin.y + (diningSnapFrame.origin.y + diningSnapFrame.size.height) - 15.0;
+	switcherBackFrame.size.height = switcherBackFrame.origin.y + (diningSnapFrame.origin.y + diningSnapFrame.size.height) - 25.0;
 	
 	_switcherBack = [[UIView alloc] initWithFrame:switcherBackFrame];
 	_switcherBack.backgroundColor = [UIColor lightGrayColor];
