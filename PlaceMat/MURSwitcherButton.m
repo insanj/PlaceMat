@@ -7,7 +7,6 @@
 //
 
 #import "MURSwitcherButton.h"
-#import "MURTheme.h"
 
 #define DEFAULT_IMAGE_SIZE (CGSize){33.0, 33.0}
 

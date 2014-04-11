@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#include "MURSwitcherButton.h"
-#include "MURProfileViewController.h"
-#include "MURDiningViewController.h"
+#import "MURSwitcherButton.h"
+#import "MURProfileViewController.h"
+#import "MURDiningViewController.h"
+#import "MURSocialViewController.h"
+#import "MURSettingsViewController.h"
 
 @interface MURBarSwitcherItem : UIBarButtonItem {
 	MURSwitcherButton *_profile, *_dining, *_social, *_settings;

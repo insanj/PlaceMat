@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#include "MURTheme.h"
+
 @interface MURSwitcherButton : UIButton
 
 - (instancetype)initWithImage:(UIImage *)image;

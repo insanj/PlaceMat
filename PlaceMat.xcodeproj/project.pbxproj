@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
+		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
+		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
 		9E6DE50A18E614B700E27AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50918E614B700E27AC2 /* Foundation.framework */; };
 		9E6DE50C18E614B700E27AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */; };
 		9E6DE50E18E614B700E27AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50D18E614B700E27AC2 /* UIKit.framework */; };
@@ -47,6 +49,10 @@
 /* Begin PBXFileReference section */
 		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
 		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
+		9E4C69A418F8501700359C18 /* MURSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSocialViewController.h; sourceTree = "<group>"; };
+		9E4C69A518F8501700359C18 /* MURSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSocialViewController.m; sourceTree = "<group>"; };
+		9E4C69A718F8505C00359C18 /* MURSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSettingsViewController.h; sourceTree = "<group>"; };
+		9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSettingsViewController.m; sourceTree = "<group>"; };
 		9E6DE50618E614B700E27AC2 /* PlaceMat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceMat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6DE50918E614B700E27AC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,6 +112,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E4C69AA18F8517100359C18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EFA649318E617E200B9A095 /* MURProfileViewController.h */,
+				9EFA649418E617E200B9A095 /* MURProfileViewController.m */,
+				9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */,
+				9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */,
+				9E4C69A418F8501700359C18 /* MURSocialViewController.h */,
+				9E4C69A518F8501700359C18 /* MURSocialViewController.m */,
+				9E4C69A718F8505C00359C18 /* MURSettingsViewController.h */,
+				9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		9E6DE4FD18E614B700E27AC2 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +160,8 @@
 		9E6DE50F18E614B700E27AC2 /* PlaceMat */ = {
 			isa = PBXGroup;
 			children = (
+				9EFA64A918E61ED100B9A095 /* Assets */,
+				9E4C69AA18F8517100359C18 /* ViewControllers */,
 				9E6DE51818E614B700E27AC2 /* MURAppDelegate.h */,
 				9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */,
 				9EFA649618E6180300B9A095 /* MURTheme.h */,
@@ -149,11 +172,6 @@
 				9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */,
 				9EFA649018E6174300B9A095 /* MURNavigationController.h */,
 				9EFA649118E6174300B9A095 /* MURNavigationController.m */,
-				9EFA649318E617E200B9A095 /* MURProfileViewController.h */,
-				9EFA649418E617E200B9A095 /* MURProfileViewController.m */,
-				9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */,
-				9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */,
-				9EFA64A918E61ED100B9A095 /* Switcher */,
 				9EFA64A518E61E7100B9A095 /* Images.xcassets */,
 				9E6DE51018E614B700E27AC2 /* Supporting Files */,
 			);
@@ -189,7 +207,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9EFA64A918E61ED100B9A095 /* Switcher */ = {
+		9EFA64A918E61ED100B9A095 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				9E9D9C5F18EF68CC00E3713F /* CheckIn@2x.png */,
@@ -200,6 +218,7 @@
 				9E9D9C6318EF68CC00E3713F /* Settings@2x.png */,
 				9E9D9C6418EF68CC00E3713F /* Social@2x.png */,
 			);
+			name = Assets;
 			path = Switcher;
 			sourceTree = "<group>";
 		};
@@ -313,9 +332,11 @@
 				9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */,
 				9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */,
 				9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */,
+				9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */,
 				9EFA649818E6180300B9A095 /* MURTheme.m in Sources */,
 				9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */,
 				9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */,
+				9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */,
 				9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
