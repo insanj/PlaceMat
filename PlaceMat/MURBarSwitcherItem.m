@@ -90,7 +90,7 @@
 	[actingBox addSubview:_settings];
 	
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:SNAP_DAMPING initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
-		_overlay.alpha = 0.25;
+		_overlay.alpha = 0.45;
 		_switcherBack.alpha = _profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 1.0;
 		
 		_switcherBack.frame = switcherBackSnapFrame;

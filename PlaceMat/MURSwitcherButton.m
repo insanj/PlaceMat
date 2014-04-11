@@ -46,7 +46,7 @@
 }
 
 - (UIImage *)sizeImageToDefault:(UIImage *)image {
-	UIGraphicsBeginImageContextWithOptions(DEFAULT_IMAGE_SIZE, NO, 4.0);
+	UIGraphicsBeginImageContextWithOptions(DEFAULT_IMAGE_SIZE, NO, 0.0);
     [image drawInRect:CGRectMake(0, 0, DEFAULT_IMAGE_SIZE.width, DEFAULT_IMAGE_SIZE.height)];
     UIImage *sized = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
