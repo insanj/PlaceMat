@@ -8,7 +8,7 @@
 
 #import "MURProfileViewController.h"
 
-#define DEBUG_NAME @"Julian Weiss"
+#define DEBUG_NAME_YEAR @"Julian Weiss 2017"
 
 @implementation MURProfileViewController
 
@@ -63,7 +63,7 @@
 	switch (section) {
 		default:
 		case 0:
-			return DEBUG_NAME;
+			return nil;
 		case 1:
 			return @"Recent Activity";
 		case 2:
@@ -77,7 +77,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.section == 0) {
-		return 100.0;
+		return 150.0;
 	}
 	
 	return 50.0;
@@ -96,29 +96,53 @@
 	UITableViewCell *cell;
 	if (indexPath.section == 0) {
 		cell = [tableView dequeueReusableCellWithIdentifier:@"SelfCell"];
+		
+		// No memory conservation here, because there'll only ever be one!
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SelfCell"];
+			CGFloat cellHeight = 150.0;
+			CGFloat avatarHeight = cellHeight - 15.0;
 			
-			CGFloat padding = (100.0 - 85.0) / 2.0;
-			UIImageView *avatar = [[UIImageView alloc] initWithFrame:CGRectMake(padding, padding, 85.0, 85.0)];
+			CGFloat padding = (cellHeight - avatarHeight) / 2.0;
+			UIImageView *avatar = [[UIImageView alloc] initWithFrame:CGRectMake(padding, padding, avatarHeight, avatarHeight)];
+			avatar.image = [UIImage imageNamed:@"Julian.jpg"];
+			avatar.center = CGPointMake(cell.center.x, avatar.center.y);
 			avatar.layer.masksToBounds = YES;
-			avatar.layer.cornerRadius = 7.0;
-			avatar.tag = 1;
+			avatar.layer.cornerRadius = 10.0;
+						
+			UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
+			CGFloat labelHeight = 25.0;
 			
+			NSString *firstName = [DEBUG_NAME_YEAR componentsSeparatedByString:@" "][0];
+			CGSize firstNameSize = [firstName sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			UILabel *firstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + 15.0, (cellHeight / 2.0) - (labelHeight * 2.0) + padding, firstNameSize.width, labelHeight)];
+			firstNameLabel.font = nameFont;
+			firstNameLabel.text = firstName;
+			
+			NSString *lastName = [DEBUG_NAME_YEAR componentsSeparatedByString:@" "][1];
+			CGSize lastNameSize = [lastName sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			UILabel *lastNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + 15.0, (cellHeight / 2.0) - labelHeight + padding, lastNameSize.width, labelHeight)];
+			lastNameLabel.font = nameFont;
+			lastNameLabel.text = lastName;
+			
+			NSString *classYear = [DEBUG_NAME_YEAR componentsSeparatedByString:@" "][2];
+			CGSize classYearSize = [classYear sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			UILabel *classYearLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + 15.0, (cellHeight / 2.0) + padding, classYearSize.width, labelHeight)];
+			classYearLabel.font = nameFont;
+			classYearLabel.text = classYear;
+			
+			UIButton *cog = [[UIButton alloc] initWithFrame:CGRectMake(avatar.frame.origin.x - (50.0 + 15.0), avatar.center.y - (50.0 / 1.9), 50.0, 50.0)];
+			[cog setImage:[UIImage imageNamed:@"Settings"] forState:UIControlStateNormal];
+			cog.alpha = 0.8;
+			
+			[cell.contentView addSubview:cog];
 			[cell.contentView addSubview:avatar];
-			
-			NSString *firstName = [DEBUG_NAME componentsSeparatedByString:@" "][0];
-			CGSize firstNameSize = [firstName sizeWithAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18.0]}];
-			UILabel *firstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(cell.frame.size.width - firstNameSize.width - padding, (100 / 3.0) - padding, firstNameSize.width, firstNameSize.height)];
-			firstNameLabel.font = [UIFont systemFontOfSize:18.0];
-			[firstNameLabel setText:firstName];
-			firstNameLabel.tag = 2;
-			
 			[cell.contentView addSubview:firstNameLabel];
+			[cell.contentView addSubview:lastNameLabel];
+			[cell.contentView addSubview:classYearLabel];
 		}
 		
-		UIImageView *taggedAvatar = (UIImageView *)[cell.contentView viewWithTag:1];
-		[taggedAvatar setImage:[UIImage imageNamed:@"Julian.jpg"]];
+
 		
 	} // self cell
 	
