@@ -16,4 +16,8 @@
 // Main background color for app. Used in ViewControllers.
 + (UIColor *)backgroundColor;
 
+// UIButton tint colors (MURSwitcherButton is primary usage), unused
+// + (UIColor *)buttonTintColor;
+// + (UIColor *)buttonTouchTintColor;
+
 @end

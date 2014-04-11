@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E6DE50A18E614B700E27AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50918E614B700E27AC2 /* Foundation.framework */; };
 		9E6DE50C18E614B700E27AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */; };
 		9E6DE50E18E614B700E27AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50D18E614B700E27AC2 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
+		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
 		9E6DE50618E614B700E27AC2 /* PlaceMat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceMat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6DE50918E614B700E27AC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +143,8 @@
 				9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */,
 				9EFA649618E6180300B9A095 /* MURTheme.h */,
 				9EFA649718E6180300B9A095 /* MURTheme.m */,
+				9E4C69A118F8494100359C18 /* MURSwitcherButton.h */,
+				9E4C69A218F8494100359C18 /* MURSwitcherButton.m */,
 				9EFA649918E61B2200B9A095 /* MURBarSwitcherItem.h */,
 				9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */,
 				9EFA649018E6174300B9A095 /* MURNavigationController.h */,
@@ -311,6 +316,7 @@
 				9EFA649818E6180300B9A095 /* MURTheme.m in Sources */,
 				9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */,
 				9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */,
+				9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

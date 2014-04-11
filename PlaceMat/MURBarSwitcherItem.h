@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#include "MURSwitcherButton.h"
+#include "MURProfileViewController.h"
+#include "MURDiningViewController.h"
+
 @interface MURBarSwitcherItem : UIBarButtonItem {
-	UIButton *_profile, *_dining, *_social, *_settings;
+	MURSwitcherButton *_profile, *_dining, *_social, *_settings;
 	UIDynamicAnimator *_animator;
 	UINavigationController *_controller;
 	

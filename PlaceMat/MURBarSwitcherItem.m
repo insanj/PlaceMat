@@ -8,38 +8,23 @@
 
 #import "MURBarSwitcherItem.h"
 
-#import "MURProfileViewController.h"
-#import "MURDiningViewController.h"
-
 #define SNAP_DAMPING 0.4
 #define BUBBLE_SEPARATION 10.0
-#define DEFAULT_IMAGE_SIZE (CGSize){33.0, 33.0}
 
 @implementation MURBarSwitcherItem
 
+// Custom initializer that creates the basic "chevron" switcher view
 - (instancetype)initWithNavigationController:(UINavigationController *)arg1 {
-	UIImage *chevronImage = [self defaultImageSizeWithName:@"Chevron"];
-
-	UIButton *customView = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, chevronImage.size.width, chevronImage.size.height)];
-	[customView setImage:chevronImage forState:UIControlStateNormal];
-	[customView addTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
-	customView.showsTouchWhenHighlighted = YES;
-
-	if ((self = [super initWithCustomView:customView])) {
+	
+	MURSwitcherButton *chevron = [[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"Chevron"]];
+	[chevron addTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
+	
+	if ((self = [super initWithCustomView:chevron])) {
 		_animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.customView];
 		_controller = arg1;
 	}
 	
 	return self;
-}
-
-- (UIImage *)defaultImageSizeWithName:(NSString *)name {
-	UIGraphicsBeginImageContextWithOptions(DEFAULT_IMAGE_SIZE, NO, 4.0);
-    [[UIImage imageNamed:name] drawInRect:CGRectMake(0, 0, DEFAULT_IMAGE_SIZE.width, DEFAULT_IMAGE_SIZE.height)];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-	
-    return image;
 }
 
 - (void)shootBalloons {
@@ -58,17 +43,12 @@
 	[actingBox addSubview:_overlay];
 	
 	// Then, create the individual switcher buttons, and initialize them
-	_profile = [[UIButton alloc] initWithFrame:frame];
-	_dining = [[UIButton alloc] initWithFrame:frame];
-
-	[_profile setImage:[self defaultImageSizeWithName:@"Profile"] forState:UIControlStateNormal];
-	[_dining setImage:[self defaultImageSizeWithName:@"Dining"] forState:UIControlStateNormal];
+	_profile = [[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"Profile"]];
+	_dining = [[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"Dining"]];
+	_profile.frame = _dining.frame = frame;
 
 	[_profile addTarget:self action:@selector(pushControllerBasedOn:) forControlEvents:UIControlEventTouchUpInside];
 	[_dining addTarget:self action:@selector(pushControllerBasedOn:) forControlEvents:UIControlEventTouchUpInside];
-	
-	_profile.userInteractionEnabled = _dining.userInteractionEnabled = YES;
-	_profile.showsTouchWhenHighlighted = _dining.userInteractionEnabled = YES;
 	_profile.alpha = _dining.alpha = 0.0;
 	
 	_profile.tag = 0;

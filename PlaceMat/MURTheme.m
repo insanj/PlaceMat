@@ -18,4 +18,12 @@
 	return [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0];
 }
 
++ (UIColor *)buttonTintColor {
+	return [UIColor blackColor];
+}
+
++ (UIColor *)buttonTouchTintColor {
+	return [UIColor colorWithWhite:0.9 alpha:0.5];
+}
+
 @end
