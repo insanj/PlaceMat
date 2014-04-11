@@ -49,11 +49,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-	return 50.0;
+	return section == 0 ? 0.0 : 45.0;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-	
 	UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *) view;
 	header.textLabel.font = [UIFont boldSystemFontOfSize:20.0];
 	header.alpha = 0.85;
@@ -93,32 +92,69 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSString *identifier;
-	switch (indexPath.section) {
-		default:
-		case 0:
-			identifier = @"SelfCell";
-			break;
-		case 1:
-			identifier = @"ActivityCell";
-			break;
-		case 2:
-			identifier = @"FriendsCell";
-			break;
-		case 3:
-			identifier = @"DishesCell";
-			break;
-		case 4:
-			identifier = @"PlacesCell";
-			break;
-	}
 	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-	if (!cell) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-	}
+	UITableViewCell *cell;
+	if (indexPath.section == 0) {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"SelfCell"];
+		if (!cell) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SelfCell"];
+			
+			CGFloat padding = (100.0 - 85.0) / 2.0;
+			UIImageView *avatar = [[UIImageView alloc] initWithFrame:CGRectMake(padding, padding, 85.0, 85.0)];
+			avatar.layer.masksToBounds = YES;
+			avatar.layer.cornerRadius = 7.0;
+			avatar.tag = 1;
+			
+			[cell.contentView addSubview:avatar];
+			
+			NSString *firstName = [DEBUG_NAME componentsSeparatedByString:@" "][0];
+			CGSize firstNameSize = [firstName sizeWithAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18.0]}];
+			UILabel *firstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(cell.frame.size.width - firstNameSize.width - padding, (100 / 3.0) - padding, firstNameSize.width, firstNameSize.height)];
+			firstNameLabel.font = [UIFont systemFontOfSize:18.0];
+			[firstNameLabel setText:firstName];
+			firstNameLabel.tag = 2;
+			
+			[cell.contentView addSubview:firstNameLabel];
+		}
+		
+		UIImageView *taggedAvatar = (UIImageView *)[cell.contentView viewWithTag:1];
+		[taggedAvatar setImage:[UIImage imageNamed:@"Julian.jpg"]];
+		
+	} // self cell
+	
+	else if (indexPath.section == 1) {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityCell"];
+		if (!cell) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ActivityCell"];
+		}
+	} // activity cell
+	
+	else if (indexPath.section == 2) {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"FriendsCell"];
+		if (!cell) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"FriendsCell"];
+		}
+	} // friends cell
+	
+	else if (indexPath.section == 3) {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"DishesCell"];
+		if (!cell) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DishesCell"];
+		}
+	} // dishes cell
+	
+	else {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"PlacesCell"];
+		if (!cell) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"PlacesCell"];
+		}
+	} // places cell
 	
 	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

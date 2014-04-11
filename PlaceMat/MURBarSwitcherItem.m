@@ -28,7 +28,7 @@
 }
 
 - (void)shootBalloons {
-	[(UIButton *)self.customView removeTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
+	[(MURSwitcherButton *)self.customView removeTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIWindow *actingBox = [UIApplication sharedApplication].keyWindow;
 	CGPoint origin = [actingBox convertPoint:self.customView.frame.origin fromView:self.customView.superview];
@@ -77,11 +77,11 @@
 	switcherBackSnapFrame.size.height = (settingsSnapFrame.origin.y + settingsSnapFrame.size.height) - frame.origin.y + 10.0;
 
 	_switcherBack = [[UIView alloc] initWithFrame:switcherBackFrame];
-	_switcherBack.backgroundColor = [UIColor lightGrayColor];
 	_switcherBack.layer.masksToBounds = YES;
 	_switcherBack.layer.cornerRadius = 7.0;
-	_switcherBack.alpha = 0.0;
 	_switcherBack.userInteractionEnabled = NO;
+	_switcherBack.hidden = YES;
+	_switcherBack.backgroundColor = [UIColor lightGrayColor];
 	[_overlay addSubview:_switcherBack];
 	
 	[actingBox addSubview:_profile];
@@ -90,8 +90,10 @@
 	[actingBox addSubview:_settings];
 	
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:SNAP_DAMPING initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+		_switcherBack.hidden = NO;
+		
 		_overlay.alpha = 0.45;
-		_switcherBack.alpha = _profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 1.0;
+		_profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 1.0;
 		
 		_switcherBack.frame = switcherBackSnapFrame;
 		_profile.frame = profileSnapFrame;
@@ -102,19 +104,21 @@
 		// air
 	}];
 	
-	[(UIButton *)self.customView addTarget:self action:@selector(suckBalloons) forControlEvents:UIControlEventTouchUpInside];
+	[(MURSwitcherButton *)self.customView addTarget:self action:@selector(suckBalloons) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)suckBalloons {
-	[(UIButton *)self.customView removeTarget:self action:@selector(suckBalloons) forControlEvents:UIControlEventTouchUpInside];
+	[(MURSwitcherButton *)self.customView removeTarget:self action:@selector(suckBalloons) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIWindow *actingBox = [UIApplication sharedApplication].keyWindow;
 	CGPoint origin = [actingBox convertPoint:self.customView.frame.origin fromView:self.customView.superview];
 	CGRect frame = CGRectMake(origin.x, origin.y, self.customView.frame.size.width, self.customView.frame.size.height);
 		
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+		_switcherBack.hidden = YES;
+		
 		_profile.frame = _dining.frame = _social.frame = _settings.frame = frame;
-		_overlay.alpha = _switcherBack.alpha = _profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 0.0;
+		_overlay.alpha = _profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 0.0;
 	} completion:^(BOOL finished){
 		[_profile removeFromSuperview];
 		[_dining removeFromSuperview];
@@ -125,7 +129,7 @@
 		[_overlay removeFromSuperview];
 	}];
 	
-	[(UIButton *)self.customView addTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
+	[(MURSwitcherButton *)self.customView addTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)pushControllerBasedOn:(UIButton *)sender {
