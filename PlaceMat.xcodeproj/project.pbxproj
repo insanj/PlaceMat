@@ -120,9 +120,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E2CA14818FB14A3009B5991 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E2CA14518FB1191009B5991 /* MURBlurView.h */,
+				9E2CA14618FB1191009B5991 /* MURBlurView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9E2CA14918FB14C3009B5991 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9E6DE51818E614B700E27AC2 /* MURAppDelegate.h */,
+				9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */,
+				9EFA649618E6180300B9A095 /* MURTheme.h */,
+				9EFA649718E6180300B9A095 /* MURTheme.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9E2CA14A18FB14D2009B5991 /* BarButtonItems */ = {
+			isa = PBXGroup;
+			children = (
+				9EFA649918E61B2200B9A095 /* MURBarSwitcherItem.h */,
+				9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */,
+				9E4C69A118F8494100359C18 /* MURSwitcherButton.h */,
+				9E4C69A218F8494100359C18 /* MURSwitcherButton.m */,
+				9E2CA13D18FB0A1A009B5991 /* MURCheckinButtonItem.h */,
+				9E2CA13E18FB0A1A009B5991 /* MURCheckinButtonItem.m */,
+			);
+			name = BarButtonItems;
+			sourceTree = "<group>";
+		};
 		9E4C69AA18F8517100359C18 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EFA649018E6174300B9A095 /* MURNavigationController.h */,
+				9EFA649118E6174300B9A095 /* MURNavigationController.m */,
 				9EFA649318E617E200B9A095 /* MURProfileViewController.h */,
 				9EFA649418E617E200B9A095 /* MURProfileViewController.m */,
 				9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */,
@@ -171,20 +206,9 @@
 				9EAE246A18F853B5009A566A /* Assets */,
 				9EAE247B18F85B69009A566A /* Prototype Assets */,
 				9E4C69AA18F8517100359C18 /* ViewControllers */,
-				9E6DE51818E614B700E27AC2 /* MURAppDelegate.h */,
-				9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */,
-				9EFA649618E6180300B9A095 /* MURTheme.h */,
-				9EFA649718E6180300B9A095 /* MURTheme.m */,
-				9EFA649918E61B2200B9A095 /* MURBarSwitcherItem.h */,
-				9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */,
-				9E4C69A118F8494100359C18 /* MURSwitcherButton.h */,
-				9E4C69A218F8494100359C18 /* MURSwitcherButton.m */,
-				9E2CA14518FB1191009B5991 /* MURBlurView.h */,
-				9E2CA14618FB1191009B5991 /* MURBlurView.m */,
-				9E2CA13D18FB0A1A009B5991 /* MURCheckinButtonItem.h */,
-				9E2CA13E18FB0A1A009B5991 /* MURCheckinButtonItem.m */,
-				9EFA649018E6174300B9A095 /* MURNavigationController.h */,
-				9EFA649118E6174300B9A095 /* MURNavigationController.m */,
+				9E2CA14818FB14A3009B5991 /* Views */,
+				9E2CA14918FB14C3009B5991 /* Classes */,
+				9E2CA14A18FB14D2009B5991 /* BarButtonItems */,
 				9EFA64A518E61E7100B9A095 /* Images.xcassets */,
 				9E6DE51018E614B700E27AC2 /* Supporting Files */,
 			);

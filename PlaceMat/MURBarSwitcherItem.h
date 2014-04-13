@@ -20,7 +20,7 @@
 	UINavigationController *_controller;
 	
 	UIButton *_overlay;
-	MURBlurView *_switcherBack;
+	UIView *_switcherBack;
 }
 
 

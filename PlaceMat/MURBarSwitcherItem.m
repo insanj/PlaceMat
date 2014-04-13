@@ -15,7 +15,6 @@
 
 // Custom initializer that creates the basic "chevron" switcher view
 - (instancetype)initWithNavigationController:(UINavigationController *)arg1 {
-	
 	MURSwitcherButton *chevron = [[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"Menu"]];
 	[chevron addTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
 	
@@ -76,8 +75,8 @@
 	CGRect switcherBackSnapFrame = switcherBackFrame;
 	switcherBackSnapFrame.size.height = (settingsSnapFrame.origin.y + settingsSnapFrame.size.height) - frame.origin.y + 10.0;
 
-	_switcherBack = [[MURBlurView alloc] initWithFrame:switcherBackFrame];
-	[_switcherBack setBlurTintColor:[MURTheme backgroundColor]];
+	_switcherBack = [[UIView alloc] initWithFrame:switcherBackFrame];
+	_switcherBack.backgroundColor = [MURTheme backgroundColor];
 	_switcherBack.layer.masksToBounds = YES;
 	_switcherBack.layer.cornerRadius = 7.0;
 	_switcherBack.userInteractionEnabled = NO;
