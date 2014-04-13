@@ -12,6 +12,7 @@
 #import "MURDiningViewController.h"
 #import "MURSocialViewController.h"
 #import "MURSettingsViewController.h"
+#import "MURBlurView.h"
 
 @interface MURBarSwitcherItem : UIBarButtonItem {
 	MURSwitcherButton *_profile, *_dining, *_social, *_settings;
@@ -19,7 +20,7 @@
 	UINavigationController *_controller;
 	
 	UIButton *_overlay;
-	UIView *_switcherBack;
+	MURBlurView *_switcherBack;
 }
 
 

@@ -76,12 +76,12 @@
 	CGRect switcherBackSnapFrame = switcherBackFrame;
 	switcherBackSnapFrame.size.height = (settingsSnapFrame.origin.y + settingsSnapFrame.size.height) - frame.origin.y + 10.0;
 
-	_switcherBack = [[UIView alloc] initWithFrame:switcherBackFrame];
+	_switcherBack = [[MURBlurView alloc] initWithFrame:switcherBackFrame];
+	[_switcherBack setBlurTintColor:[MURTheme backgroundColor]];
 	_switcherBack.layer.masksToBounds = YES;
 	_switcherBack.layer.cornerRadius = 7.0;
 	_switcherBack.userInteractionEnabled = NO;
 	_switcherBack.hidden = YES;
-	_switcherBack.backgroundColor = [UIColor lightGrayColor];
 	[_overlay addSubview:_switcherBack];
 	
 	[actingBox addSubview:_profile];
@@ -92,7 +92,7 @@
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:SNAP_DAMPING initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
 		_switcherBack.hidden = NO;
 		
-		_overlay.alpha = 0.45;
+		_overlay.alpha = 0.75;
 		_profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 1.0;
 		
 		_switcherBack.frame = switcherBackSnapFrame;
