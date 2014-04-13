@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MURTheme.h"
-#import "MURBarSwitcherItem.h"
+#import "MURTableViewController.h"
 
-@interface MURDiningViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MURDiningViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

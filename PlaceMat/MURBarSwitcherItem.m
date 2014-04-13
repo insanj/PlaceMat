@@ -8,6 +8,12 @@
 
 #import "MURBarSwitcherItem.h"
 
+#import "MURProfileViewController.h"
+#import "MURDiningViewController.h"
+#import "MURSocialViewController.h"
+#import "MURSettingsViewController.h"
+#import "MURBlurView.h"
+
 #define SNAP_DAMPING 0.4
 #define BUBBLE_SEPARATION 10.0
 

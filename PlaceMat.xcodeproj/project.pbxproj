@@ -10,6 +10,7 @@
 		9E2CA13F18FB0A1A009B5991 /* MURCheckinButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2CA13E18FB0A1A009B5991 /* MURCheckinButtonItem.m */; };
 		9E2CA14118FB0B89009B5991 /* Dining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2CA14018FB0B89009B5991 /* Dining@2x.png */; };
 		9E2CA14718FB1191009B5991 /* MURBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2CA14618FB1191009B5991 /* MURBlurView.m */; };
+		9E2CA14D18FB158C009B5991 /* MURTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2CA14C18FB158C009B5991 /* MURTableViewController.m */; };
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
 		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
@@ -55,6 +56,8 @@
 		9E2CA14018FB0B89009B5991 /* Dining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dining@2x.png"; sourceTree = "<group>"; };
 		9E2CA14518FB1191009B5991 /* MURBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURBlurView.h; sourceTree = "<group>"; };
 		9E2CA14618FB1191009B5991 /* MURBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURBlurView.m; sourceTree = "<group>"; };
+		9E2CA14B18FB158C009B5991 /* MURTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURTableViewController.h; sourceTree = "<group>"; };
+		9E2CA14C18FB158C009B5991 /* MURTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURTableViewController.m; sourceTree = "<group>"; };
 		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
 		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
 		9E4C69A418F8501700359C18 /* MURSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSocialViewController.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 			children = (
 				9EFA649018E6174300B9A095 /* MURNavigationController.h */,
 				9EFA649118E6174300B9A095 /* MURNavigationController.m */,
+				9E2CA14B18FB158C009B5991 /* MURTableViewController.h */,
+				9E2CA14C18FB158C009B5991 /* MURTableViewController.m */,
 				9EFA649318E617E200B9A095 /* MURProfileViewController.h */,
 				9EFA649418E617E200B9A095 /* MURProfileViewController.m */,
 				9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */,
@@ -384,6 +389,7 @@
 				9E2CA14718FB1191009B5991 /* MURBlurView.m in Sources */,
 				9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */,
 				9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */,
+				9E2CA14D18FB158C009B5991 /* MURTableViewController.m in Sources */,
 				9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

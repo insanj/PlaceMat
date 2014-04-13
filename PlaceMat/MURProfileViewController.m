@@ -8,18 +8,15 @@
 
 #import "MURProfileViewController.h"
 
-#define DEBUG_NAME_YEAR @"Julian Weiss 2017"
+#define DEBUG_NAME @"Julian Weiss"
+#define DEBUG_YEAR @"Class of 2017"
 
 @implementation MURProfileViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-	
 	self.title = @"Profile";
-	self.view.backgroundColor = [MURTheme backgroundColor];
-	self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithNavigationController:self.navigationController];
-	self.navigationItem.rightBarButtonItem = [[MURCheckinButtonItem alloc] initWithDefaults];
-											  
+	  
 	UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
 	[refresh addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
 	self.refreshControl = refresh;
@@ -32,8 +29,8 @@
 		[sender endRefreshing];
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
-		// NSIndexSet *allSections = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, [self.tableView numberOfSections])];
-		// [self.tableView reloadSections:allSections withRowAnimation:UITableViewRowAnimationAutomatic];
+		NSIndexSet *allSections = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, [self.tableView numberOfSections])];
+		[self.tableView reloadSections:allSections withRowAnimation:UITableViewRowAnimationAutomatic];
 		[self.tableView reloadData];
 	});
 }
@@ -58,7 +55,6 @@
 	header.textLabel.font = [UIFont boldSystemFontOfSize:20.0];
 	header.alpha = 0.85;
 }
-
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	switch (section) {
@@ -101,50 +97,48 @@
 		// No memory conservation here, because there'll only ever be one!
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SelfCell"];
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+			
 			CGFloat cellHeight = 150.0;
 			CGFloat avatarHeight = cellHeight - 15.0;
-			
 			CGFloat padding = (cellHeight - avatarHeight) / 2.0;
+			
 			UIImageView *avatar = [[UIImageView alloc] initWithFrame:CGRectMake(padding, padding, avatarHeight, avatarHeight)];
 			avatar.image = [UIImage imageNamed:@"Julian.jpg"];
-			avatar.center = CGPointMake(cell.center.x, avatar.center.y);
 			avatar.layer.masksToBounds = YES;
 			avatar.layer.cornerRadius = 10.0;
-						
-			UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
-			CGFloat labelHeight = 25.0;
 			
-			NSString *firstName = [DEBUG_NAME_YEAR componentsSeparatedByString:@" "][0];
-			CGSize firstNameSize = [firstName sizeWithAttributes:@{NSFontAttributeName : nameFont}];
-			UILabel *firstNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + 15.0, (cellHeight / 2.0) - (labelHeight * 2.0) + padding, firstNameSize.width, labelHeight)];
-			firstNameLabel.font = nameFont;
-			firstNameLabel.text = firstName;
-			
-			NSString *lastName = [DEBUG_NAME_YEAR componentsSeparatedByString:@" "][1];
-			CGSize lastNameSize = [lastName sizeWithAttributes:@{NSFontAttributeName : nameFont}];
-			UILabel *lastNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + 15.0, (cellHeight / 2.0) - labelHeight + padding, lastNameSize.width, labelHeight)];
-			lastNameLabel.font = nameFont;
-			lastNameLabel.text = lastName;
-			
-			NSString *classYear = [DEBUG_NAME_YEAR componentsSeparatedByString:@" "][2];
-			CGSize classYearSize = [classYear sizeWithAttributes:@{NSFontAttributeName : nameFont}];
-			UILabel *classYearLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + 15.0, (cellHeight / 2.0) + padding, classYearSize.width, labelHeight)];
-			classYearLabel.font = nameFont;
-			classYearLabel.text = classYear;
-			
-			UIButton *cog = [[UIButton alloc] initWithFrame:CGRectMake(avatar.frame.origin.x - (50.0 + 15.0), avatar.center.y - (50.0 / 1.9), 50.0, 50.0)];
-			[cog setImage:[UIImage imageNamed:@"Settings"] forState:UIControlStateNormal];
-			cog.alpha = 0.8;
-			
-			[cell.contentView addSubview:cog];
-			[cell.contentView addSubview:avatar];
-			[cell.contentView addSubview:firstNameLabel];
-			[cell.contentView addSubview:lastNameLabel];
-			[cell.contentView addSubview:classYearLabel];
-		}
-		
+			CGFloat xPadding = avatar.frame.origin.x + avatar.frame.size.width + padding;
 
-		
+			UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:28.0];
+			CGSize nameSize = [DEBUG_NAME sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, padding + 15.0, nameSize.width, nameSize.height)];
+			nameLabel.font = nameFont;
+			nameLabel.text = DEBUG_NAME;
+			
+			UIFont *classYearFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
+			CGSize classYearSize = [DEBUG_YEAR sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			UILabel *classYearLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, nameSize.height + 15.0, classYearSize.width, classYearSize.height)];
+			classYearLabel.font = classYearFont;
+			classYearLabel.textColor = [UIColor darkGrayColor];
+			classYearLabel.text = DEBUG_YEAR;
+			
+			CGFloat buttonHeight = 30.0;
+			UIButton *actionButton = [[UIButton alloc] initWithFrame:CGRectMake(xPadding, cellHeight - (buttonHeight * 2), cell.frame.size.width / 2.0, buttonHeight)];
+			actionButton.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+			actionButton.layer.masksToBounds = YES;
+			actionButton.layer.cornerRadius = 7.0;
+			
+			[actionButton setTitle:[self randomForkAction] forState:UIControlStateNormal];
+			[actionButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+			[actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+			[actionButton addTarget:self action:@selector(forkUser:) forControlEvents:UIControlEventTouchUpInside];
+			
+			[cell.contentView addSubview:avatar];
+			[cell.contentView addSubview:nameLabel];
+			[cell.contentView addSubview:classYearLabel];
+			[cell.contentView addSubview:actionButton];
+		}
 	} // self cell
 	
 	else if (indexPath.section == 1) {
@@ -180,6 +174,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (NSString *)randomForkAction {
+	int rand = arc4random_uniform(6);
+	switch (rand) {
+		default:
+		case 0:
+			return @"Fork me!";
+		case 1:
+			return @"Knife me!";
+		case 2:
+			return @"Spoon me!";
+		case 3:
+			return @"Spork me!";
+		case 4:
+			return @"Ladel me!";
+		case 5:
+			return @"Whisk me!";
+	}
+}
+
+- (void)forkUser:(UIButton *)button {
+
 }
 
 @end

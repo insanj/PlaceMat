@@ -12,10 +12,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-	
 	self.title = @"Settings";
-	self.view.backgroundColor = [MURTheme backgroundColor];
-	self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithNavigationController:self.navigationController];
 }
 
 - (void)didReceiveMemoryWarning {
