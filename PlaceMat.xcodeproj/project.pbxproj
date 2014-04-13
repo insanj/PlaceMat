@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2CA13F18FB0A1A009B5991 /* MURCheckinButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2CA13E18FB0A1A009B5991 /* MURCheckinButtonItem.m */; };
+		9E2CA14118FB0B89009B5991 /* Dining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2CA14018FB0B89009B5991 /* Dining@2x.png */; };
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
 		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
@@ -23,8 +25,6 @@
 		9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */; };
 		9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */; };
 		9EAE247318F853B5009A566A /* CheckIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAE246B18F853B5009A566A /* CheckIn@2x.png */; };
-		9EAE247418F853B5009A566A /* Chevron@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAE246C18F853B5009A566A /* Chevron@2x.png */; };
-		9EAE247518F853B5009A566A /* Dining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAE246D18F853B5009A566A /* Dining@2x.png */; };
 		9EAE247618F853B5009A566A /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAE246E18F853B5009A566A /* Logo@2x.png */; };
 		9EAE247718F853B5009A566A /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAE246F18F853B5009A566A /* Menu@2x.png */; };
 		9EAE247818F853B5009A566A /* Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAE247018F853B5009A566A /* Profile@2x.png */; };
@@ -49,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E2CA13D18FB0A1A009B5991 /* MURCheckinButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURCheckinButtonItem.h; sourceTree = "<group>"; };
+		9E2CA13E18FB0A1A009B5991 /* MURCheckinButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURCheckinButtonItem.m; sourceTree = "<group>"; };
+		9E2CA14018FB0B89009B5991 /* Dining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dining@2x.png"; sourceTree = "<group>"; };
 		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
 		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
 		9E4C69A418F8501700359C18 /* MURSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSocialViewController.h; sourceTree = "<group>"; };
@@ -73,8 +76,6 @@
 		9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURDiningViewController.h; sourceTree = "<group>"; };
 		9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURDiningViewController.m; sourceTree = "<group>"; };
 		9EAE246B18F853B5009A566A /* CheckIn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckIn@2x.png"; sourceTree = "<group>"; };
-		9EAE246C18F853B5009A566A /* Chevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chevron@2x.png"; sourceTree = "<group>"; };
-		9EAE246D18F853B5009A566A /* Dining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dining@2x.png"; sourceTree = "<group>"; };
 		9EAE246E18F853B5009A566A /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
 		9EAE246F18F853B5009A566A /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
 		9EAE247018F853B5009A566A /* Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Profile@2x.png"; sourceTree = "<group>"; };
@@ -175,6 +176,8 @@
 				9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */,
 				9E4C69A118F8494100359C18 /* MURSwitcherButton.h */,
 				9E4C69A218F8494100359C18 /* MURSwitcherButton.m */,
+				9E2CA13D18FB0A1A009B5991 /* MURCheckinButtonItem.h */,
+				9E2CA13E18FB0A1A009B5991 /* MURCheckinButtonItem.m */,
 				9EFA649018E6174300B9A095 /* MURNavigationController.h */,
 				9EFA649118E6174300B9A095 /* MURNavigationController.m */,
 				9EFA64A518E61E7100B9A095 /* Images.xcassets */,
@@ -216,8 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9EAE246B18F853B5009A566A /* CheckIn@2x.png */,
-				9EAE246C18F853B5009A566A /* Chevron@2x.png */,
-				9EAE246D18F853B5009A566A /* Dining@2x.png */,
+				9E2CA14018FB0B89009B5991 /* Dining@2x.png */,
 				9EAE246E18F853B5009A566A /* Logo@2x.png */,
 				9EAE246F18F853B5009A566A /* Menu@2x.png */,
 				9EAE247018F853B5009A566A /* Profile@2x.png */,
@@ -314,15 +316,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EAE247418F853B5009A566A /* Chevron@2x.png in Resources */,
 				9EAE247618F853B5009A566A /* Logo@2x.png in Resources */,
 				9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */,
 				9EAE247A18F853B5009A566A /* Social@2x.png in Resources */,
-				9EAE247518F853B5009A566A /* Dining@2x.png in Resources */,
 				9EAE247818F853B5009A566A /* Profile@2x.png in Resources */,
 				9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */,
 				9EAE247718F853B5009A566A /* Menu@2x.png in Resources */,
 				9EAE247918F853B5009A566A /* Settings@2x.png in Resources */,
+				9E2CA14118FB0B89009B5991 /* Dining@2x.png in Resources */,
 				9EAE247F18F85BA4009A566A /* Julian.jpg in Resources */,
 				9EAE247318F853B5009A566A /* CheckIn@2x.png in Resources */,
 			);
@@ -350,6 +351,7 @@
 				9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */,
 				9EFA649818E6180300B9A095 /* MURTheme.m in Sources */,
 				9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */,
+				9E2CA13F18FB0A1A009B5991 /* MURCheckinButtonItem.m in Sources */,
 				9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */,
 				9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */,
 				9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */,
@@ -471,12 +473,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9BEBD112-F1F2-4318-837B-B8487B2DC30C";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -486,12 +490,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9BEBD112-F1F2-4318-837B-B8487B2DC30C";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -10,6 +10,7 @@
 
 #import "MURTheme.h"
 #import "MURBarSwitcherItem.h"
+#import "MURCheckinButtonItem.h"
 
 @interface MURProfileViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 

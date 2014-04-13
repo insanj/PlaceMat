@@ -16,7 +16,7 @@
 // Custom initializer that creates the basic "chevron" switcher view
 - (instancetype)initWithNavigationController:(UINavigationController *)arg1 {
 	
-	MURSwitcherButton *chevron = [[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"Chevron"]];
+	MURSwitcherButton *chevron = [[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"Menu"]];
 	[chevron addTarget:self action:@selector(shootBalloons) forControlEvents:UIControlEventTouchUpInside];
 	
 	if ((self = [super initWithCustomView:chevron])) {

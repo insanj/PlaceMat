@@ -18,7 +18,8 @@
 	self.title = @"Profile";
 	self.view.backgroundColor = [MURTheme backgroundColor];
 	self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithNavigationController:self.navigationController];
-	
+	self.navigationItem.rightBarButtonItem = [[MURCheckinButtonItem alloc] initWithDefaults];
+											  
 	UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
 	[refresh addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
 	self.refreshControl = refresh;
