@@ -10,6 +10,8 @@
 
 @interface MURTheme : NSObject
 
++ (UIImage *)imageFromColor:(UIColor *)color withSize:(CGSize)size;
+
 // Main tint color for app. Used in NavigationBars.
 + (UIColor *)tintColor;
 

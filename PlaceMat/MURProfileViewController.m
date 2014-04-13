@@ -132,6 +132,7 @@
 			[actionButton setTitle:[self randomForkAction] forState:UIControlStateNormal];
 			[actionButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 			[actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+			[actionButton setBackgroundImage:[MURTheme imageFromColor:[UIColor darkGrayColor] withSize:actionButton.frame.size] forState:UIControlStateHighlighted];
 			[actionButton addTarget:self action:@selector(forkUser:) forControlEvents:UIControlEventTouchUpInside];
 			
 			[cell.contentView addSubview:avatar];
@@ -196,7 +197,25 @@
 }
 
 - (void)forkUser:(UIButton *)button {
-
+	NSString __block *replaced;
+	if ([button.titleLabel.text rangeOfString:@"Un-"].location != NSNotFound) {
+		replaced = [NSString stringWithFormat:@"%@!", [button.titleLabel.text componentsSeparatedByString:@"Un-"][1]];
+	}
+	
+	else if ([button.titleLabel.text rangeOfString:@"ed"].location == NSNotFound) {
+		replaced = [NSString stringWithFormat:@"%@ed!", [button.titleLabel.text componentsSeparatedByString:@" "][0]];
+	}
+	
+	else {
+		replaced = [NSString stringWithFormat:@"Un-%@", [button.titleLabel.text componentsSeparatedByString:@"!"][0]];
+	}
+	
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+	
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+		[button setTitle:replaced forState:UIControlStateNormal];
+	});
 }
 
 @end

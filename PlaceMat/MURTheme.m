@@ -10,6 +10,17 @@
 
 @implementation MURTheme
 
++ (UIImage *)imageFromColor:(UIColor *)color withSize:(CGSize)size{
+	UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	[color setFill];
+	CGContextFillRect(context, (CGRect){(CGPoint){0.0, 0.0}, size});
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	return image;
+}
+
 + (UIColor *)tintColor {
 	return [UIColor colorWithRed:100/255.0 green:157/255.0 blue:213/255.0 alpha:1.0];
 }
