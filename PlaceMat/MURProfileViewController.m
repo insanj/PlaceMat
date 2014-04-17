@@ -179,8 +179,23 @@
 	else if (indexPath.section == 2) {
 		cell = [tableView dequeueReusableCellWithIdentifier:@"FriendsCell"];
 		if (!cell) {
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"FriendsCell"];
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FriendsCell"];
 		}
+		
+		NSString *friend = _user.friends[indexPath.row];
+		cell.textLabel.text = friend;
+		cell.textLabel.numberOfLines = 1;
+		cell.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+		cell.textLabel.adjustsFontSizeToFitWidth = YES;
+		cell.textLabel.minimumScaleFactor = 0.1;
+		cell.textLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+		
+		UIImageView *thumbnail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[friend componentsSeparatedByString:@" "][0]]];
+		thumbnail.layer.masksToBounds = YES;
+		thumbnail.layer.cornerRadius = 7.0;
+		thumbnail.frame = CGRectInset(thumbnail.frame, 5.0, 5.0);
+								  
+		cell.accessoryView = thumbnail;
 	} // friends cell
 	
 	else if (indexPath.section == 3) {
