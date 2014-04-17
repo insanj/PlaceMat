@@ -11,6 +11,9 @@
 		9E2CA14118FB0B89009B5991 /* Dining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2CA14018FB0B89009B5991 /* Dining@2x.png */; };
 		9E2CA14718FB1191009B5991 /* MURBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2CA14618FB1191009B5991 /* MURBlurView.m */; };
 		9E2CA14D18FB158C009B5991 /* MURTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2CA14C18FB158C009B5991 /* MURTableViewController.m */; };
+		9E34BEA51900538A004F46A1 /* MURUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E34BEA41900538A004F46A1 /* MURUser.m */; };
+		9E34BEA719005596004F46A1 /* David.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEA619005596004F46A1 /* David.txt */; };
+		9E34BEA9190055DC004F46A1 /* Erin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEA8190055DC004F46A1 /* Erin.txt */; };
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
 		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
@@ -58,6 +61,10 @@
 		9E2CA14618FB1191009B5991 /* MURBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURBlurView.m; sourceTree = "<group>"; };
 		9E2CA14B18FB158C009B5991 /* MURTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURTableViewController.h; sourceTree = "<group>"; };
 		9E2CA14C18FB158C009B5991 /* MURTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURTableViewController.m; sourceTree = "<group>"; };
+		9E34BEA31900538A004F46A1 /* MURUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURUser.h; sourceTree = "<group>"; };
+		9E34BEA41900538A004F46A1 /* MURUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURUser.m; sourceTree = "<group>"; };
+		9E34BEA619005596004F46A1 /* David.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = David.txt; path = ../David.txt; sourceTree = "<group>"; };
+		9E34BEA8190055DC004F46A1 /* Erin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Erin.txt; path = ../Erin.txt; sourceTree = "<group>"; };
 		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
 		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
 		9E4C69A418F8501700359C18 /* MURSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSocialViewController.h; sourceTree = "<group>"; };
@@ -139,6 +146,8 @@
 				9E6DE51918E614B700E27AC2 /* MURAppDelegate.m */,
 				9EFA649618E6180300B9A095 /* MURTheme.h */,
 				9EFA649718E6180300B9A095 /* MURTheme.m */,
+				9E34BEA31900538A004F46A1 /* MURUser.h */,
+				9E34BEA41900538A004F46A1 /* MURUser.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -252,6 +261,8 @@
 		9EAE246A18F853B5009A566A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9E34BEA619005596004F46A1 /* David.txt */,
+				9E34BEA8190055DC004F46A1 /* Erin.txt */,
 				9EAE246B18F853B5009A566A /* CheckIn@2x.png */,
 				9E2CA14018FB0B89009B5991 /* Dining@2x.png */,
 				9EAE246E18F853B5009A566A /* Logo@2x.png */,
@@ -358,6 +369,8 @@
 				9EAE247718F853B5009A566A /* Menu@2x.png in Resources */,
 				9EAE247918F853B5009A566A /* Settings@2x.png in Resources */,
 				9E2CA14118FB0B89009B5991 /* Dining@2x.png in Resources */,
+				9E34BEA9190055DC004F46A1 /* Erin.txt in Resources */,
+				9E34BEA719005596004F46A1 /* David.txt in Resources */,
 				9EAE247F18F85BA4009A566A /* Julian.jpg in Resources */,
 				9EAE247318F853B5009A566A /* CheckIn@2x.png in Resources */,
 			);
@@ -379,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6DE51618E614B700E27AC2 /* main.m in Sources */,
+				9E34BEA51900538A004F46A1 /* MURUser.m in Sources */,
 				9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */,
 				9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */,
 				9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */,

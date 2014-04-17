@@ -15,8 +15,9 @@
 -(instancetype)initWithImage:(UIImage *)image {
 	UIImage *sized = [self sizeImageToDefault:image];
 	
-	if ((self = [super initWithFrame:CGRectMake(0.0, 0.0, sized.size.width, sized.size.height)])) {
+	if ((self = [super initWithFrame:CGRectMake(0.0, 0.0, sized.size.width + 5.0, sized.size.height + 5.0)])) {
 		[self setImage:sized forState:UIControlStateNormal];
+		self.contentMode = UIViewContentModeCenter;
 	}
 	
 	return self;

@@ -8,15 +8,13 @@
 
 #import "MURProfileViewController.h"
 
-#define DEBUG_NAME @"Julian Weiss"
-#define DEBUG_YEAR @"Class of 2017"
-
 @implementation MURProfileViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
 	self.title = @"Profile";
-	  
+	_user = [[MURUser alloc] initWithPath:[MURUser pathForDebugUser]];
+	
 	UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
 	[refresh addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
 	self.refreshControl = refresh;
@@ -43,7 +41,7 @@
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 5; // Self, Recent Activity, Friends, Dishes, Places
+	return 4; // Self, Recent Activity, Friends, Dishes, --Places--
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -67,8 +65,6 @@
 			return @"Friends";
 		case 3:
 			return @"Dishes";
-		case 4:
-			return @"Places";
 	}
 }
 
@@ -81,11 +77,17 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	if (section == 0) {
-		return 1;
+	switch (section) {
+		default:
+		case 0:
+			return 1;
+		case 1:
+			return _user.activities.count;
+		case 2:
+			return _user.friends.count;
+		case 3:
+			return _user.dishes.count;
 	}
-	
-	return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -104,24 +106,24 @@
 			CGFloat padding = (cellHeight - avatarHeight) / 2.0;
 			
 			UIImageView *avatar = [[UIImageView alloc] initWithFrame:CGRectMake(padding, padding, avatarHeight, avatarHeight)];
-			avatar.image = [UIImage imageNamed:@"Julian.jpg"];
+			avatar.image = _user.avatar;
 			avatar.layer.masksToBounds = YES;
 			avatar.layer.cornerRadius = 10.0;
 			
 			CGFloat xPadding = avatar.frame.origin.x + avatar.frame.size.width + padding;
 
 			UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:28.0];
-			CGSize nameSize = [DEBUG_NAME sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			CGSize nameSize = [_user.name sizeWithAttributes:@{NSFontAttributeName : nameFont}];
 			UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, padding + 15.0, nameSize.width, nameSize.height)];
 			nameLabel.font = nameFont;
-			nameLabel.text = DEBUG_NAME;
+			nameLabel.text = _user.name;
 			
 			UIFont *classYearFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
-			CGSize classYearSize = [DEBUG_YEAR sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			CGSize classYearSize = [_user.classOf sizeWithAttributes:@{NSFontAttributeName : nameFont}];
 			UILabel *classYearLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, nameSize.height + 15.0, classYearSize.width, classYearSize.height)];
 			classYearLabel.font = classYearFont;
 			classYearLabel.textColor = [UIColor darkGrayColor];
-			classYearLabel.text = DEBUG_YEAR;
+			classYearLabel.text = _user.classOf;
 			
 			CGFloat buttonHeight = 30.0;
 			UIButton *actionButton = [[UIButton alloc] initWithFrame:CGRectMake(xPadding, cellHeight - (buttonHeight * 2), cell.frame.size.width / 2.0, buttonHeight)];
@@ -162,13 +164,6 @@
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DishesCell"];
 		}
 	} // dishes cell
-	
-	else {
-		cell = [tableView dequeueReusableCellWithIdentifier:@"PlacesCell"];
-		if (!cell) {
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"PlacesCell"];
-		}
-	} // places cell
 	
 	return cell;
 }

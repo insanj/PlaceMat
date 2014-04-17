@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MURTableViewController.h"
+#import "MURUser.h"
 
 @interface MURProfileViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property(nonatomic, retain) MURUser *user;
 
 @end

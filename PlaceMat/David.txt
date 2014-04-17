@@ -1,0 +1,16 @@
+name = David Libbey
+class = 2016
+checked in = Danforth
+Activity 1 = David Libbey checked into Danforth; 10 min 
+Activity 2 = Maggie Curtis spooned David; 5 hr 
+Activity 3 = David Libbey rated Chicken Vera Cruz; *** 
+Activity 4 = Said: "Had a great time in Danforth tonight!"; 17 hr 
+Activity 5 = Checked into Danforth; 17 hr 
+Friend 1 = Louise Lu Yi 
+Friend 2 = Jessica Sheng 
+Friend 3 = Maggie Curtis 
+Friend 4 = Julian Weiss 
+Friend 5 = Erin Cherry
+Dish 1 = Falafel and Salad; *****
+Dish 2 = Curried Turkey Wrap; *****
+Dish 3 = Turkey with Orange Sauce; ****
