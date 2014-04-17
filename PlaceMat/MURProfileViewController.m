@@ -154,27 +154,24 @@
 		cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityCell"];
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ActivityCell"];
+						
+			CGRect wrappedFrame = CGRectMake(15.0, 0.0, cell.frame.size.width - 110.0, cell.frame.size.height);
+			UILabel *wrapping = [[UILabel alloc] initWithFrame:wrappedFrame];
+			wrapping.tag = 1;
+			[cell.contentView addSubview:wrapping];
 		}
 		
 		//CGFloat labelWidth = self.view.frame.size.width - 50.0;
 		NSArray *activity = [_user.activities[indexPath.row] componentsSeparatedByString:@"; "];
-			
-		NSString *labelRawText = activity[0];
-		NSString *labelText = @"";
-		for (int i = 0; i < labelRawText.length; i++) {
-			if ((i+1) % 29 == 0) {
-				labelText = [labelText stringByAppendingString:@"\n"];
-			}
-			
-			labelText = [labelText stringByAppendingFormat:@"%c", [labelRawText characterAtIndex:i]];
-		}
-
-		cell.textLabel.text = labelText;
-		cell.textLabel.numberOfLines = 2;
-		cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-		cell.textLabel.adjustsFontSizeToFitWidth = YES;
-		cell.textLabel.minimumScaleFactor = 0.1;
-		cell.textLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+		NSString *labelText = activity[0];
+		
+		UILabel *wrapping = (UILabel *)[cell.contentView viewWithTag:1];
+		wrapping.text = labelText;
+		wrapping.numberOfLines = 2;
+		wrapping.lineBreakMode = NSLineBreakByWordWrapping;
+		wrapping.adjustsFontSizeToFitWidth = YES;
+		wrapping.minimumScaleFactor = 0.1;
+		wrapping.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
 		
 		if (activity.count > 1) {
 			cell.detailTextLabel.text = activity[1];
@@ -208,26 +205,24 @@
 		cell = [tableView dequeueReusableCellWithIdentifier:@"DishesCell"];
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DishesCell"];
+			
+			CGRect wrappedFrame = CGRectMake(15.0, 0.0, cell.frame.size.width - 110.0, cell.frame.size.height);
+			UILabel *wrapping = [[UILabel alloc] initWithFrame:wrappedFrame];
+			wrapping.tag = 1;
+			[cell.contentView addSubview:wrapping];
 		}
 		
 		NSArray *dish = [_user.dishes[indexPath.row] componentsSeparatedByString:@"; "];
 		
-		NSString *labelRawText = dish[0];
-		NSString *labelText = @"";
-		for (int i = 0; i < labelRawText.length; i++) {
-			if ((i+1) % 29 == 0) {
-				labelText = [labelText stringByAppendingString:@"\n"];
-			}
-			
-			labelText = [labelText stringByAppendingFormat:@"%c", [labelRawText characterAtIndex:i]];
-		}
+		NSString *labelText = dish[0];
 		
-		cell.textLabel.text = labelText;
-		cell.textLabel.numberOfLines = 2;
-		cell.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-		cell.textLabel.adjustsFontSizeToFitWidth = YES;
-		cell.textLabel.minimumScaleFactor = 0.1;
-		cell.textLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+		UILabel *wrapping = (UILabel *)[cell.contentView viewWithTag:1];
+		wrapping.text = labelText;
+		wrapping.numberOfLines = 2;
+		wrapping.lineBreakMode = NSLineBreakByTruncatingTail;
+		wrapping.adjustsFontSizeToFitWidth = YES;
+		wrapping.minimumScaleFactor = 0.1;
+		wrapping.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
 		
 		if (dish.count > 1) {
 			cell.detailTextLabel.text = dish[1];

@@ -26,7 +26,6 @@
 			break;
 	}
 	
-	NSLog(@"%i", ran);
 	return [[NSBundle mainBundle] pathForResource:name ofType:@"txt"];
 }
 
