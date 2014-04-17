@@ -14,6 +14,12 @@
 		9E34BEA51900538A004F46A1 /* MURUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E34BEA41900538A004F46A1 /* MURUser.m */; };
 		9E34BEA719005596004F46A1 /* David.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEA619005596004F46A1 /* David.txt */; };
 		9E34BEA9190055DC004F46A1 /* Erin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEA8190055DC004F46A1 /* Erin.txt */; };
+		9E34BEB119005DCB004F46A1 /* David@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAB19005DCB004F46A1 /* David@2x.png */; };
+		9E34BEB219005DCB004F46A1 /* Erin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAC19005DCB004F46A1 /* Erin@2x.png */; };
+		9E34BEB319005DCB004F46A1 /* Jessica@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAD19005DCB004F46A1 /* Jessica@2x.png */; };
+		9E34BEB419005DCB004F46A1 /* Julian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAE19005DCB004F46A1 /* Julian@2x.png */; };
+		9E34BEB519005DCB004F46A1 /* Louise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAF19005DCB004F46A1 /* Louise@2x.png */; };
+		9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEB019005DCB004F46A1 /* Maggie@2x.png */; };
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
 		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
@@ -65,6 +71,12 @@
 		9E34BEA41900538A004F46A1 /* MURUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURUser.m; sourceTree = "<group>"; };
 		9E34BEA619005596004F46A1 /* David.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = David.txt; path = ../David.txt; sourceTree = "<group>"; };
 		9E34BEA8190055DC004F46A1 /* Erin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Erin.txt; path = ../Erin.txt; sourceTree = "<group>"; };
+		9E34BEAB19005DCB004F46A1 /* David@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "David@2x.png"; sourceTree = "<group>"; };
+		9E34BEAC19005DCB004F46A1 /* Erin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Erin@2x.png"; sourceTree = "<group>"; };
+		9E34BEAD19005DCB004F46A1 /* Jessica@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jessica@2x.png"; sourceTree = "<group>"; };
+		9E34BEAE19005DCB004F46A1 /* Julian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Julian@2x.png"; sourceTree = "<group>"; };
+		9E34BEAF19005DCB004F46A1 /* Louise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Louise@2x.png"; sourceTree = "<group>"; };
+		9E34BEB019005DCB004F46A1 /* Maggie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Maggie@2x.png"; sourceTree = "<group>"; };
 		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
 		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
 		9E4C69A418F8501700359C18 /* MURSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSocialViewController.h; sourceTree = "<group>"; };
@@ -165,6 +177,19 @@
 			name = BarButtonItems;
 			sourceTree = "<group>";
 		};
+		9E34BEAA19005DCB004F46A1 /* Avatars */ = {
+			isa = PBXGroup;
+			children = (
+				9E34BEAB19005DCB004F46A1 /* David@2x.png */,
+				9E34BEAC19005DCB004F46A1 /* Erin@2x.png */,
+				9E34BEAD19005DCB004F46A1 /* Jessica@2x.png */,
+				9E34BEAE19005DCB004F46A1 /* Julian@2x.png */,
+				9E34BEAF19005DCB004F46A1 /* Louise@2x.png */,
+				9E34BEB019005DCB004F46A1 /* Maggie@2x.png */,
+			);
+			path = Avatars;
+			sourceTree = "<group>";
+		};
 		9E4C69AA18F8517100359C18 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +286,7 @@
 		9EAE246A18F853B5009A566A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9E34BEAA19005DCB004F46A1 /* Avatars */,
 				9E34BEA619005596004F46A1 /* David.txt */,
 				9E34BEA8190055DC004F46A1 /* Erin.txt */,
 				9EAE246B18F853B5009A566A /* CheckIn@2x.png */,
@@ -361,16 +387,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E34BEB219005DCB004F46A1 /* Erin@2x.png in Resources */,
+				9E34BEB519005DCB004F46A1 /* Louise@2x.png in Resources */,
+				9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */,
 				9EAE247618F853B5009A566A /* Logo@2x.png in Resources */,
 				9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */,
 				9EAE247A18F853B5009A566A /* Social@2x.png in Resources */,
 				9EAE247818F853B5009A566A /* Profile@2x.png in Resources */,
 				9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */,
 				9EAE247718F853B5009A566A /* Menu@2x.png in Resources */,
+				9E34BEB319005DCB004F46A1 /* Jessica@2x.png in Resources */,
 				9EAE247918F853B5009A566A /* Settings@2x.png in Resources */,
+				9E34BEB119005DCB004F46A1 /* David@2x.png in Resources */,
 				9E2CA14118FB0B89009B5991 /* Dining@2x.png in Resources */,
 				9E34BEA9190055DC004F46A1 /* Erin.txt in Resources */,
 				9E34BEA719005596004F46A1 /* David.txt in Resources */,
+				9E34BEB419005DCB004F46A1 /* Julian@2x.png in Resources */,
 				9EAE247F18F85BA4009A566A /* Julian.jpg in Resources */,
 				9EAE247318F853B5009A566A /* CheckIn@2x.png in Resources */,
 			);

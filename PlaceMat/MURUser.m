@@ -22,7 +22,7 @@
 		_dishes = [[NSMutableArray alloc] init];
 		
 		NSError *error;
-		NSString *raw = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:&error];
+		NSString *raw = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
 		
 		NSArray *lines = [raw componentsSeparatedByString:@"\n"];
 		for (NSString *line in lines) {
@@ -55,7 +55,8 @@
 			}
 		}
 		
-		_avatar = [UIImage imageNamed:[path substringWithRange:NSMakeRange(0, path.length - 4)]];
+		NSString *imagePath = [[path substringWithRange:NSMakeRange(0, path.length - 4)] stringByAppendingString:@".png"];
+		_avatar = [UIImage imageWithContentsOfFile:imagePath];
 	}
 	
 	return self;

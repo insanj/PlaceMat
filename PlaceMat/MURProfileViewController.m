@@ -149,6 +149,31 @@
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ActivityCell"];
 		}
+		
+		//CGFloat labelWidth = self.view.frame.size.width - 50.0;
+		NSArray *activity = [_user.activities[indexPath.row] componentsSeparatedByString:@"; "];
+			
+		NSString *labelRawText = activity[0];
+		NSString *labelText = @"";
+		for (int i = 0; i < labelRawText.length; i++) {
+			if ((i+1) % 29 == 0) {
+				labelText = [labelText stringByAppendingString:@"\n"];
+			}
+			
+			labelText = [labelText stringByAppendingFormat:@"%c", [labelRawText characterAtIndex:i]];
+		}
+
+		cell.textLabel.text = labelText;
+		cell.textLabel.numberOfLines = 2;
+		cell.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+		cell.textLabel.adjustsFontSizeToFitWidth = YES;
+		cell.textLabel.minimumScaleFactor = 0.1;
+		cell.textLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+		
+		if (activity.count > 1) {
+			cell.detailTextLabel.text = activity[1];
+			cell.detailTextLabel.adjustsFontSizeToFitWidth = YES;
+		}
 	} // activity cell
 	
 	else if (indexPath.section == 2) {
