@@ -20,6 +20,8 @@
 		9E34BEB419005DCB004F46A1 /* Julian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAE19005DCB004F46A1 /* Julian@2x.png */; };
 		9E34BEB519005DCB004F46A1 /* Louise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAF19005DCB004F46A1 /* Louise@2x.png */; };
 		9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEB019005DCB004F46A1 /* Maggie@2x.png */; };
+		9E34BEB819006328004F46A1 /* Regina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEB719006328004F46A1 /* Regina@2x.png */; };
+		9E34BEBA1900636A004F46A1 /* Regina.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEB91900636A004F46A1 /* Regina.txt */; };
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
 		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
@@ -77,6 +79,8 @@
 		9E34BEAE19005DCB004F46A1 /* Julian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Julian@2x.png"; sourceTree = "<group>"; };
 		9E34BEAF19005DCB004F46A1 /* Louise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Louise@2x.png"; sourceTree = "<group>"; };
 		9E34BEB019005DCB004F46A1 /* Maggie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Maggie@2x.png"; sourceTree = "<group>"; };
+		9E34BEB719006328004F46A1 /* Regina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Regina@2x.png"; sourceTree = "<group>"; };
+		9E34BEB91900636A004F46A1 /* Regina.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Regina.txt; sourceTree = "<group>"; };
 		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
 		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
 		9E4C69A418F8501700359C18 /* MURSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSocialViewController.h; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				9E34BEAE19005DCB004F46A1 /* Julian@2x.png */,
 				9E34BEAF19005DCB004F46A1 /* Louise@2x.png */,
 				9E34BEB019005DCB004F46A1 /* Maggie@2x.png */,
+				9E34BEB719006328004F46A1 /* Regina@2x.png */,
 			);
 			path = Avatars;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				9E34BEAA19005DCB004F46A1 /* Avatars */,
 				9E34BEA619005596004F46A1 /* David.txt */,
 				9E34BEA8190055DC004F46A1 /* Erin.txt */,
+				9E34BEB91900636A004F46A1 /* Regina.txt */,
 				9EAE246B18F853B5009A566A /* CheckIn@2x.png */,
 				9E2CA14018FB0B89009B5991 /* Dining@2x.png */,
 				9EAE246E18F853B5009A566A /* Logo@2x.png */,
@@ -400,10 +406,12 @@
 				9EAE247918F853B5009A566A /* Settings@2x.png in Resources */,
 				9E34BEB119005DCB004F46A1 /* David@2x.png in Resources */,
 				9E2CA14118FB0B89009B5991 /* Dining@2x.png in Resources */,
+				9E34BEB819006328004F46A1 /* Regina@2x.png in Resources */,
 				9E34BEA9190055DC004F46A1 /* Erin.txt in Resources */,
 				9E34BEA719005596004F46A1 /* David.txt in Resources */,
 				9E34BEB419005DCB004F46A1 /* Julian@2x.png in Resources */,
 				9EAE247F18F85BA4009A566A /* Julian.jpg in Resources */,
+				9E34BEBA1900636A004F46A1 /* Regina.txt in Resources */,
 				9EAE247318F853B5009A566A /* CheckIn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

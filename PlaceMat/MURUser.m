@@ -11,7 +11,23 @@
 @implementation MURUser
 
 + (NSString *)pathForDebugUser {
-	return [[NSBundle mainBundle] pathForResource:@"Erin" ofType:@"txt"];
+	int ran = arc4random_uniform(3);
+	NSString *name;
+	switch (ran) {
+		default:
+		case 0:
+			name = @"David";
+			break;
+		case 1:
+			name = @"Erin";
+			break;
+		case 2:
+			name = @"Regina";
+			break;
+	}
+	
+	NSLog(@"%i", ran);
+	return [[NSBundle mainBundle] pathForResource:name ofType:@"txt"];
 }
 
 - (instancetype)initWithPath:(NSString *)path {

@@ -45,11 +45,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-	return section == 0 ? 0.0 : 45.0;
+	return section == 0 ? 0.0 : 35.0;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
 	UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *) view;
+	header.contentView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
 	header.textLabel.font = [UIFont boldSystemFontOfSize:20.0];
 	header.alpha = 0.85;
 }
@@ -109,14 +110,19 @@
 			avatar.image = _user.avatar;
 			avatar.layer.masksToBounds = YES;
 			avatar.layer.cornerRadius = 10.0;
+			avatar.contentMode = UIViewContentModeScaleAspectFill;
 			
 			CGFloat xPadding = avatar.frame.origin.x + avatar.frame.size.width + padding;
 
 			UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:28.0];
 			CGSize nameSize = [_user.name sizeWithAttributes:@{NSFontAttributeName : nameFont}];
-			UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, padding + 15.0, nameSize.width, nameSize.height)];
+			CGRect nameRect = CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, padding + 15.0, 0, nameSize.height);
+			nameRect.size.width = cell.frame.size.width - nameRect.origin.x - padding;
+			UILabel *nameLabel = [[UILabel alloc] initWithFrame:nameRect];
 			nameLabel.font = nameFont;
 			nameLabel.text = _user.name;
+			nameLabel.adjustsFontSizeToFitWidth = YES;
+			nameLabel.minimumScaleFactor = 0.5;
 			
 			UIFont *classYearFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
 			CGSize classYearSize = [_user.classOf sizeWithAttributes:@{NSFontAttributeName : nameFont}];
@@ -165,7 +171,7 @@
 
 		cell.textLabel.text = labelText;
 		cell.textLabel.numberOfLines = 2;
-		cell.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+		cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
 		cell.textLabel.adjustsFontSizeToFitWidth = YES;
 		cell.textLabel.minimumScaleFactor = 0.1;
 		cell.textLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
@@ -202,6 +208,30 @@
 		cell = [tableView dequeueReusableCellWithIdentifier:@"DishesCell"];
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DishesCell"];
+		}
+		
+		NSArray *dish = [_user.dishes[indexPath.row] componentsSeparatedByString:@"; "];
+		
+		NSString *labelRawText = dish[0];
+		NSString *labelText = @"";
+		for (int i = 0; i < labelRawText.length; i++) {
+			if ((i+1) % 29 == 0) {
+				labelText = [labelText stringByAppendingString:@"\n"];
+			}
+			
+			labelText = [labelText stringByAppendingFormat:@"%c", [labelRawText characterAtIndex:i]];
+		}
+		
+		cell.textLabel.text = labelText;
+		cell.textLabel.numberOfLines = 2;
+		cell.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+		cell.textLabel.adjustsFontSizeToFitWidth = YES;
+		cell.textLabel.minimumScaleFactor = 0.1;
+		cell.textLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+		
+		if (dish.count > 1) {
+			cell.detailTextLabel.text = dish[1];
+			cell.detailTextLabel.adjustsFontSizeToFitWidth = YES;
 		}
 	} // dishes cell
 	

@@ -1,0 +1,16 @@
+name = Regina George
+class = 2014
+checked in = Starbucks
+Activity 1 = Regina George checked into Starbucks; 2 min
+Activity 2 = Said: “The barrista at Bucks is so gross.”; 10 min
+Activity 3 = You spooned Cady; 30 min
+Activity 4 = You rated the Chef’s Salad; *
+Activity 5 = You knifed Gretchen Weiner; 1 hr
+Friend 1 = Gretchen Weiner
+Friend 2 = Cady Herron
+Friend 3 = David Libbey
+Friend 4 = Julian Weiss
+Friend 5 = Erin Cherry
+Dish 1 = Cranberry Chicken Salad; *****
+Dish 2 = Cinnamon Crispin’ Sundae; *****
+Dish 3 = Pork Chop with Mashed Potatoes; ****

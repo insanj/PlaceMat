@@ -16,6 +16,7 @@
 	self.view.backgroundColor = [MURTheme backgroundColor];
 	self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithNavigationController:self.navigationController];
 	self.navigationItem.rightBarButtonItem = [[MURCheckinButtonItem alloc] initWithDefaults];
+	self.tableView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
