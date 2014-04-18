@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MURSwitcherButton.h"
 
-@interface MURCheckinButtonItem : UIBarButtonItem
+@interface MURCheckinButtonItem : UIBarButtonItem <UIAlertViewDelegate> {
+	UIAlertView *checkInAlert;
+}
 
 - (instancetype)initWithDefaults;
 
