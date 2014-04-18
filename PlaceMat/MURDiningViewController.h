@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MURTableViewController.h"
+#import "MURPlace.h"
 
-@interface MURDiningViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MURDiningViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource> {
+	NSArray *places, *firstLetters;
+}
 
 @end

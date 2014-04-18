@@ -1,0 +1,16 @@
+name = Jessica Sheng
+class = 2016
+checked in = Connections
+Activity 1 = Jessica Sheng checked into Connections;  14 min
+Activity 2 = Jessica Sheng rated the Morrocan Lentil Soup; 8 min
+Activity 3 = Jessica Sheng spooned Louise; 7 min
+Activity 4 = Jessica Sheng spooned Regina; 4 min
+Activity 5 = Jessica Sheng rated the Turkey Pepperjack Sandwich; 1 min
+Friend 1 = David Libbey
+Friend 2 = Regina George
+Friend 3 = Louise Lu
+Friend 4 = Julian Weiss
+Friend 5 = Erin Cherry
+Dish 1 = Moroccan Lentil Soup ★★★★★
+Dish 2 = Herb stuffing ★★★★
+Dish 3 =  Pepperjack grilled cheese ★★★★

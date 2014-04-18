@@ -196,7 +196,8 @@
 		UIImageView *thumbnail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[friend componentsSeparatedByString:@" "][0]]];
 		thumbnail.layer.masksToBounds = YES;
 		thumbnail.layer.cornerRadius = 7.0;
-		thumbnail.frame = CGRectInset(thumbnail.frame, 5.0, 5.0);
+		thumbnail.contentMode = UIViewContentModeScaleAspectFill;
+		thumbnail.frame = CGRectMake(0.0, 5.0, 45.0, 45.0);
 								  
 		cell.accessoryView = thumbnail;
 	} // friends cell

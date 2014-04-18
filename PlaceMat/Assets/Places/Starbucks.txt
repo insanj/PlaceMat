@@ -1,0 +1,4 @@
+name = Starbucks
+money = declining
+serving = all-day
+time = 7:30 - 0:00

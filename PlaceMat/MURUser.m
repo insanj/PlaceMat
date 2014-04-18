@@ -11,7 +11,7 @@
 @implementation MURUser
 
 + (NSString *)pathForDebugUser {
-	int ran = arc4random_uniform(3);
+	int ran = arc4random_uniform(6);
 	NSString *name;
 	switch (ran) {
 		default:
@@ -23,6 +23,15 @@
 			break;
 		case 2:
 			name = @"Regina";
+			break;
+		case 3:
+			name = @"Cam";
+			break;
+		case 4:
+			name = @"Jessica";
+			break;
+		case 5:
+			name = @"Joel";
 			break;
 	}
 	

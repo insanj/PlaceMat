@@ -1,0 +1,9 @@
+name = Douglass
+money = unlimited, declining ($7.50)
+serving = lunch
+time = 11:00 - 14:30
+Dish 1 = Seasoned Roast Beef; gf
+Dish 2 = Quinoa and Red Pepper Slider; v; gf
+Dish 3 = Loaded Potato Soup; v
+Dish 4 = Tofu and Veggie Teriyaki; v; gf
+Dish 5 = Cheeseburger Pie

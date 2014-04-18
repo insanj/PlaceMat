@@ -1,0 +1,17 @@
+name = Joel Seligman
+class = 1971
+checked in = Danforth
+Activity 1 = Joel Seligman checked into Danforth; 1 min
+Activity 2 = Joel Seligman rated the Tilapia Taco; ★★★★★
+Activity 3 = Joel Seligman spooned Peter Lennie; 12 min
+Activity 4 = Joel Seligman rated the Six Onion Soup; ★★★★
+Activity 5 = Joel Seligman  knifed Gretchen Weiner; 2 hr
+Friend 1 = Peter Lennie
+Friend 2 = Ronald J. Paprocki
+Friend 3 = Richard Feldmanh
+Friend 4 = Wendi Heinzelman
+Friend 5 = David Lewis
+Friend 6 = Mark Zupan
+Dish 1 = Tilapia Taco; ★★★★★
+Dish 2 = Turkey Hotdog; ★
+Dish 3 = Six Onion Soup; ★★★★
