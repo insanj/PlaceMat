@@ -118,7 +118,7 @@
 	//	idx++;
 	//}
 	
-	int idx = indexPath.section == 0 ? indexPath.section + indexPath.row : (2 * indexPath.section) + (indexPath.row - 1);
+	long idx = indexPath.section == 0 ? indexPath.section + indexPath.row : (2 * indexPath.section) + (indexPath.row - 1);
 
 	MURPlace *place = places[idx];
 	UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];

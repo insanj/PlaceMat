@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MURTheme.h"
 #import "MURCheckinButtonItem.h"
+#import "MURFirstRunViewController.h"
 
 @interface MURNavigationController : UINavigationController
 

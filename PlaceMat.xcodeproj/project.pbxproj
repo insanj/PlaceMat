@@ -55,6 +55,7 @@
 		9E6DE52D18E614B700E27AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */; };
 		9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */; };
 		9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */; };
+		9EC81F361905D9720016B822 /* MURFirstRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC81F351905D9720016B822 /* MURFirstRunViewController.m */; };
 		9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649118E6174300B9A095 /* MURNavigationController.m */; };
 		9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649418E617E200B9A095 /* MURProfileViewController.m */; };
 		9EFA649818E6180300B9A095 /* MURTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649718E6180300B9A095 /* MURTheme.m */; };
@@ -134,6 +135,8 @@
 		9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceMatTests.m; sourceTree = "<group>"; };
 		9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURDiningViewController.h; sourceTree = "<group>"; };
 		9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURDiningViewController.m; sourceTree = "<group>"; };
+		9EC81F341905D9720016B822 /* MURFirstRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURFirstRunViewController.h; sourceTree = "<group>"; };
+		9EC81F351905D9720016B822 /* MURFirstRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURFirstRunViewController.m; sourceTree = "<group>"; };
 		9EFA649018E6174300B9A095 /* MURNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURNavigationController.h; sourceTree = "<group>"; };
 		9EFA649118E6174300B9A095 /* MURNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURNavigationController.m; sourceTree = "<group>"; };
 		9EFA649318E617E200B9A095 /* MURProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURProfileViewController.h; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 				9EFA649118E6174300B9A095 /* MURNavigationController.m */,
 				9E2CA14B18FB158C009B5991 /* MURTableViewController.h */,
 				9E2CA14C18FB158C009B5991 /* MURTableViewController.m */,
+				9EC81F341905D9720016B822 /* MURFirstRunViewController.h */,
+				9EC81F351905D9720016B822 /* MURFirstRunViewController.m */,
 				9EFA649318E617E200B9A095 /* MURProfileViewController.h */,
 				9EFA649418E617E200B9A095 /* MURProfileViewController.m */,
 				9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */,
@@ -315,9 +320,9 @@
 			isa = PBXGroup;
 			children = (
 				9EAE246A18F853B5009A566A /* Assets */,
+				9E2CA14918FB14C3009B5991 /* Classes */,
 				9E4C69AA18F8517100359C18 /* ViewControllers */,
 				9E2CA14818FB14A3009B5991 /* Views */,
-				9E2CA14918FB14C3009B5991 /* Classes */,
 				9E2CA14A18FB14D2009B5991 /* BarButtonItems */,
 				9EFA64A518E61E7100B9A095 /* Images.xcassets */,
 				9E6DE51018E614B700E27AC2 /* Supporting Files */,
@@ -498,6 +503,7 @@
 				9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */,
 				9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */,
 				9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */,
+				9EC81F361905D9720016B822 /* MURFirstRunViewController.m in Sources */,
 				9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */,
 				9EFA649818E6180300B9A095 /* MURTheme.m in Sources */,
 				9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */,
