@@ -19,7 +19,6 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - UITableViewDelegate
-#pragma mark - UITableViewDataSource
+
 
 @end

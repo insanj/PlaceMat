@@ -243,9 +243,8 @@
 	switch (rand) {
 		default:
 		case 0:
-			return @"Fork me!";
 		case 1:
-			return @"Knife me!";
+			return @"Fork me!";
 		case 2:
 			return @"Spoon me!";
 		case 3:
