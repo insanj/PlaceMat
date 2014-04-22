@@ -26,20 +26,7 @@
 	self.refreshControl = refresh;
 	
 	self.tableView.delaysContentTouches = NO;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-	if (![_name isEqualToString:@"Profile"] || !_name) {
-		self.navigationController.navigationBar.topItem.title = @"";
-		self.title = _name;
-	}
-	
-	else {
-		self.navigationController.navigationBar.topItem.title = _name;
-		self.title = _name;
-	}
-	
-	[super viewWillAppear:animated];
+	self.title = [_name componentsSeparatedByString:@" "][0];
 }
 
 - (instancetype)init {

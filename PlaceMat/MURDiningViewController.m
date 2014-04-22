@@ -14,6 +14,7 @@
     [super viewDidLoad];
 	
 	self.title = @"Dining";
+	self.tableView.sectionIndexBackgroundColor = [UIColor colorWithWhite:1.0 alpha:0.25];
 	places = [self placesWithNames:@[@"Commons", @"Connections", @"Danforth", @"Douglass", @"Meliora", @"Pura Vida", @"Starbucks"]];
 	
 	NSMutableArray *running = [[NSMutableArray alloc] init];

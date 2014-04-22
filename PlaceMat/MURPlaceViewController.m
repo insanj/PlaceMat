@@ -26,7 +26,8 @@
 	_collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
 	[_collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"PlaceCell"];
 	_collectionView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
-	_collectionView.contentInset = UIEdgeInsetsMake(44.0, 0.0, 0.0, 0.0);
+	_collectionView.contentInset = UIEdgeInsetsMake(50.0, 0.0, 0.0, 0.0);
+	_collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(64.0, 0.0, 0.0, 0.0);
 	_collectionView.delegate = self;
 	_collectionView.dataSource = self;
 	[self.view addSubview:_collectionView];
