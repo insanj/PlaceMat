@@ -11,8 +11,10 @@
 
 @interface MURCheckinButtonItem : UIBarButtonItem <UIAlertViewDelegate> {
 	UIAlertView *checkInAlert;
+	NSString *overrideName;
 }
 
 - (instancetype)initWithDefaults;
+- (instancetype)initWithName:(NSString *)name;
 
 @end

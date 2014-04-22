@@ -10,6 +10,17 @@
 
 @implementation MURCheckinButtonItem
 
+
+- (instancetype)initWithName:(NSString *)name {
+	self = [super initWithCustomView:[[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"CheckIn"]]];
+	if (self) {
+		overrideName = name;
+		[self.button addTarget:self action:@selector(showSpecificCheckIn) forControlEvents:UIControlEventTouchUpInside];
+	}
+	
+	return self;
+}
+
 - (instancetype)initWithDefaults {
 	self = [super initWithCustomView:[[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"CheckIn"]]];
 	if (self) {
@@ -25,6 +36,11 @@
 
 - (void)showCheckin {
 	checkInAlert = [[UIAlertView alloc] initWithTitle:@"Check in" message:[NSString stringWithFormat:@"Looks like you're near %@. Would you like to share this location?", [self randomPlace]] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Share", @"Manual", nil];
+	[checkInAlert show];
+}
+
+- (void)showSpecificCheckIn {
+	checkInAlert = [[UIAlertView alloc] initWithTitle:@"Check in" message:[NSString stringWithFormat:@"Would you like to check in to %@?", overrideName] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Share", @"Manual", nil];
 	[checkInAlert show];
 }
 

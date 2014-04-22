@@ -56,7 +56,6 @@
 		9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */; };
 		9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */; };
 		9E9E148A1906F85B00403B9A /* Cheeseburger Pie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14841906F85B00403B9A /* Cheeseburger Pie.png */; };
-		9E9E148B1906F85B00403B9A /* Icon in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14851906F85B00403B9A /* Icon */; };
 		9E9E148C1906F85B00403B9A /* Loaded Potato Soup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14861906F85B00403B9A /* Loaded Potato Soup.png */; };
 		9E9E148D1906F85B00403B9A /* Quinoa and Red Pepper Slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */; };
 		9E9E148E1906F85B00403B9A /* Seasoned Roast Beef.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */; };
@@ -179,7 +178,6 @@
 		9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURDiningViewController.h; sourceTree = "<group>"; };
 		9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURDiningViewController.m; sourceTree = "<group>"; };
 		9E9E14841906F85B00403B9A /* Cheeseburger Pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cheeseburger Pie.png"; sourceTree = "<group>"; };
-		9E9E14851906F85B00403B9A /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
 		9E9E14861906F85B00403B9A /* Loaded Potato Soup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Loaded Potato Soup.png"; sourceTree = "<group>"; };
 		9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Quinoa and Red Pepper Slider.png"; sourceTree = "<group>"; };
 		9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seasoned Roast Beef.png"; sourceTree = "<group>"; };
@@ -458,7 +456,6 @@
 			isa = PBXGroup;
 			children = (
 				9E9E14841906F85B00403B9A /* Cheeseburger Pie.png */,
-				9E9E14851906F85B00403B9A /* Icon */,
 				9E9E14861906F85B00403B9A /* Loaded Potato Soup.png */,
 				9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */,
 				9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */,
@@ -680,7 +677,6 @@
 				9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */,
 				9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */,
 				9E9F3D271906C76B002B80E0 /* Italian Sausage.png in Resources */,
-				9E9E148B1906F85B00403B9A /* Icon in Resources */,
 				9E6602DB1901D70F00299A8E /* Commons.txt in Resources */,
 				9E9E148E1906F85B00403B9A /* Seasoned Roast Beef.png in Resources */,
 				9E9F3D2F1906C76B002B80E0 /* Egg & Cheese Muffin.png in Resources */,
@@ -869,14 +865,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7AF2E868-F9D0-46FD-931C-BF8B16850ABA";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
@@ -887,14 +883,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7AF2E868-F9D0-46FD-931C-BF8B16850ABA";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};

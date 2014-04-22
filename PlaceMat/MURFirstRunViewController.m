@@ -43,14 +43,14 @@
 	[login setTitle:@"Log in" forState:UIControlStateNormal];
 	login.titleLabel.font = [UIFont systemFontOfSize:20.0];
 	login.frame = glad.frame;
-	login.center = CGPointMake(login.center.x, (createAccount.center.y + (createAccount.frame.size.height / 2.0)) + (padding / 1.5));
+	login.center = CGPointMake(login.center.x, (createAccount.center.y + (createAccount.frame.size.height / 2.0)) + (padding / 1.4));
 	
 	UIButton *facebook = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[facebook addTarget:self action:@selector(resignFirstRunView) forControlEvents:UIControlEventTouchUpInside];
 	[facebook setTitle:@"Connect with Facebook" forState:UIControlStateNormal];
 	facebook.titleLabel.font = [UIFont systemFontOfSize:20.0];
 	facebook.frame = login.frame;
-	facebook.center = CGPointMake(facebook.center.x, (login.center.y + (login.frame.size.height / 2.0)) + (padding / 1.5));
+	facebook.center = CGPointMake(facebook.center.x, (login.center.y + (login.frame.size.height / 2.0)) + (padding / 1.4));
 	
 	[self.view addSubview:welcome];
 	[self.view addSubview:glad];

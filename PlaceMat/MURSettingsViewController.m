@@ -379,15 +379,28 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
+	// Allergy pop-over
 	if (indexPath.section == 6 && indexPath.row == 5) {
 		UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Pick Any Allergies" delegate:self cancelButtonTitle:@"Done" destructiveButtonTitle:nil otherButtonTitles:@"Peanuts", @"Tree Nuts", @"Eggs", @"Wheat", @"Milk", @"Soy", @"Shellfish", @"Fish", nil];
 		[sheet showInView:self.view];
 	}
 	
+	// Log out
 	else if (indexPath.section == 4 && indexPath.row == 0) {
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		[defaults removeObjectForKey:@"Vegetarian"];
+		[defaults removeObjectForKey:@"Vegan"];
+		[defaults removeObjectForKey:@"Pescatarian"];
+		[defaults removeObjectForKey:@"Lactose"];
+		[defaults removeObjectForKey:@"Gluten"];
+		[defaults removeObjectForKey:@"Kosher"];
+		[defaults removeObjectForKey:@"Halal"];
+		[defaults removeObjectForKey:@"Notifications"];
+		[defaults removeObjectForKey:@"Sounds"];
+		[defaults removeObjectForKey:@"TextSize"];
+			
 		[self.navigationController setViewControllers:@[[[MURProfileViewController alloc] init], [[MURFirstRunViewController alloc] init]] animated:YES];
 	}
-	
 }
 
 - (void)willPresentActionSheet:(UIActionSheet *)actionSheet {
@@ -402,7 +415,6 @@
         }
     }
 }
-
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];

@@ -43,6 +43,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	self.navigationItem.rightBarButtonItem = [[MURCheckinButtonItem alloc] initWithName:_place.name];
+
 	CGFloat side = (self.view.bounds.size.height / 2.0) - (_collectionView.frame.size.height + 100.0);
 	UIImageView *bigPlaceImage = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, (self.view.bounds.size.height / 2.0) + 30.0, side, side)];
 	bigPlaceImage.contentMode = UIViewContentModeScaleAspectFill;
