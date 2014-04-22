@@ -81,17 +81,17 @@
 		9E9F3D281906C76B002B80E0 /* Mel Burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D081906C76B002B80E0 /* Mel Burger.png */; };
 		9E9F3D291906C76B002B80E0 /* Meliora Veggie Burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D091906C76B002B80E0 /* Meliora Veggie Burger.png */; };
 		9E9F3D2A1906C76B002B80E0 /* Poutine.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D0A1906C76B002B80E0 /* Poutine.png */; };
-		9E9F3D2B1906C76B002B80E0 /* Toasted Cheese _ Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D0B1906C76B002B80E0 /* Toasted Cheese _ Tomato.png */; };
+		9E9F3D2B1906C76B002B80E0 /* Toasted Cheese & Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D0B1906C76B002B80E0 /* Toasted Cheese & Tomato.png */; };
 		9E9F3D2C1906C76B002B80E0 /* Blueberry Cheese Croissant.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D0D1906C76B002B80E0 /* Blueberry Cheese Croissant.png */; };
 		9E9F3D2D1906C76B002B80E0 /* Blueberry Scone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D0E1906C76B002B80E0 /* Blueberry Scone.png */; };
 		9E9F3D2E1906C76B002B80E0 /* Bold Roast Coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D0F1906C76B002B80E0 /* Bold Roast Coffee.png */; };
-		9E9F3D2F1906C76B002B80E0 /* Egg _ Cheese Muffin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D101906C76B002B80E0 /* Egg _ Cheese Muffin.png */; };
-		9E9F3D301906C76B002B80E0 /* Homestyle M_M Cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D111906C76B002B80E0 /* Homestyle M_M Cookie.png */; };
+		9E9F3D2F1906C76B002B80E0 /* Egg & Cheese Muffin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D101906C76B002B80E0 /* Egg & Cheese Muffin.png */; };
+		9E9F3D301906C76B002B80E0 /* Homestyle M&M Cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D111906C76B002B80E0 /* Homestyle M&M Cookie.png */; };
 		9E9F3D311906C76B002B80E0 /* Caramel Macchiato.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D131906C76B002B80E0 /* Caramel Macchiato.png */; };
 		9E9F3D321906C76B002B80E0 /* Cheesecake Brownie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D141906C76B002B80E0 /* Cheesecake Brownie.png */; };
 		9E9F3D331906C76B002B80E0 /* Chocolate Marble Cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D151906C76B002B80E0 /* Chocolate Marble Cake.png */; };
 		9E9F3D341906C76B002B80E0 /* Green Tea Latte.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D161906C76B002B80E0 /* Green Tea Latte.png */; };
-		9E9F3D351906C76B002B80E0 /* Ham _ Swiss Panini.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D171906C76B002B80E0 /* Ham _ Swiss Panini.png */; };
+		9E9F3D351906C76B002B80E0 /* Ham & Swiss Panini.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3D171906C76B002B80E0 /* Ham & Swiss Panini.png */; };
 		9EC81F361905D9720016B822 /* MURFirstRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC81F351905D9720016B822 /* MURFirstRunViewController.m */; };
 		9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649118E6174300B9A095 /* MURNavigationController.m */; };
 		9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649418E617E200B9A095 /* MURProfileViewController.m */; };
@@ -199,17 +199,17 @@
 		9E9F3D081906C76B002B80E0 /* Mel Burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mel Burger.png"; sourceTree = "<group>"; };
 		9E9F3D091906C76B002B80E0 /* Meliora Veggie Burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Meliora Veggie Burger.png"; sourceTree = "<group>"; };
 		9E9F3D0A1906C76B002B80E0 /* Poutine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poutine.png; sourceTree = "<group>"; };
-		9E9F3D0B1906C76B002B80E0 /* Toasted Cheese _ Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toasted Cheese _ Tomato.png"; sourceTree = "<group>"; };
+		9E9F3D0B1906C76B002B80E0 /* Toasted Cheese & Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toasted Cheese & Tomato.png"; sourceTree = "<group>"; };
 		9E9F3D0D1906C76B002B80E0 /* Blueberry Cheese Croissant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blueberry Cheese Croissant.png"; sourceTree = "<group>"; };
 		9E9F3D0E1906C76B002B80E0 /* Blueberry Scone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blueberry Scone.png"; sourceTree = "<group>"; };
 		9E9F3D0F1906C76B002B80E0 /* Bold Roast Coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bold Roast Coffee.png"; sourceTree = "<group>"; };
-		9E9F3D101906C76B002B80E0 /* Egg _ Cheese Muffin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Egg _ Cheese Muffin.png"; sourceTree = "<group>"; };
-		9E9F3D111906C76B002B80E0 /* Homestyle M_M Cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Homestyle M_M Cookie.png"; sourceTree = "<group>"; };
+		9E9F3D101906C76B002B80E0 /* Egg & Cheese Muffin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Egg & Cheese Muffin.png"; sourceTree = "<group>"; };
+		9E9F3D111906C76B002B80E0 /* Homestyle M&M Cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Homestyle M&M Cookie.png"; sourceTree = "<group>"; };
 		9E9F3D131906C76B002B80E0 /* Caramel Macchiato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Caramel Macchiato.png"; sourceTree = "<group>"; };
 		9E9F3D141906C76B002B80E0 /* Cheesecake Brownie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cheesecake Brownie.png"; sourceTree = "<group>"; };
 		9E9F3D151906C76B002B80E0 /* Chocolate Marble Cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chocolate Marble Cake.png"; sourceTree = "<group>"; };
 		9E9F3D161906C76B002B80E0 /* Green Tea Latte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Tea Latte.png"; sourceTree = "<group>"; };
-		9E9F3D171906C76B002B80E0 /* Ham _ Swiss Panini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ham _ Swiss Panini.png"; sourceTree = "<group>"; };
+		9E9F3D171906C76B002B80E0 /* Ham & Swiss Panini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ham & Swiss Panini.png"; sourceTree = "<group>"; };
 		9EC81F341905D9720016B822 /* MURFirstRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURFirstRunViewController.h; sourceTree = "<group>"; };
 		9EC81F351905D9720016B822 /* MURFirstRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURFirstRunViewController.m; sourceTree = "<group>"; };
 		9EFA649018E6174300B9A095 /* MURNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURNavigationController.h; sourceTree = "<group>"; };
@@ -498,7 +498,7 @@
 				9E9F3D081906C76B002B80E0 /* Mel Burger.png */,
 				9E9F3D091906C76B002B80E0 /* Meliora Veggie Burger.png */,
 				9E9F3D0A1906C76B002B80E0 /* Poutine.png */,
-				9E9F3D0B1906C76B002B80E0 /* Toasted Cheese _ Tomato.png */,
+				9E9F3D0B1906C76B002B80E0 /* Toasted Cheese & Tomato.png */,
 			);
 			path = "Meliora Images";
 			sourceTree = "<group>";
@@ -509,8 +509,8 @@
 				9E9F3D0D1906C76B002B80E0 /* Blueberry Cheese Croissant.png */,
 				9E9F3D0E1906C76B002B80E0 /* Blueberry Scone.png */,
 				9E9F3D0F1906C76B002B80E0 /* Bold Roast Coffee.png */,
-				9E9F3D101906C76B002B80E0 /* Egg _ Cheese Muffin.png */,
-				9E9F3D111906C76B002B80E0 /* Homestyle M_M Cookie.png */,
+				9E9F3D101906C76B002B80E0 /* Egg & Cheese Muffin.png */,
+				9E9F3D111906C76B002B80E0 /* Homestyle M&M Cookie.png */,
 			);
 			path = "Pura Vida Images";
 			sourceTree = "<group>";
@@ -522,7 +522,7 @@
 				9E9F3D141906C76B002B80E0 /* Cheesecake Brownie.png */,
 				9E9F3D151906C76B002B80E0 /* Chocolate Marble Cake.png */,
 				9E9F3D161906C76B002B80E0 /* Green Tea Latte.png */,
-				9E9F3D171906C76B002B80E0 /* Ham _ Swiss Panini.png */,
+				9E9F3D171906C76B002B80E0 /* Ham & Swiss Panini.png */,
 			);
 			path = "Starbucks Images";
 			sourceTree = "<group>";
@@ -653,7 +653,7 @@
 				9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */,
 				9E9F3D271906C76B002B80E0 /* Italian Sausage.png in Resources */,
 				9E6602DB1901D70F00299A8E /* Commons.txt in Resources */,
-				9E9F3D2F1906C76B002B80E0 /* Egg _ Cheese Muffin.png in Resources */,
+				9E9F3D2F1906C76B002B80E0 /* Egg & Cheese Muffin.png in Resources */,
 				9E9F3D321906C76B002B80E0 /* Cheesecake Brownie.png in Resources */,
 				9E34BEB319005DCB004F46A1 /* Jessica@2x.png in Resources */,
 				9E9F3D331906C76B002B80E0 /* Chocolate Marble Cake.png in Resources */,
@@ -666,7 +666,7 @@
 				9E9F3D311906C76B002B80E0 /* Caramel Macchiato.png in Resources */,
 				9E6602EC1901DD8200299A8E /* Joel.txt in Resources */,
 				9E6602C91901C32900299A8E /* Profile@2x.png in Resources */,
-				9E9F3D301906C76B002B80E0 /* Homestyle M_M Cookie.png in Resources */,
+				9E9F3D301906C76B002B80E0 /* Homestyle M&M Cookie.png in Resources */,
 				9E34BEB119005DCB004F46A1 /* David@2x.png in Resources */,
 				9E9F3D1E1906C76B002B80E0 /* Cheddar Scallion Bagel.png in Resources */,
 				9E34BEB819006328004F46A1 /* Regina@2x.png in Resources */,
@@ -677,10 +677,10 @@
 				9E9F3D211906C76B002B80E0 /* Strawberry Smoothie.png in Resources */,
 				9E6602E61901D71A00299A8E /* Starbucks@2x.png in Resources */,
 				9E9F3D1A1906C76B002B80E0 /* Hot Dog.png in Resources */,
-				9E9F3D2B1906C76B002B80E0 /* Toasted Cheese _ Tomato.png in Resources */,
+				9E9F3D2B1906C76B002B80E0 /* Toasted Cheese & Tomato.png in Resources */,
 				9E9F3D291906C76B002B80E0 /* Meliora Veggie Burger.png in Resources */,
 				9E6602C61901C32900299A8E /* Dining@2x.png in Resources */,
-				9E9F3D351906C76B002B80E0 /* Ham _ Swiss Panini.png in Resources */,
+				9E9F3D351906C76B002B80E0 /* Ham & Swiss Panini.png in Resources */,
 				9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */,
 				9E6602D21901C32D00299A8E /* Regina.txt in Resources */,
 				9E6602CB1901C32900299A8E /* Social@2x.png in Resources */,
@@ -837,13 +837,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9BEBD112-F1F2-4318-837B-B8487B2DC30C";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
@@ -854,13 +855,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9BEBD112-F1F2-4318-837B-B8487B2DC30C";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};

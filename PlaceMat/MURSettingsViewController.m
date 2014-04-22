@@ -178,6 +178,7 @@
 		}
 		
 		UITextField *usernameEntry = (UITextField *)[cell.contentView viewWithTag:1];
+		usernameEntry.secureTextEntry = YES;
 		usernameEntry.placeholder = @"new password";
 	}
 	
@@ -267,6 +268,7 @@
 	
 		else {
 			cell.textLabel.text = @"Allergies...";
+			cell.textLabel.font = [UIFont boldSystemFontOfSize:cell.textLabel.font.pointSize];
 			[restSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"Allergies"]];
 			[restSwitch addTarget:self action:@selector(switchForGluten) forControlEvents:UIControlEventValueChanged];
 		}

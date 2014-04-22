@@ -11,7 +11,7 @@
 #import "MURProfileViewController.h"
 #import "MURFirstRunViewController.h"
 
-@interface MURSettingsViewController : MURTableViewController  <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIActionSheetDelegate>
+@interface MURSettingsViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIActionSheetDelegate>
 
 @property(nonatomic, retain) NSDictionary *specifiers;
 @property(nonatomic, retain) NSArray *cells;

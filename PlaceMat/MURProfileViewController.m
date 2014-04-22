@@ -162,13 +162,20 @@
 			actionButton.layer.masksToBounds = YES;
 			actionButton.layer.cornerRadius = 7.0;
 			
-			[actionButton setTitle:[self randomForkAction] forState:UIControlStateNormal];
+			if ([_name isEqualToString:@"Profile"]) {
+				[actionButton setTitle:@"Create status..." forState:UIControlStateNormal];
+				[actionButton addTarget:self action:@selector(createStatus:) forControlEvents:UIControlEventTouchUpInside];
+			}
+			
+			else {
+				[actionButton setTitle:[self randomForkAction] forState:UIControlStateNormal];
+				[actionButton addTarget:self action:@selector(forkUser:) forControlEvents:UIControlEventTouchUpInside];
+			}
+			
 			[actionButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+			[actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 			[actionButton setBackgroundImage:[MURTheme imageFromColor:[UIColor colorWithWhite:0.9 alpha:1.0] withSize:actionButton.frame.size] forState:UIControlStateNormal];
-
-			[actionButton addTarget:self action:@selector(darkenButton:) forControlEvents:UIControlEventTouchDown];
-			[actionButton addTarget:self action:@selector(forkUser:) forControlEvents:UIControlEventTouchUpInside];
-			[actionButton addTarget:self action:@selector(lightenButton:) forControlEvents:UIControlEventTouchCancel];
+			[actionButton setBackgroundImage:[MURTheme imageFromColor:[UIColor darkGrayColor] withSize:actionButton.frame.size] forState:UIControlStateHighlighted];
 			
 			[cell.contentView addSubview:avatar];
 			[cell.contentView addSubview:nameLabel];
@@ -298,11 +305,6 @@
 	}
 }
 
-- (void)darkenButton:(UIButton *)button {
-	[button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-	[button setBackgroundImage:[MURTheme imageFromColor:[UIColor darkGrayColor] withSize:button.frame.size] forState:UIControlStateHighlighted];
-}
-
 - (void)forkUser:(UIButton *)button {
 	NSString __block *replaced;
 	if ([button.titleLabel.text rangeOfString:@"Un-"].location != NSNotFound) {
@@ -317,20 +319,30 @@
 		replaced = [NSString stringWithFormat:@"Un-%@", [button.titleLabel.text componentsSeparatedByString:@"!"][0]];
 	}
 	
-	[self lightenButton:button];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-	
 	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 		[button setTitle:replaced forState:UIControlStateNormal];
 	});
 }
 
-
-- (void)lightenButton:(UIButton *)button {
-	[button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-	[button setBackgroundImage:[MURTheme imageFromColor:[UIColor colorWithWhite:0.9 alpha:1.0] withSize:button.frame.size] forState:UIControlStateNormal];
+- (void)createStatus:(UIButton *)button {
+	UIAlertView *statusAlert = [[UIAlertView alloc] initWithTitle:@"New Status" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Post", nil];
+	statusAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+	statusAlert.delegate = self;
+	[statusAlert textFieldAtIndex:0].placeholder = @"I'm feeling...";
+	[statusAlert show];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if (buttonIndex != [alertView cancelButtonIndex]) {
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+			[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+			UIAlertView *confirmAlert = [[UIAlertView alloc] initWithTitle:@"Status Posted" message:@"Your status has been posted and shared with your nearby friends successfully." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Sweet!", nil];
+			[confirmAlert show];
+		});
+	}
+}
 
 @end

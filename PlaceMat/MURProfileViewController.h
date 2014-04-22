@@ -10,7 +10,7 @@
 #import "MURTableViewController.h"
 #import "MURUser.h"
 
-@interface MURProfileViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MURProfileViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property(nonatomic, retain) MURUser *user;
 @property(nonatomic, retain) NSString *name;
