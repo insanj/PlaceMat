@@ -79,7 +79,7 @@
 		
 		NSArray *cells = _specifiers[key];
 		for (NSDictionary *thisCell in cells) {
-			for (NSString *keykey in thisCell.allKeys) {
+			for (int i = 0; i < thisCell.allKeys.count; i++) {
 				if (counter++ == section) {
 					header.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
 					return;
@@ -98,7 +98,7 @@
 		
 		NSArray *cells = _specifiers[key];
 		for (NSDictionary *thisCell in cells) {
-			for (NSString *keykey in thisCell.allKeys) {
+			for (int i = 0; i < thisCell.allKeys.count; i++) {
 				if (counter++ == section) {
 					return 30.0;
 				}

@@ -68,7 +68,7 @@
 	NSArray *reverseOrder = [datesToActivities.allKeys sortedArrayUsingDescriptors:descriptors];
 	
 	NSMutableArray *ranAround = [[NSMutableArray alloc] init];
-	for (int i = reverseOrder.count-1; i >= 0; i--) {
+	for (int i = ((int)reverseOrder.count)-1; i >= 0; i--) {
 		[ranAround addObject:[datesToActivities objectForKey:reverseOrder[i]]];
 	}
 	
