@@ -60,6 +60,7 @@
 		9E9E148D1906F85B00403B9A /* Quinoa and Red Pepper Slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */; };
 		9E9E148E1906F85B00403B9A /* Seasoned Roast Beef.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */; };
 		9E9E148F1906F85B00403B9A /* Tofu and Veggie Teriyaki.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14891906F85B00403B9A /* Tofu and Veggie Teriyaki.png */; };
+		9E9E1491190724FF00403B9A /* Nutrition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E1490190724FF00403B9A /* Nutrition@2x.png */; };
 		9E9F3CDF1906BA0A002B80E0 /* Connections.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CDE1906BA0A002B80E0 /* Connections.txt */; };
 		9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE01906BA0F002B80E0 /* Meliora.txt */; };
 		9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */; };
@@ -182,6 +183,7 @@
 		9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Quinoa and Red Pepper Slider.png"; sourceTree = "<group>"; };
 		9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seasoned Roast Beef.png"; sourceTree = "<group>"; };
 		9E9E14891906F85B00403B9A /* Tofu and Veggie Teriyaki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tofu and Veggie Teriyaki.png"; sourceTree = "<group>"; };
+		9E9E1490190724FF00403B9A /* Nutrition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nutrition@2x.png"; sourceTree = "<group>"; };
 		9E9F3CDE1906BA0A002B80E0 /* Connections.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Connections.txt; sourceTree = "<group>"; };
 		9E9F3CE01906BA0F002B80E0 /* Meliora.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Meliora.txt; sourceTree = "<group>"; };
 		9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pura Vida.txt"; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 		9EAE246A18F853B5009A566A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9E9E1490190724FF00403B9A /* Nutrition@2x.png */,
 				9E9F3CF31906C76B002B80E0 /* Thumbnails */,
 				9E6602D61901D70F00299A8E /* Places */,
 				9E6602CC1901C32D00299A8E /* Users */,
@@ -690,6 +693,7 @@
 				9E9F3D1C1906C76B002B80E0 /* Philly Cheesesteak.png in Resources */,
 				9E9F3CE51906BA1C002B80E0 /* Connections@2x.png in Resources */,
 				9E9F3D311906C76B002B80E0 /* Caramel Macchiato.png in Resources */,
+				9E9E1491190724FF00403B9A /* Nutrition@2x.png in Resources */,
 				9E6602EC1901DD8200299A8E /* Joel.txt in Resources */,
 				9E6602C91901C32900299A8E /* Profile@2x.png in Resources */,
 				9E9F3D301906C76B002B80E0 /* Homestyle M&M Cookie.png in Resources */,
@@ -865,14 +869,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7AF2E868-F9D0-46FD-931C-BF8B16850ABA";
+				PROVISIONING_PROFILE = "9BAB6E58-7512-4F03-AB81-C30457BD0702";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
@@ -883,14 +887,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Julian Weiss (24X8MVUSCN)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlaceMat/PlaceMat-Prefix.pch";
 				INFOPLIST_FILE = "PlaceMat/PlaceMat-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7AF2E868-F9D0-46FD-931C-BF8B16850ABA";
+				PROVISIONING_PROFILE = "9BAB6E58-7512-4F03-AB81-C30457BD0702";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};

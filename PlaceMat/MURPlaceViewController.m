@@ -65,7 +65,7 @@
 	legend.textAlignment = NSTextAlignmentCenter;
 	legend.font = [UIFont systemFontOfSize:13.0];
 	legend.textColor = [UIColor lightGrayColor];
-	legend.text = @"Vegan: *     Vegetarian: ☀︎     Gluten-free: ✝";
+	legend.text = @"Vegan: *     Vegetarian: ✭     Gluten-free: ✝";
 	[self.view addSubview:legend];
 }
 
@@ -125,21 +125,21 @@
 
 	for (int i = 1; i < dishComponents.count; i++) {
 		if ([dishComponents[i] rangeOfString:@"vin"].location != NSNotFound) {
-			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Vegan"]) {
+			//if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Vegan"]) {
 				foodCaption.text = [foodCaption.text stringByAppendingString:@" *"];
-			}
+			//}
 		}
 		
 		else if ([dishComponents[i] rangeOfString:@"v"].location != NSNotFound) {
-			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Vegetarian"]) {
-				foodCaption.text = [foodCaption.text stringByAppendingString:@" ☀︎"];
-			}
+			//if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Vegetarian"]) {
+				foodCaption.text = [foodCaption.text stringByAppendingString:@" ✭"];
+			//}
 		}
 		
 		else if ([dishComponents[i] rangeOfString:@"gf"].location != NSNotFound) {
-			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Gluten"]) {
+			//if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Gluten"]) {
 				foodCaption.text = [foodCaption.text stringByAppendingString:@" ✝"];
-			}
+			//}
 		}
 	}
 	
@@ -149,7 +149,30 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+	UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+	UIButton *giantNutrition = [UIButton buttonWithType:UIButtonTypeCustom];
+	giantNutrition.frame = [self collectionView:collectionView cellForItemAtIndexPath:indexPath].frame;
+	giantNutrition.backgroundColor = [UIColor colorWithWhite:0.25 alpha:0.6];
+	[giantNutrition addTarget:self action:@selector(dismissGiantView:) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIImageView *nutritionImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Nutrition"]];
+	nutritionImage.contentMode = UIViewContentModeCenter;
+	[giantNutrition addSubview:nutritionImage];
+	
+	[keyWindow addSubview:giantNutrition];
+	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.75 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
+		giantNutrition.frame = keyWindow.bounds;
+		nutritionImage.center = giantNutrition.center;
+	}completion:^(BOOL finished){
+	}];
+}
 
+- (void)dismissGiantView:(UIButton *)giantNutrition {
+	[UIView animateWithDuration:0.25 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
+		giantNutrition.alpha = 0.0;
+	}completion:^(BOOL finished){
+		[giantNutrition removeFromSuperview];
+	}];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -126,6 +126,11 @@
 		evenMoreLabel.font = [UIFont systemFontOfSize:14.0];
 		evenMoreLabel.tag = 4;
 		
+		/*UILabel *friendsAmount = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 40.0, 40.0)];
+		friendsAmount.textColor = [UIColor blackColor];
+		friendsAmount.font = [UIFont systemFontOfSize:10.0];
+		cell.accessoryView = friendsAmount;*/
+		
 		[cell.contentView addSubview:imageView];
 		[cell.contentView addSubview:nameLabel];
 		[cell.contentView addSubview:detailLabel];
@@ -144,13 +149,14 @@
 	imageView.image = place.avatar;
 	
 	UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
-	nameLabel.text = place.name;
+	nameLabel.text = [NSString stringWithFormat:@"%@ (%@ 👤)", place.name, [@(arc4random_uniform(5)+1) stringValue]];
 	
 	UILabel *detailLabel = (UILabel *)[cell viewWithTag:3];
 	detailLabel.text = place.description;
 	
 	UILabel *evenMoreLabel = (UILabel *)[cell viewWithTag:4];
 	evenMoreLabel.text = [place.serving stringByAppendingString:[@" from " stringByAppendingString:place.time]];
+
 	
 	return cell;
 }

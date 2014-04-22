@@ -1,11 +1,11 @@
 name = Jessica Sheng
 class = 2016
 checked in = Connections
-Activity 1 = Jessica Sheng checked into Connections;  14 min
-Activity 2 = Jessica Sheng rated the Morrocan Lentil Soup; 8 min
+Activity 1 = Jessica Sheng rated the Turkey Pepperjack Sandwich; 1 min
+Activity 2 = Jessica Sheng spooned Regina; 4 min
 Activity 3 = Jessica Sheng spooned Louise; 7 min
-Activity 4 = Jessica Sheng spooned Regina; 4 min
-Activity 5 = Jessica Sheng rated the Turkey Pepperjack Sandwich; 1 min
+Activity 4 = Jessica Sheng rated the Morrocan Lentil Soup; 8 min
+Activity 5 = Jessica Sheng checked into Connections;  14 min
 Friend 1 = Joel Seligman
 Friend 2 = David Libbey
 Friend 3 = Regina George

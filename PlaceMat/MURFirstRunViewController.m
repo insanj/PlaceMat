@@ -50,7 +50,7 @@
 	[facebook setTitle:@"Connect with Facebook" forState:UIControlStateNormal];
 	facebook.titleLabel.font = [UIFont systemFontOfSize:20.0];
 	facebook.frame = login.frame;
-	facebook.center = CGPointMake(facebook.center.x, (login.center.y + (login.frame.size.height / 2.0)) + (padding / 1.4));
+	facebook.center = CGPointMake(facebook.center.x, (login.center.y + (login.frame.size.height / 2.0)) + (padding / 1.3));
 	
 	[self.view addSubview:welcome];
 	[self.view addSubview:glad];
