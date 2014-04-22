@@ -43,6 +43,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	CGFloat side = (self.view.bounds.size.height / 2.0) - (_collectionView.frame.size.height + 100.0);
+	UIImageView *bigPlaceImage = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, (self.view.bounds.size.height / 2.0) + 30.0, side, side)];
+	bigPlaceImage.contentMode = UIViewContentModeScaleAspectFill;
+	bigPlaceImage.layer.masksToBounds = YES;
+	bigPlaceImage.layer.cornerRadius = 10.0;
+	bigPlaceImage.image = _place.avatar;
+	[self.view addSubview:bigPlaceImage];
+	
+	UITextView *bigPlaceText = [[UITextView alloc] initWithFrame:CGRectMake(bigPlaceImage.frame.origin.x + bigPlaceImage.frame.size.width + 10.0, bigPlaceImage.frame.origin.y, self.view.bounds.size.width - (20.0 + bigPlaceImage.frame.size.width + 20.0), bigPlaceImage.frame.size.height)];
+	bigPlaceText.editable = NO;
+	bigPlaceText.backgroundColor = [UIColor clearColor];
+	bigPlaceText.textColor = [UIColor blackColor];
+	bigPlaceText.font = [UIFont systemFontOfSize:14.0];
+	bigPlaceText.text = [NSString stringWithFormat:@"Welcome to %@. You can use %@ to buy %@ during %@.", [_place.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" "]], _place.description, _place.serving, _place.time];
+	[self.view addSubview:bigPlaceText];
+	
 	UILabel *legend = [[UILabel alloc] initWithFrame:CGRectMake(0.0, self.view.frame.size.height - 50.0, self.view.frame.size.width, 50.0)];
 	legend.textAlignment = NSTextAlignmentCenter;
 	legend.font = [UIFont systemFontOfSize:13.0];

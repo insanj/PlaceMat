@@ -55,6 +55,12 @@
 		9E6DE52D18E614B700E27AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */; };
 		9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */; };
 		9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */; };
+		9E9E148A1906F85B00403B9A /* Cheeseburger Pie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14841906F85B00403B9A /* Cheeseburger Pie.png */; };
+		9E9E148B1906F85B00403B9A /* Icon in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14851906F85B00403B9A /* Icon */; };
+		9E9E148C1906F85B00403B9A /* Loaded Potato Soup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14861906F85B00403B9A /* Loaded Potato Soup.png */; };
+		9E9E148D1906F85B00403B9A /* Quinoa and Red Pepper Slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */; };
+		9E9E148E1906F85B00403B9A /* Seasoned Roast Beef.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */; };
+		9E9E148F1906F85B00403B9A /* Tofu and Veggie Teriyaki.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14891906F85B00403B9A /* Tofu and Veggie Teriyaki.png */; };
 		9E9F3CDF1906BA0A002B80E0 /* Connections.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CDE1906BA0A002B80E0 /* Connections.txt */; };
 		9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE01906BA0F002B80E0 /* Meliora.txt */; };
 		9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */; };
@@ -172,6 +178,12 @@
 		9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceMatTests.m; sourceTree = "<group>"; };
 		9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURDiningViewController.h; sourceTree = "<group>"; };
 		9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURDiningViewController.m; sourceTree = "<group>"; };
+		9E9E14841906F85B00403B9A /* Cheeseburger Pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cheeseburger Pie.png"; sourceTree = "<group>"; };
+		9E9E14851906F85B00403B9A /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
+		9E9E14861906F85B00403B9A /* Loaded Potato Soup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Loaded Potato Soup.png"; sourceTree = "<group>"; };
+		9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Quinoa and Red Pepper Slider.png"; sourceTree = "<group>"; };
+		9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seasoned Roast Beef.png"; sourceTree = "<group>"; };
+		9E9E14891906F85B00403B9A /* Tofu and Veggie Teriyaki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tofu and Veggie Teriyaki.png"; sourceTree = "<group>"; };
 		9E9F3CDE1906BA0A002B80E0 /* Connections.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Connections.txt; sourceTree = "<group>"; };
 		9E9F3CE01906BA0F002B80E0 /* Meliora.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Meliora.txt; sourceTree = "<group>"; };
 		9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pura Vida.txt"; sourceTree = "<group>"; };
@@ -442,9 +454,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9E9E14831906F85B00403B9A /* Douglass Images */ = {
+			isa = PBXGroup;
+			children = (
+				9E9E14841906F85B00403B9A /* Cheeseburger Pie.png */,
+				9E9E14851906F85B00403B9A /* Icon */,
+				9E9E14861906F85B00403B9A /* Loaded Potato Soup.png */,
+				9E9E14871906F85B00403B9A /* Quinoa and Red Pepper Slider.png */,
+				9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */,
+				9E9E14891906F85B00403B9A /* Tofu and Veggie Teriyaki.png */,
+			);
+			path = "Douglass Images";
+			sourceTree = "<group>";
+		};
 		9E9F3CF31906C76B002B80E0 /* Thumbnails */ = {
 			isa = PBXGroup;
 			children = (
+				9E9E14831906F85B00403B9A /* Douglass Images */,
 				9E9F3CF41906C76B002B80E0 /* Commons Images */,
 				9E9F3CFA1906C76B002B80E0 /* Connections Images */,
 				9E9F3D001906C76B002B80E0 /* Danforth Images */,
@@ -619,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6602E51901D71A00299A8E /* Douglass@2x.png in Resources */,
+				9E9E148F1906F85B00403B9A /* Tofu and Veggie Teriyaki.png in Resources */,
 				9E34BEB219005DCB004F46A1 /* Erin@2x.png in Resources */,
 				9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */,
 				9E9F3D281906C76B002B80E0 /* Mel Burger.png in Resources */,
@@ -638,6 +665,7 @@
 				9E9F3CE91906BA21002B80E0 /* Meliora@2x.png in Resources */,
 				9E6602C71901C32900299A8E /* Logo@2x.png in Resources */,
 				9E9F3D1D1906C76B002B80E0 /* Beef Barley Soup.png in Resources */,
+				9E9E148A1906F85B00403B9A /* Cheeseburger Pie.png in Resources */,
 				9E6602E41901D71A00299A8E /* Danforth@2x.png in Resources */,
 				9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */,
 				9E9F3CDF1906BA0A002B80E0 /* Connections.txt in Resources */,
@@ -652,7 +680,9 @@
 				9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */,
 				9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */,
 				9E9F3D271906C76B002B80E0 /* Italian Sausage.png in Resources */,
+				9E9E148B1906F85B00403B9A /* Icon in Resources */,
 				9E6602DB1901D70F00299A8E /* Commons.txt in Resources */,
+				9E9E148E1906F85B00403B9A /* Seasoned Roast Beef.png in Resources */,
 				9E9F3D2F1906C76B002B80E0 /* Egg & Cheese Muffin.png in Resources */,
 				9E9F3D321906C76B002B80E0 /* Cheesecake Brownie.png in Resources */,
 				9E34BEB319005DCB004F46A1 /* Jessica@2x.png in Resources */,
@@ -676,9 +706,11 @@
 				9E9F3D201906C76B002B80E0 /* Hot Cocoa.png in Resources */,
 				9E9F3D211906C76B002B80E0 /* Strawberry Smoothie.png in Resources */,
 				9E6602E61901D71A00299A8E /* Starbucks@2x.png in Resources */,
+				9E9E148D1906F85B00403B9A /* Quinoa and Red Pepper Slider.png in Resources */,
 				9E9F3D1A1906C76B002B80E0 /* Hot Dog.png in Resources */,
 				9E9F3D2B1906C76B002B80E0 /* Toasted Cheese & Tomato.png in Resources */,
 				9E9F3D291906C76B002B80E0 /* Meliora Veggie Burger.png in Resources */,
+				9E9E148C1906F85B00403B9A /* Loaded Potato Soup.png in Resources */,
 				9E6602C61901C32900299A8E /* Dining@2x.png in Resources */,
 				9E9F3D351906C76B002B80E0 /* Ham & Swiss Panini.png in Resources */,
 				9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */,
