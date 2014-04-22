@@ -21,6 +21,7 @@
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
 		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
+		9E5EB71B190604FE009691A0 /* Joel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5EB71A190604FE009691A0 /* Joel@2x.png */; };
 		9E6602C51901C32900299A8E /* CheckIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602BE1901C32900299A8E /* CheckIn@2x.png */; };
 		9E6602C61901C32900299A8E /* Dining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602BF1901C32900299A8E /* Dining@2x.png */; };
 		9E6602C71901C32900299A8E /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602C01901C32900299A8E /* Logo@2x.png */; };
@@ -95,6 +96,7 @@
 		9E4C69A518F8501700359C18 /* MURSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSocialViewController.m; sourceTree = "<group>"; };
 		9E4C69A718F8505C00359C18 /* MURSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSettingsViewController.h; sourceTree = "<group>"; };
 		9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSettingsViewController.m; sourceTree = "<group>"; };
+		9E5EB71A190604FE009691A0 /* Joel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joel@2x.png"; sourceTree = "<group>"; };
 		9E6602BE1901C32900299A8E /* CheckIn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckIn@2x.png"; sourceTree = "<group>"; };
 		9E6602BF1901C32900299A8E /* Dining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dining@2x.png"; sourceTree = "<group>"; };
 		9E6602C01901C32900299A8E /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				9E34BEAB19005DCB004F46A1 /* David@2x.png */,
 				9E34BEAC19005DCB004F46A1 /* Erin@2x.png */,
 				9E34BEAD19005DCB004F46A1 /* Jessica@2x.png */,
+				9E5EB71A190604FE009691A0 /* Joel@2x.png */,
 				9E34BEAE19005DCB004F46A1 /* Julian@2x.png */,
 				9E34BEAF19005DCB004F46A1 /* Louise@2x.png */,
 				9E34BEB019005DCB004F46A1 /* Maggie@2x.png */,
@@ -268,9 +271,9 @@
 				9E6602CD1901C32D00299A8E /* David.txt */,
 				9E6602CE1901C32D00299A8E /* Erin.txt */,
 				9E6602CF1901C32D00299A8E /* Regina.txt */,
-				9E6602E71901DD8200299A8E /* Cam.txt */,
 				9E6602E81901DD8200299A8E /* Jessica.txt */,
 				9E6602E91901DD8200299A8E /* Joel.txt */,
+				9E6602E71901DD8200299A8E /* Cam.txt */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				9E6602E51901D71A00299A8E /* Douglass@2x.png in Resources */,
 				9E34BEB219005DCB004F46A1 /* Erin@2x.png in Resources */,
 				9E6602C51901C32900299A8E /* CheckIn@2x.png in Resources */,
+				9E5EB71B190604FE009691A0 /* Joel@2x.png in Resources */,
 				9E6602DC1901D70F00299A8E /* Danforth.txt in Resources */,
 				9E34BEB519005DCB004F46A1 /* Louise@2x.png in Resources */,
 				9E6602C71901C32900299A8E /* Logo@2x.png in Resources */,

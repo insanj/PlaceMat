@@ -11,26 +11,23 @@
 @implementation MURUser
 
 + (NSString *)pathForDebugUser {
-	int ran = arc4random_uniform(6);
+	int ran = arc4random_uniform(5);
 	NSString *name;
 	switch (ran) {
 		default:
 		case 0:
-			name = @"David";
-			break;
-		case 1:
 			name = @"Erin";
 			break;
+		case 1:
+			name = @"David";
+			break;
 		case 2:
-			name = @"Regina";
-			break;
-		case 3:
-			name = @"Cam";
-			break;
-		case 4:
 			name = @"Jessica";
 			break;
-		case 5:
+		case 3:
+			name = @"Regina";
+			break;
+		case 4:
 			name = @"Joel";
 			break;
 	}
