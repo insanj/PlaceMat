@@ -156,6 +156,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	MURPlaceViewController *placeController = [[MURPlaceViewController alloc] initWithPlace:[placesBySection[indexPath.section] objectAtIndex:indexPath.row]];
+	[self.navigationController pushViewController:placeController animated:YES];
 }
 
 @end

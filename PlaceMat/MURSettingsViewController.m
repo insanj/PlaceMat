@@ -223,6 +223,7 @@
 			
 			if (indexPath.row != 5) {
 				cell.selectionStyle = UITableViewCellSelectionStyleNone;
+				
 				UISwitch *restSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(0.0, 0.0, 30.0, 30.0)];
 				restSwitch.tag = 2;
 				restSwitch.on = NO;
@@ -230,9 +231,10 @@
 			}
 		}
 		
-		UISwitch *restSwitch = (UISwitch *)[cell.contentView viewWithTag:2];
+		UISwitch *restSwitch = (UISwitch *)cell.accessoryView;
 		[restSwitch removeTarget:self action:nil forControlEvents:UIControlEventValueChanged];
-
+		
+		
 		if (indexPath.row == 0) {
 			cell.textLabel.text = @"Vegetarian";
 			[restSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"Vegetarian"]];
@@ -284,7 +286,7 @@
 			cell.accessoryView = restSwitch;
 		}
 		
-		UISwitch *restSwitch = (UISwitch *)[cell.contentView viewWithTag:2];
+		UISwitch *restSwitch = (UISwitch *)cell.accessoryView;
 		[restSwitch removeTarget:self action:nil forControlEvents:UIControlEventValueChanged];
 		
 		if (indexPath.row == 0) {
@@ -315,7 +317,7 @@
 				cell.accessoryView = restSwitch;
 			}
 			
-			UISwitch *restSwitch = (UISwitch *)[cell.contentView viewWithTag:2];
+			UISwitch *restSwitch = (UISwitch *)cell.accessoryView;
 			[restSwitch removeTarget:self action:nil forControlEvents:UIControlEventValueChanged];
 			
 			if (indexPath.row == 0) {
@@ -347,7 +349,7 @@
 				cell.accessoryView = stepper;
 			}
 			
-			UIStepper *stepper = (UIStepper *)[cell.contentView viewWithTag:3];
+			UIStepper *stepper = (UIStepper *)cell.accessoryView;
 			[stepper removeTarget:self action:nil forControlEvents:UIControlEventValueChanged];
 			
 			cell.textLabel.text = @"Text Size";
@@ -428,6 +430,8 @@
 - (void)switchForVegetarian {
 	BOOL prev = [[NSUserDefaults standardUserDefaults] boolForKey:@"Vegetarian"];
 	[[NSUserDefaults standardUserDefaults] setBool:!prev forKey:@"Vegetarian"];
+	
+	NSLog(@"set value %@ for key %@, read %@ (afterwards)", prev ? @"YES" : @"NO", @"Vegetarian", [[NSUserDefaults standardUserDefaults] boolForKey:@"Vegetarian"] ? @"YES" : @"NO");
 }
 
 - (void)switchForVegan {

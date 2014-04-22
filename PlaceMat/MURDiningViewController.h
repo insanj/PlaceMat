@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MURTableViewController.h"
+#import "MURPlaceViewController.h"
 #import "MURPlace.h"
 
 @interface MURDiningViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource> {
