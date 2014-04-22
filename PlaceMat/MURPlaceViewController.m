@@ -157,6 +157,20 @@
 	
 	UIImageView *nutritionImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Nutrition"]];
 	nutritionImage.contentMode = UIViewContentModeCenter;
+	
+	CGFloat motionRelativeValue = 10.0;
+	UIInterpolatingMotionEffect *verticalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+	verticalMotionEffect.minimumRelativeValue = @(-motionRelativeValue);
+	verticalMotionEffect.maximumRelativeValue = @(motionRelativeValue);
+	
+	UIInterpolatingMotionEffect *horizontalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+	horizontalMotionEffect.minimumRelativeValue = @(-motionRelativeValue);
+	horizontalMotionEffect.maximumRelativeValue = @(motionRelativeValue);
+	
+	UIMotionEffectGroup *group = [UIMotionEffectGroup new];
+	group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
+	[nutritionImage addMotionEffect:group];
+	
 	[giantNutrition addSubview:nutritionImage];
 	
 	[keyWindow addSubview:giantNutrition];

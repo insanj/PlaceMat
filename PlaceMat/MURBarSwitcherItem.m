@@ -94,6 +94,23 @@
 	[actingBox addSubview:_social];
 	[actingBox addSubview:_settings];
 	
+	CGFloat motionRelativeValue = 8.0;
+	UIInterpolatingMotionEffect *verticalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+	verticalMotionEffect.minimumRelativeValue = @(-motionRelativeValue);
+	verticalMotionEffect.maximumRelativeValue = @(motionRelativeValue);
+	
+	UIInterpolatingMotionEffect *horizontalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+	horizontalMotionEffect.minimumRelativeValue = @(-motionRelativeValue);
+	horizontalMotionEffect.maximumRelativeValue = @(motionRelativeValue);
+	
+	UIMotionEffectGroup *group = [UIMotionEffectGroup new];
+	group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
+	[_switcherBack addMotionEffect:group];
+	[_profile addMotionEffect:group];
+	[_dining addMotionEffect:group];
+	[_social addMotionEffect:group];
+	[_settings addMotionEffect:group];
+
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:SNAP_DAMPING initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
 		_switcherBack.hidden = NO;
 		
