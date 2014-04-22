@@ -14,19 +14,28 @@
     [super viewDidLoad];
 	
 	self.title = @"Dining";
-	places = [self placesWithNames:@[@"Commons", @"Danforth", @"Douglass", @"Starbucks"]];
+	places = [self placesWithNames:@[@"Commons", @"Connections", @"Danforth", @"Douglass", @"Meliora", @"Pura Vida", @"Starbucks"]];
 	
 	NSMutableArray *running = [[NSMutableArray alloc] init];
+	NSMutableArray *runningPlaces = [[NSMutableArray alloc] init];
 	char lastFirst = '\0';
 	for (MURPlace *s in places) {
 		char thisFirst = [s.name characterAtIndex:0];
 		if (thisFirst > lastFirst) {
 			lastFirst = thisFirst;
+			
+			[runningPlaces addObject:[[NSMutableArray alloc] initWithObjects:s, nil]];
 			[running addObject:[NSString stringWithFormat:@"%c", lastFirst]];
+		}
+		
+		else {
+			NSMutableArray *last = (NSMutableArray *)[runningPlaces lastObject];
+			[last addObject:s];
 		}
 	}
 		
 	firstLetters = [NSArray arrayWithArray:running];
+	placesBySection = [NSArray arrayWithArray:runningPlaces];
 }
 
 
@@ -91,12 +100,12 @@
 	
 		CGRect imageViewFrame = CGRectMake(padding, padding, 70.0, height - (padding * 2));
 		UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageViewFrame];
-		imageView.contentMode = UIViewContentModeScaleAspectFill;
+		imageView.contentMode = UIViewContentModeScaleAspectFit;
 		imageView.layer.masksToBounds = YES;
 		imageView.layer.cornerRadius = 7.0;
 		imageView.tag = 1;
 		
-		CGRect nameLabelFrame = CGRectMake(imageViewFrame.origin.x + imageViewFrame.size.width + padding, padding * 2, 0.0, 20.0);
+		CGRect nameLabelFrame = CGRectMake(imageViewFrame.origin.x + imageViewFrame.size.width + (padding * 2), padding * 2, 0.0, 20.0);
 		nameLabelFrame.size.width = cell.frame.size.width - nameLabelFrame.origin.x;
 		UILabel *nameLabel = [[UILabel alloc] initWithFrame:nameLabelFrame];
 		nameLabel.numberOfLines = 1;
@@ -128,9 +137,9 @@
 	//	idx++;
 	//}
 	
-	long idx = indexPath.section == 0 ? indexPath.section + indexPath.row : (2 * indexPath.section) + (indexPath.row - 1);
+	//long idx = indexPath.section == 0 ? indexPath.section + indexPath.row : (2 * indexPath.section) + (indexPath.row - 1);
 
-	MURPlace *place = places[idx];
+	MURPlace *place = [placesBySection[indexPath.section] objectAtIndex:indexPath.row];
 	UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
 	imageView.image = place.avatar;
 	

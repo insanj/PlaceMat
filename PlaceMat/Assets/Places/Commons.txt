@@ -1,4 +1,4 @@
 name = Commons
 money = declining
 serving = all-day
-time = 8:30, 23:00
+time = 8:30 - 23:00

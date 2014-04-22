@@ -1,0 +1,9 @@
+name = Pura Vida Cafe
+money = declining
+serving = breakfast, lunch
+time = 7:30 - 18:30 
+Dish 1 = Bold Roast Coffee; v ; gf
+Dish 2 = Blueberry Cheese Croissant; v
+Dish 3 = Egg & Cheese Muffin
+Dish 4 = Homestyle M&M Cookie; v
+Dish 5 = Blueberry Scone; v

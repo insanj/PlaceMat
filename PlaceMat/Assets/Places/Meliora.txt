@@ -1,0 +1,9 @@
+name = Meliora Restaurant
+money = declining
+serving = lunch
+time = 11 - 14:00
+Dish 1 = Meliora Burger
+Dish 2 = Meliora Veggie Burger; v
+Dish 3 = Italian Sausage
+Dish 4 = Toasted Cheese & Tomato; v
+Dish 5 = Poutine; v

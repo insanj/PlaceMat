@@ -11,7 +11,7 @@
 #import "MURPlace.h"
 
 @interface MURDiningViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource> {
-	NSArray *places, *firstLetters;
+	NSArray *places, *firstLetters, *placesBySection;
 }
 
 @end

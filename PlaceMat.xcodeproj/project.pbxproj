@@ -55,6 +55,12 @@
 		9E6DE52D18E614B700E27AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DE52B18E614B700E27AC2 /* InfoPlist.strings */; };
 		9E6DE52F18E614B700E27AC2 /* PlaceMatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */; };
 		9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */; };
+		9E9F3CDF1906BA0A002B80E0 /* Connections.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CDE1906BA0A002B80E0 /* Connections.txt */; };
+		9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE01906BA0F002B80E0 /* Meliora.txt */; };
+		9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */; };
+		9E9F3CE51906BA1C002B80E0 /* Connections@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE41906BA1C002B80E0 /* Connections@2x.png */; };
+		9E9F3CE81906BA21002B80E0 /* Pura Vida@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE61906BA21002B80E0 /* Pura Vida@2x.png */; };
+		9E9F3CE91906BA21002B80E0 /* Meliora@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE71906BA21002B80E0 /* Meliora@2x.png */; };
 		9EC81F361905D9720016B822 /* MURFirstRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC81F351905D9720016B822 /* MURFirstRunViewController.m */; };
 		9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649118E6174300B9A095 /* MURNavigationController.m */; };
 		9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649418E617E200B9A095 /* MURProfileViewController.m */; };
@@ -135,6 +141,12 @@
 		9E6DE52E18E614B700E27AC2 /* PlaceMatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceMatTests.m; sourceTree = "<group>"; };
 		9E9D9C5A18EF611900E3713F /* MURDiningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURDiningViewController.h; sourceTree = "<group>"; };
 		9E9D9C5B18EF611900E3713F /* MURDiningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURDiningViewController.m; sourceTree = "<group>"; };
+		9E9F3CDE1906BA0A002B80E0 /* Connections.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Connections.txt; sourceTree = "<group>"; };
+		9E9F3CE01906BA0F002B80E0 /* Meliora.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Meliora.txt; sourceTree = "<group>"; };
+		9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pura Vida.txt"; sourceTree = "<group>"; };
+		9E9F3CE41906BA1C002B80E0 /* Connections@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Connections@2x.png"; sourceTree = "<group>"; };
+		9E9F3CE61906BA21002B80E0 /* Pura Vida@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pura Vida@2x.png"; sourceTree = "<group>"; };
+		9E9F3CE71906BA21002B80E0 /* Meliora@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Meliora@2x.png"; sourceTree = "<group>"; };
 		9EC81F341905D9720016B822 /* MURFirstRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURFirstRunViewController.h; sourceTree = "<group>"; };
 		9EC81F351905D9720016B822 /* MURFirstRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURFirstRunViewController.m; sourceTree = "<group>"; };
 		9EFA649018E6174300B9A095 /* MURNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURNavigationController.h; sourceTree = "<group>"; };
@@ -212,17 +224,20 @@
 		9E34BEAA19005DCB004F46A1 /* Avatars */ = {
 			isa = PBXGroup;
 			children = (
+				9E6602DF1901D71A00299A8E /* Commons@2x.png */,
+				9E9F3CE41906BA1C002B80E0 /* Connections@2x.png */,
+				9E6602E01901D71A00299A8E /* Danforth@2x.png */,
 				9E34BEAB19005DCB004F46A1 /* David@2x.png */,
+				9E6602E11901D71A00299A8E /* Douglass@2x.png */,
 				9E34BEAC19005DCB004F46A1 /* Erin@2x.png */,
 				9E34BEAD19005DCB004F46A1 /* Jessica@2x.png */,
 				9E5EB71A190604FE009691A0 /* Joel@2x.png */,
 				9E34BEAE19005DCB004F46A1 /* Julian@2x.png */,
 				9E34BEAF19005DCB004F46A1 /* Louise@2x.png */,
 				9E34BEB019005DCB004F46A1 /* Maggie@2x.png */,
+				9E9F3CE71906BA21002B80E0 /* Meliora@2x.png */,
+				9E9F3CE61906BA21002B80E0 /* Pura Vida@2x.png */,
 				9E34BEB719006328004F46A1 /* Regina@2x.png */,
-				9E6602DF1901D71A00299A8E /* Commons@2x.png */,
-				9E6602E01901D71A00299A8E /* Danforth@2x.png */,
-				9E6602E11901D71A00299A8E /* Douglass@2x.png */,
 				9E6602E21901D71A00299A8E /* Starbucks@2x.png */,
 			);
 			path = Avatars;
@@ -279,8 +294,11 @@
 			isa = PBXGroup;
 			children = (
 				9E6602D71901D70F00299A8E /* Commons.txt */,
+				9E9F3CDE1906BA0A002B80E0 /* Connections.txt */,
 				9E6602D81901D70F00299A8E /* Danforth.txt */,
 				9E6602D91901D70F00299A8E /* Douglass.txt */,
+				9E9F3CE01906BA0F002B80E0 /* Meliora.txt */,
+				9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */,
 				9E6602DA1901D70F00299A8E /* Starbucks.txt */,
 			);
 			path = Places;
@@ -451,13 +469,17 @@
 			files = (
 				9E6602E51901D71A00299A8E /* Douglass@2x.png in Resources */,
 				9E34BEB219005DCB004F46A1 /* Erin@2x.png in Resources */,
+				9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */,
 				9E6602C51901C32900299A8E /* CheckIn@2x.png in Resources */,
 				9E5EB71B190604FE009691A0 /* Joel@2x.png in Resources */,
 				9E6602DC1901D70F00299A8E /* Danforth.txt in Resources */,
+				9E9F3CE81906BA21002B80E0 /* Pura Vida@2x.png in Resources */,
 				9E34BEB519005DCB004F46A1 /* Louise@2x.png in Resources */,
+				9E9F3CE91906BA21002B80E0 /* Meliora@2x.png in Resources */,
 				9E6602C71901C32900299A8E /* Logo@2x.png in Resources */,
 				9E6602E41901D71A00299A8E /* Danforth@2x.png in Resources */,
 				9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */,
+				9E9F3CDF1906BA0A002B80E0 /* Connections.txt in Resources */,
 				9E6602DD1901D70F00299A8E /* Douglass.txt in Resources */,
 				9E6602E31901D71A00299A8E /* Commons@2x.png in Resources */,
 				9E6602D01901C32D00299A8E /* David.txt in Resources */,
@@ -469,6 +491,7 @@
 				9E6602DB1901D70F00299A8E /* Commons.txt in Resources */,
 				9E34BEB319005DCB004F46A1 /* Jessica@2x.png in Resources */,
 				9E6602D11901C32D00299A8E /* Erin.txt in Resources */,
+				9E9F3CE51906BA1C002B80E0 /* Connections@2x.png in Resources */,
 				9E6602EC1901DD8200299A8E /* Joel.txt in Resources */,
 				9E6602C91901C32900299A8E /* Profile@2x.png in Resources */,
 				9E34BEB119005DCB004F46A1 /* David@2x.png in Resources */,
@@ -477,6 +500,7 @@
 				9E6602CA1901C32900299A8E /* Settings@2x.png in Resources */,
 				9E6602E61901D71A00299A8E /* Starbucks@2x.png in Resources */,
 				9E6602C61901C32900299A8E /* Dining@2x.png in Resources */,
+				9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */,
 				9E6602D21901C32D00299A8E /* Regina.txt in Resources */,
 				9E6602CB1901C32900299A8E /* Social@2x.png in Resources */,
 			);

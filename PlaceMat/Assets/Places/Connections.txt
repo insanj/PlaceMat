@@ -1,0 +1,9 @@
+name = Connections
+money = declining
+serving = all-day
+time = 7 - 22:00
+Dish 1 = Hot Cocoa ; v ; gf
+Dish 2 = Strawberry Smoothie ; v ; gf
+Dish 3 = Beef Barley Soup
+Dish 4 = Cheddar Scallion Bagel ; v
+Dish 5 = Chocolate Chunk Scone ; v
