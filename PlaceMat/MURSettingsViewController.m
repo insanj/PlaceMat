@@ -20,7 +20,8 @@
 	_specifiers = @{ @"Account" :
 						 @[@{@"Change Username" : @[UITextField.class]},
 						   @{@"Change Password" : @[UITextField.class]},
-						   @{@"Change Email" : @[UITextField.class]}],
+						   @{@"Change Email" : @[UITextField.class]},
+						   @{@"Sign In Status" : @[UIButton.class]}],
 					 @"Restrictions" :
 						 @[@{@"Dietary Restrictions" : @[UISwitch.class, UISwitch.class, UISwitch.class, UISwitch.class, UISwitch.class, UISwitch.class]},
 						   @{@"Religious Restrictions" : @[UISwitch.class, UISwitch.class]}]
@@ -195,6 +196,20 @@
 		usernameEntry.placeholder = @"new email";
 	}
 	
+	else if ([sectionName isEqualToString:@"Sign In Status"]) {
+		identifier = @"ButtonCell";
+		cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+		
+		if (!cell) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+		}
+		
+		cell.textLabel.textAlignment = NSTextAlignmentLeft;
+		cell.textLabel.textColor = [UIColor redColor];
+		cell.textLabel.text = @"Log out";
+	}
+	
 	else if ([sectionName isEqualToString:@"Dietary Restrictions"]) {
 		identifier = @"SwitchCell";
 		cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -291,9 +306,14 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	if (indexPath.row == 5) {
+	
+	if (indexPath.section == 6 && indexPath.row == 5) {
 		UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Pick Any Allergies" delegate:self cancelButtonTitle:@"Done" destructiveButtonTitle:nil otherButtonTitles:@"Peanuts", @"Tree Nuts", @"Eggs", @"Wheat", @"Milk", @"Soy", @"Shellfish", @"Fish", nil];
 		[sheet showInView:self.view];
+	}
+	
+	else if (indexPath.section == 4 && indexPath.row == 0) {
+		[self.navigationController setViewControllers:@[[[MURProfileViewController alloc] init], [[MURFirstRunViewController alloc] init]] animated:YES];
 	}
 	
 }

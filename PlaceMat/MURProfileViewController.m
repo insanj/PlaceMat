@@ -35,8 +35,8 @@
 	}
 	
 	else {
-		self.navigationController.navigationBar.topItem.title = @"Profile";
-		self.title = @"Profile";
+		self.navigationController.navigationBar.topItem.title = _name;
+		self.title = _name;
 	}
 	
 	[super viewWillAppear:animated];

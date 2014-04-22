@@ -19,10 +19,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	if (YES || ![[NSUserDefaults standardUserDefaults] boolForKey:@"PlaceMatRan"]) {
-		NSLog(@"Detected user hasn't run before...");
-		
+		NSLog(@"Detected user hasn't run before...");		
 		[self pushViewController:[[MURFirstRunViewController alloc] init] animated:YES];
-		[self.navigationBar.topItem setHidesBackButton:YES animated:NO];
 	}
 	
 	[super viewWillAppear:animated];

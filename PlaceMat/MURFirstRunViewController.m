@@ -58,6 +58,11 @@
 	[self.view addSubview:facebook];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[self.navigationController.navigationBar.topItem setHidesBackButton:YES animated:NO];
+	[super viewWillAppear:animated];
+}
+
 - (void)resignFirstRunView {
 	[self.navigationController popToRootViewControllerAnimated:YES];
 	[self.navigationController.navigationBar.topItem setHidesBackButton:NO animated:NO];

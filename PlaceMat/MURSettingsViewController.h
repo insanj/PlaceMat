@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MURTableViewController.h"
+#import "MURProfileViewController.h"
+#import "MURFirstRunViewController.h"
 
 @interface MURSettingsViewController : MURTableViewController  <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIActionSheetDelegate>
 
