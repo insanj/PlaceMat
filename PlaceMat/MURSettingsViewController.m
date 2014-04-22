@@ -24,8 +24,12 @@
 						   @{@"Sign In Status" : @[UIButton.class]}],
 					 @"Restrictions" :
 						 @[@{@"Dietary Restrictions" : @[UISwitch.class, UISwitch.class, UISwitch.class, UISwitch.class, UISwitch.class, UISwitch.class]},
-						   @{@"Religious Restrictions" : @[UISwitch.class, UISwitch.class]}]
+						   @{@"Religious Restrictions" : @[UISwitch.class, UISwitch.class]}],
+					 @"Other" :
+						 @[@{@"App Preferences" : @[UISwitch.class, UISwitch.class, UIStepper.class]}]
 					};
+	
+	self.tableView.delaysContentTouches = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -296,8 +300,72 @@
 		}
 	}
 	
+	else if ([sectionName isEqualToString:@"App Preferences"]) {
+		if (indexPath.row < 2) {
+			identifier = @"SwitchCell";
+			cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+		
+			if (!cell) {
+				cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+				cell.selectionStyle = UITableViewCellSelectionStyleNone;
+				
+				UISwitch *restSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(0.0, 0.0, 30.0, 30.0)];
+				restSwitch.tag = 2;
+				restSwitch.on = NO;
+				cell.accessoryView = restSwitch;
+			}
+			
+			UISwitch *restSwitch = (UISwitch *)[cell.contentView viewWithTag:2];
+			[restSwitch removeTarget:self action:nil forControlEvents:UIControlEventValueChanged];
+			
+			if (indexPath.row == 0) {
+				cell.textLabel.text = @"Notifications";
+				[restSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"Notifications"]];
+				[restSwitch addTarget:self action:@selector(switchForNotifications) forControlEvents:UIControlEventValueChanged];
+			}
+			
+			else {
+				cell.textLabel.text = @"Sounds";
+				[restSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"Sounds"]];
+				[restSwitch addTarget:self action:@selector(switchForSounds) forControlEvents:UIControlEventValueChanged];
+			}
+		}
+		
+		else {
+			identifier = @"StepperCell";
+			cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+			
+			if (!cell) {
+				cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+				cell.selectionStyle = UITableViewCellSelectionStyleNone;
+				
+				UIStepper *stepper = [[UIStepper alloc] initWithFrame:CGRectMake(0.0, 0.0, 30.0, 30.0)];
+				stepper.tag = 3;
+				stepper.stepValue = 0.5;
+				stepper.minimumValue = 0.5;
+				stepper.maximumValue = 5.0;
+				cell.accessoryView = stepper;
+			}
+			
+			UIStepper *stepper = (UIStepper *)[cell.contentView viewWithTag:3];
+			[stepper removeTarget:self action:nil forControlEvents:UIControlEventValueChanged];
+			
+			cell.textLabel.text = @"Text Size";
+			[stepper setValue:[[NSUserDefaults standardUserDefaults] integerForKey:@"TextSize"]];
+			[stepper addTarget:self action:@selector(stepForTextSize:) forControlEvents:UIControlEventValueChanged];
+		}
+	}
+
 	else {
 		return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Shit"];
+	}
+	
+	for (id obj in cell.subviews) {
+		if ([NSStringFromClass([obj class]) isEqualToString:@"UITableViewCellScrollView"]) {
+			UIScrollView *scroll = (UIScrollView *) obj;
+			scroll.delaysContentTouches = NO;
+			break;
+		}
 	}
 	
 	return cell;
@@ -392,4 +460,19 @@
 	[[NSUserDefaults standardUserDefaults] setBool:!prev forKey:@"Halal"];
 }
 
+- (void)switchForNotifications {
+	BOOL prev = [[NSUserDefaults standardUserDefaults] boolForKey:@"Notifications"];
+	[[NSUserDefaults standardUserDefaults] setBool:!prev forKey:@"Notifications"];
+}
+	
+- (void)switchForSounds {
+	BOOL prev = [[NSUserDefaults standardUserDefaults] boolForKey:@"Sounds"];
+	[[NSUserDefaults standardUserDefaults] setBool:!prev forKey:@"Sounds"];
+}
+
+- (void)stepForTextSize:(UIStepper *)stepper {
+	[[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"TextSize"];
+}
+
 @end
+

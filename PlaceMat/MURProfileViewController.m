@@ -273,10 +273,8 @@
 		}
 	} // dishes cell
 	
-	for (id obj in cell.subviews)
-	{
-		if ([NSStringFromClass([obj class]) isEqualToString:@"UITableViewCellScrollView"])
-		{
+	for (id obj in cell.subviews) {
+		if ([NSStringFromClass([obj class]) isEqualToString:@"UITableViewCellScrollView"]) {
 			UIScrollView *scroll = (UIScrollView *) obj;
 			scroll.delaysContentTouches = NO;
 			break;
