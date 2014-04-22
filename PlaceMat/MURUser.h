@@ -15,6 +15,8 @@
 @property(nonatomic, retain) UIImage *avatar;
 
 + (NSString *)pathForDebugUser;
++ (NSString *)pathForName:(NSString *)name;
+
 - (instancetype)initWithPath:(NSString *)path;
 
 @end

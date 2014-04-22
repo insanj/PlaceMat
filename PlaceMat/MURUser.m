@@ -38,6 +38,11 @@
 	return [[NSBundle mainBundle] pathForResource:name ofType:@"txt"];
 }
 
+
++ (NSString *)pathForName:(NSString *)name {
+	return [[NSBundle mainBundle] pathForResource:[name componentsSeparatedByString:@" "][0] ofType:@"txt"];
+}
+
 - (instancetype)initWithPath:(NSString *)path {
 	self = [super init];
 	if (self) {

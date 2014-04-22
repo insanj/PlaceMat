@@ -12,12 +12,38 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-	self.title = @"Profile";
-	_user = [[MURUser alloc] initWithPath:[MURUser pathForDebugUser]];
+
+	if ([self.title isEqualToString:@"Profile"]) {
+		self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithNavigationController:self.navigationController];
+	}
+	
+	else {
+		self.navigationItem.leftBarButtonItem = nil;
+	}
 	
 	UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
 	[refresh addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
 	self.refreshControl = refresh;
+	
+	self.tableView.delaysContentTouches = NO;
+}
+
+- (instancetype)init {
+	self = [super init];
+	
+	self.title = @"Profile";
+	
+	_user = [[MURUser alloc] initWithPath:[MURUser pathForDebugUser]];
+	return self;
+}
+
+- (instancetype)initWithName:(NSString *)name {
+	self = [super init];
+	
+	self.title = name;
+
+	_user = [[MURUser alloc] initWithPath:[MURUser pathForName:name]];
+	return self;
 }
 
 - (void)refreshTable:(UIRefreshControl *)sender {
@@ -139,9 +165,11 @@
 			
 			[actionButton setTitle:[self randomForkAction] forState:UIControlStateNormal];
 			[actionButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-			[actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-			[actionButton setBackgroundImage:[MURTheme imageFromColor:[UIColor darkGrayColor] withSize:actionButton.frame.size] forState:UIControlStateHighlighted];
+			[actionButton setBackgroundImage:[MURTheme imageFromColor:[UIColor colorWithWhite:0.9 alpha:1.0] withSize:actionButton.frame.size] forState:UIControlStateNormal];
+
+			[actionButton addTarget:self action:@selector(darkenButton:) forControlEvents:UIControlEventTouchDown];
 			[actionButton addTarget:self action:@selector(forkUser:) forControlEvents:UIControlEventTouchUpInside];
+			[actionButton addTarget:self action:@selector(lightenButton:) forControlEvents:UIControlEventTouchCancel];
 			
 			[cell.contentView addSubview:avatar];
 			[cell.contentView addSubview:nameLabel];
@@ -154,7 +182,8 @@
 		cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityCell"];
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ActivityCell"];
-						
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
 			CGRect wrappedFrame = CGRectMake(15.0, 0.0, cell.frame.size.width - 110.0, cell.frame.size.height);
 			UILabel *wrapping = [[UILabel alloc] initWithFrame:wrappedFrame];
 			wrapping.tag = 1;
@@ -206,7 +235,8 @@
 		cell = [tableView dequeueReusableCellWithIdentifier:@"DishesCell"];
 		if (!cell) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DishesCell"];
-			
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
 			CGRect wrappedFrame = CGRectMake(15.0, 0.0, cell.frame.size.width - 110.0, cell.frame.size.height);
 			UILabel *wrapping = [[UILabel alloc] initWithFrame:wrappedFrame];
 			wrapping.tag = 1;
@@ -231,11 +261,26 @@
 		}
 	} // dishes cell
 	
+	for (id obj in cell.subviews)
+	{
+		if ([NSStringFromClass([obj class]) isEqualToString:@"UITableViewCellScrollView"])
+		{
+			UIScrollView *scroll = (UIScrollView *) obj;
+			scroll.delaysContentTouches = NO;
+			break;
+		}
+	}
+	
 	return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+	if ([cell.reuseIdentifier isEqualToString:@"FriendsCell"]) {
+		[self.navigationController pushViewController:[[MURProfileViewController alloc] initWithName:cell.textLabel.text] animated:YES];
+	}
 }
 
 - (NSString *)randomForkAction {
@@ -256,6 +301,11 @@
 	}
 }
 
+- (void)darkenButton:(UIButton *)button {
+	[button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+	[button setBackgroundImage:[MURTheme imageFromColor:[UIColor darkGrayColor] withSize:button.frame.size] forState:UIControlStateHighlighted];
+}
+
 - (void)forkUser:(UIButton *)button {
 	NSString __block *replaced;
 	if ([button.titleLabel.text rangeOfString:@"Un-"].location != NSNotFound) {
@@ -270,6 +320,7 @@
 		replaced = [NSString stringWithFormat:@"Un-%@", [button.titleLabel.text componentsSeparatedByString:@"!"][0]];
 	}
 	
+	[self lightenButton:button];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	
 	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -277,5 +328,12 @@
 		[button setTitle:replaced forState:UIControlStateNormal];
 	});
 }
+
+
+- (void)lightenButton:(UIButton *)button {
+	[button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+	[button setBackgroundImage:[MURTheme imageFromColor:[UIColor colorWithWhite:0.9 alpha:1.0] withSize:button.frame.size] forState:UIControlStateNormal];
+}
+
 
 @end

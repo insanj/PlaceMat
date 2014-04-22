@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MURTableViewController.h"
 
-@interface MURSettingsViewController : MURTableViewController  <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+@interface MURSettingsViewController : MURTableViewController  <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIActionSheetDelegate>
 
 @property(nonatomic, retain) NSDictionary *specifiers;
 @property(nonatomic, retain) NSArray *cells;

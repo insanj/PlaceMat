@@ -85,6 +85,8 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
 		CGFloat height = 80.0, padding = 5.0;
 	
 		CGRect imageViewFrame = CGRectMake(padding, padding, 70.0, height - (padding * 2));
@@ -102,15 +104,23 @@
 		nameLabel.font = [UIFont boldSystemFontOfSize:18.0];
 		nameLabel.tag = 2;
 		
-		UILabel *detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(nameLabelFrame.origin.x, nameLabelFrame.origin.y + nameLabelFrame.size.height + padding, nameLabelFrame.size.width, 20.0)];
+		UILabel *detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(nameLabelFrame.origin.x, nameLabelFrame.origin.y + nameLabelFrame.size.height + 2.0, nameLabelFrame.size.width, 20.0)];
 		detailLabel.numberOfLines = 1;
 		detailLabel.lineBreakMode = NSLineBreakByTruncatingTail;
 		detailLabel.font = [UIFont systemFontOfSize:16.0];
 		detailLabel.tag = 3;
 		
+		UILabel *evenMoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(nameLabelFrame.origin.x, detailLabel.frame.origin.y + detailLabel.frame.size.height, nameLabelFrame.size.width, 20.0)];
+		evenMoreLabel.numberOfLines = 1;
+		evenMoreLabel.textColor = [UIColor darkGrayColor];
+		evenMoreLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+		evenMoreLabel.font = [UIFont systemFontOfSize:14.0];
+		evenMoreLabel.tag = 4;
+		
 		[cell.contentView addSubview:imageView];
 		[cell.contentView addSubview:nameLabel];
 		[cell.contentView addSubview:detailLabel];
+		[cell.contentView addSubview:evenMoreLabel];
 	}
 	
 	//int idx = indexPath.row + indexPath.section;
@@ -129,6 +139,9 @@
 	
 	UILabel *detailLabel = (UILabel *)[cell viewWithTag:3];
 	detailLabel.text = place.description;
+	
+	UILabel *evenMoreLabel = (UILabel *)[cell viewWithTag:4];
+	evenMoreLabel.text = [place.serving stringByAppendingString:[@" from " stringByAppendingString:place.time]];
 	
 	return cell;
 }
