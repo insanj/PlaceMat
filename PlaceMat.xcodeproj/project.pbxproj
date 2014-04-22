@@ -41,7 +41,6 @@
 		9E6602E41901D71A00299A8E /* Danforth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E01901D71A00299A8E /* Danforth@2x.png */; };
 		9E6602E51901D71A00299A8E /* Douglass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E11901D71A00299A8E /* Douglass@2x.png */; };
 		9E6602E61901D71A00299A8E /* Starbucks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E21901D71A00299A8E /* Starbucks@2x.png */; };
-		9E6602EA1901DD8200299A8E /* Cam.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E71901DD8200299A8E /* Cam.txt */; };
 		9E6602EB1901DD8200299A8E /* Jessica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E81901DD8200299A8E /* Jessica.txt */; };
 		9E6602EC1901DD8200299A8E /* Joel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E91901DD8200299A8E /* Joel.txt */; };
 		9E6DE50A18E614B700E27AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6DE50918E614B700E27AC2 /* Foundation.framework */; };
@@ -117,7 +116,6 @@
 		9E6602E01901D71A00299A8E /* Danforth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Danforth@2x.png"; sourceTree = "<group>"; };
 		9E6602E11901D71A00299A8E /* Douglass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Douglass@2x.png"; sourceTree = "<group>"; };
 		9E6602E21901D71A00299A8E /* Starbucks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Starbucks@2x.png"; sourceTree = "<group>"; };
-		9E6602E71901DD8200299A8E /* Cam.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cam.txt; sourceTree = "<group>"; };
 		9E6602E81901DD8200299A8E /* Jessica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jessica.txt; sourceTree = "<group>"; };
 		9E6602E91901DD8200299A8E /* Joel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Joel.txt; sourceTree = "<group>"; };
 		9E6DE50618E614B700E27AC2 /* PlaceMat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceMat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,7 +271,6 @@
 				9E6602CF1901C32D00299A8E /* Regina.txt */,
 				9E6602E81901DD8200299A8E /* Jessica.txt */,
 				9E6602E91901DD8200299A8E /* Joel.txt */,
-				9E6602E71901DD8200299A8E /* Cam.txt */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -459,7 +456,6 @@
 				9E6602DC1901D70F00299A8E /* Danforth.txt in Resources */,
 				9E34BEB519005DCB004F46A1 /* Louise@2x.png in Resources */,
 				9E6602C71901C32900299A8E /* Logo@2x.png in Resources */,
-				9E6602EA1901DD8200299A8E /* Cam.txt in Resources */,
 				9E6602E41901D71A00299A8E /* Danforth@2x.png in Resources */,
 				9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */,
 				9E6602DD1901D70F00299A8E /* Douglass.txt in Resources */,

@@ -10,6 +10,71 @@
 
 @implementation MURUser
 
+/*
+ 
+ Activity 1 = David checked into Danforth; 10 min
+ Activity 2 = Maggie Curtis spooned David; 5 hr
+ 
+ */
+
++ (NSArray *)chronologicalListOfUserActivitiesForSocialViewControllerTableViewControllerTableViewCellForRowAtIndexPath {
+	
+	/*NSMutableArray *runningUsers = [[NSMutableArray alloc] init];
+	NSString *path = [[NSBundle mainBundle] bundlePath];
+	NSLog(@"path :%@", path);
+	for(NSString *pathName in [manager contentsOfDirectoryAtPath:path error:&error]) {
+		NSLog(@"pathName: %@", pathName);
+		if ([pathName rangeOfString:@"txt"].location != NSNotFound) {
+			MURUser *user = [[MURUser alloc] initWithPath:[path stringByAppendingString:pathName]];
+			NSLog(@"adding: %@", user);
+			[runningUsers addObject:user];
+		}
+	}*/
+	
+	NSArray *allUsers = @[[[MURUser alloc] initWithPath:[MURUser pathForName:@"David"]],
+						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Erin"]],
+						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Regina"]],
+						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Jessica"]],
+						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Joel"]]];
+	NSMutableDictionary *datesToActivities = [[NSMutableDictionary alloc] init];
+	
+	//; 1 min
+	for (MURUser *user in allUsers) {
+		for (NSString *rawActivity in user.activities) {
+			NSArray *split = [rawActivity componentsSeparatedByString:@"; "];
+			
+			NSArray *rawTime = [split[1] componentsSeparatedByString:@" "];
+			if (rawTime.count == 2) {
+				CGFloat minutes;
+				if ([rawTime[1] rangeOfString:@"min"].location == NSNotFound) {
+					minutes = [rawTime[0] floatValue] * 60;
+				}
+				
+				else {
+					minutes = [rawTime[0] floatValue];
+				}
+				
+				NSDateComponents *add = [[NSDateComponents alloc] init];
+				add.minute = minutes;
+				
+				NSDate *iterated = [[NSCalendar currentCalendar] dateByAddingComponents:add toDate:[NSDate date] options:0];
+				[datesToActivities setObject:rawActivity forKey:iterated];
+			}
+		}
+	}
+	
+	NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"self" ascending:NO];
+	NSArray *descriptors = [NSArray arrayWithObject:descriptor];
+	NSArray *reverseOrder = [datesToActivities.allKeys sortedArrayUsingDescriptors:descriptors];
+	
+	NSMutableArray *ranAround = [[NSMutableArray alloc] init];
+	for (int i = reverseOrder.count-1; i >= 0; i--) {
+		[ranAround addObject:[datesToActivities objectForKey:reverseOrder[i]]];
+	}
+	
+	return [NSArray arrayWithArray:ranAround];
+}
+
 + (NSString *)pathForDebugUser {
 	int ran = arc4random_uniform(5);
 	NSString *name;
@@ -89,18 +154,3 @@
 }
 
 @end
-
-/*
- name = Erin Cherry
- class = PD Associate
- checked in =
- Activity 1 = Said: "Dinner with Louise Lu Yi was delicious"; 12 hr
- Activity 2 = Rated Meat Lover's Calzone; ****
- Activity 3 = Checked into Douglass; 12 hr
- Activity 4 = Maggie Curtis forked Erin
- Activity 5 = Checked into The Commons; 17 hr
- Friend 1 = Maggie Curtis
- Friend 2 = Julian Weiss
- Friend 3 = Jessica Sheng
- Friend 4 = David Libbey
- Friend 5 = Louis Lu Yi*/

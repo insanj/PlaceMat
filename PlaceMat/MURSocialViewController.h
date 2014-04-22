@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MURTableViewController.h"
+#import "MURUser.h"
 
 @interface MURSocialViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property(nonatomic, retain) NSArray *activity;
 
 @end

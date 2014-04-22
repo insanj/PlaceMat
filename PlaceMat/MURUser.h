@@ -14,6 +14,7 @@
 @property(nonatomic, retain) NSMutableArray *activities, *friends, *dishes, *places;
 @property(nonatomic, retain) UIImage *avatar;
 
++ (NSArray *)chronologicalListOfUserActivitiesForSocialViewControllerTableViewControllerTableViewCellForRowAtIndexPath;
 + (NSString *)pathForDebugUser;
 + (NSString *)pathForName:(NSString *)name;
 
