@@ -20,6 +20,33 @@
 
 	_activity = [MURUser chronologicalListOfUserActivitiesForSocialViewControllerTableViewControllerTableViewCellForRowAtIndexPath];
 	self.title = @"Social";
+	
+	
+	_searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, 44.0)];
+	_searchBar.delegate = self;
+    _searchBar.showsCancelButton = YES;
+    self.tableView.tableHeaderView = _searchBar;
+	
+	/*CGFloat searchBarPadding = _searchBar.frame.size.height + 5.0;
+	self.tableView.contentOffset = CGPointMake(0.0, searchBarPadding * 2);
+	//self.tableView.contentSize = CGSizeMake(self.tableView.contentSize.width, self.tableView.contentSize.height + searchBarPadding);
+	self.tableView.contentInset = UIEdgeInsetsMake(-searchBarPadding, 0.0, 0.0, 0.0);
+	[self.tableView addSubview:_searchBar];*/
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // [self.tableView setContentOffset:CGPointMake(0, _searchBar.frame.size.height)];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [searchBar resignFirstResponder];
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+	[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [searchBar resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {

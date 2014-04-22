@@ -10,8 +10,9 @@
 #import "MURTableViewController.h"
 #import "MURUser.h"
 
-@interface MURSocialViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MURSocialViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property(nonatomic, retain) NSArray *activity;
+@property(nonatomic, retain) UISearchBar *searchBar;
 
 @end
