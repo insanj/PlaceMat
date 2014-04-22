@@ -10,13 +10,6 @@
 
 @implementation MURUser
 
-/*
- 
- Activity 1 = David checked into Danforth; 10 min
- Activity 2 = Maggie Curtis spooned David; 5 hr
- 
- */
-
 + (NSArray *)chronologicalListOfUserActivitiesForSocialViewControllerTableViewControllerTableViewCellForRowAtIndexPath {
 	
 	/*NSMutableArray *runningUsers = [[NSMutableArray alloc] init];
@@ -76,7 +69,7 @@
 }
 
 + (NSString *)pathForDebugUser {
-	int ran = arc4random_uniform(5);
+	/*int ran = arc4random_uniform(5);
 	NSString *name;
 	switch (ran) {
 		default:
@@ -95,9 +88,9 @@
 		case 4:
 			name = @"Joel";
 			break;
-	}
+	}*/
 	
-	return [[NSBundle mainBundle] pathForResource:name ofType:@"txt"];
+	return [[NSBundle mainBundle] pathForResource:@"Erin" ofType:@"txt"];
 }
 
 

@@ -13,7 +13,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
 
-	if ([self.title isEqualToString:@"Profile"]) {
+	if ([_name isEqualToString:@"Profile"]) {
 		self.navigationItem.leftBarButtonItem = [[MURBarSwitcherItem alloc] initWithNavigationController:self.navigationController];
 	}
 	
@@ -28,11 +28,24 @@
 	self.tableView.delaysContentTouches = NO;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	if (![_name isEqualToString:@"Profile"] || !_name) {
+		self.navigationController.navigationBar.topItem.title = @"";
+		self.title = _name;
+	}
+	
+	else {
+		self.navigationController.navigationBar.topItem.title = @"Profile";
+		self.title = @"Profile";
+	}
+	
+	[super viewWillAppear:animated];
+}
+
 - (instancetype)init {
 	self = [super init];
 	
-	self.title = @"Profile";
-	
+	_name = @"Profile";
 	_user = [[MURUser alloc] initWithPath:[MURUser pathForDebugUser]];
 	return self;
 }
@@ -40,8 +53,7 @@
 - (instancetype)initWithName:(NSString *)name {
 	self = [super init];
 	
-	self.title = name;
-
+	_name = name;
 	_user = [[MURUser alloc] initWithPath:[MURUser pathForName:name]];
 	return self;
 }
@@ -184,7 +196,7 @@
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ActivityCell"];
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-			CGRect wrappedFrame = CGRectMake(15.0, 0.0, cell.frame.size.width - 110.0, cell.frame.size.height);
+			CGRect wrappedFrame = CGRectMake(15.0, 5.0, cell.frame.size.width - 110.0, cell.frame.size.height);
 			UILabel *wrapping = [[UILabel alloc] initWithFrame:wrappedFrame];
 			wrapping.tag = 1;
 			[cell.contentView addSubview:wrapping];
@@ -237,7 +249,7 @@
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DishesCell"];
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-			CGRect wrappedFrame = CGRectMake(15.0, 0.0, cell.frame.size.width - 110.0, cell.frame.size.height);
+			CGRect wrappedFrame = CGRectMake(15.0, 2.5, cell.frame.size.width - 110.0, cell.frame.size.height);
 			UILabel *wrapping = [[UILabel alloc] initWithFrame:wrappedFrame];
 			wrapping.tag = 1;
 			[cell.contentView addSubview:wrapping];

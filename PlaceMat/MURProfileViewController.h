@@ -13,5 +13,6 @@
 @interface MURProfileViewController : MURTableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, retain) MURUser *user;
+@property(nonatomic, retain) NSString *name;
 
 @end
