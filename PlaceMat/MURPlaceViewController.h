@@ -8,11 +8,7 @@
 
 #import "MURTableViewController.h"
 #import "MURPlace.h"
-#import "MURTheme.h"
-
-@interface CAFilter : NSObject
-+ (id)filterWithName:(NSString *)arg1;
-@end
+#import "BLRView.h"
 
 @interface MURPlaceViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

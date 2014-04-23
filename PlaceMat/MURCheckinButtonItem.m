@@ -10,7 +10,6 @@
 
 @implementation MURCheckinButtonItem
 
-
 - (instancetype)initWithName:(NSString *)name {
 	self = [super initWithCustomView:[[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"CheckIn"]]];
 	if (self) {

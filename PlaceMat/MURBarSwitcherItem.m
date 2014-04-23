@@ -81,8 +81,8 @@
 	CGRect switcherBackSnapFrame = switcherBackFrame;
 	switcherBackSnapFrame.size.height = (settingsSnapFrame.origin.y + settingsSnapFrame.size.height) - frame.origin.y + 10.0;
 
-	_switcherBack = [[UIView alloc] initWithFrame:switcherBackFrame];
-	_switcherBack.backgroundColor = [MURTheme backgroundColor];
+	_switcherBack = [[MURBlurView alloc] initWithFrame:switcherBackFrame];
+	_switcherBack.backgroundColor = [UIColor whiteColor];
 	_switcherBack.layer.masksToBounds = YES;
 	_switcherBack.layer.cornerRadius = 7.0;
 	_switcherBack.userInteractionEnabled = NO;
@@ -114,10 +114,10 @@
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:SNAP_DAMPING initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
 		_switcherBack.hidden = NO;
 		
-		CAFilter* filter = [CAFilter filterWithName:@"gaussianBlur"];
+		/*CAFilter* filter = [CAFilter filterWithName:@"gaussianBlur"];
 		[filter setValue:@(20.0) forKey:@"inputRadius"];
 		[filter setValue:@(YES) forKey:@"inputHardEdges"];
-		_switcherBack.layer.filters = @[filter];
+		_switcherBack.layer.filters = @[filter];*/
 		
 		_overlay.alpha = 0.75;
 		_profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 1.0;

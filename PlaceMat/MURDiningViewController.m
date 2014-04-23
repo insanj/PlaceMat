@@ -95,7 +95,6 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-
 		CGFloat height = 80.0, padding = 5.0;
 	
 		CGRect imageViewFrame = CGRectMake(padding, padding, 70.0, height - (padding * 2));
@@ -113,22 +112,15 @@
 		peopleLabel.font = [UIFont systemFontOfSize:12.0];
 		peopleLabel.tag = 5;
 		
-		CGRect slice = peopleLabel.frame;
-		CGFloat removed = slice.size.width / 1.8;
-		slice.size.width -= removed;
-		slice.origin.x += removed;
-		slice.origin.y -= 2.0;
+		CGRect cornerFrame = peopleLabel.frame;
+		CGFloat removed = cornerFrame.size.width / 1.8;
+		cornerFrame.size.width -= removed;
+		cornerFrame.origin.x += removed;
+		cornerFrame.origin.y -= 2.0;
 		
-		UIView *blurFuckerViewYeah = [[UIView alloc] initWithFrame:slice];
-		blurFuckerViewYeah.layer.masksToBounds = YES;
-		blurFuckerViewYeah.layer.cornerRadius = 6.0;
-		blurFuckerViewYeah.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
-		blurFuckerViewYeah.tag = 6;
-		
-		CAFilter* filter = [CAFilter filterWithName:@"gaussianBlur"];
-		[filter setValue:@(10.0) forKey:@"inputRadius"];
-		[filter setValue:@(YES) forKey:@"inputHardEdges"];
-		blurFuckerViewYeah.layer.filters = @[filter];
+		MURBlurView *peopleLabelBacking = [[MURBlurView alloc] initWithFrame:cornerFrame cornerRadius:6.0];
+		peopleLabelBacking.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+		peopleLabelBacking.tag = 6;
 		
 		CGRect nameLabelFrame = CGRectMake(imageViewFrame.origin.x + imageViewFrame.size.width + (padding * 2), padding * 2, 0.0, 20.0);
 		nameLabelFrame.size.width = cell.frame.size.width - nameLabelFrame.origin.x;
@@ -157,7 +149,8 @@
 		cell.accessoryView = friendsAmount;*/
 		
 		[cell.contentView addSubview:imageView];
-		[imageView addSubview:blurFuckerViewYeah];
+		[imageView addSubview:peopleLabelBacking];
+		
 		[cell.contentView addSubview:peopleLabel];
 		[cell.contentView addSubview:nameLabel];
 		[cell.contentView addSubview:detailLabel];
@@ -173,7 +166,7 @@
 
 	MURPlace *place = [placesBySection[indexPath.section] objectAtIndex:indexPath.row];
 	UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
-	imageView.image = place.avatar;
+	imageView.image = imageView.highlightedImage = place.avatar;
 	
 	UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
 	nameLabel.text = place.name;

@@ -36,6 +36,7 @@
 	[UIView animateWithDuration:0.5 animations:^(void){
 		self.alpha = 1.0;
 	}];
+	
 	[super touchesEnded:touches withEvent:event];
 }
 
@@ -43,6 +44,7 @@
 	[UIView animateWithDuration:0.5 animations:^(void){
 		self.alpha = 1.0;
 	}];
+	
 	[super touchesEnded:touches withEvent:event];
 }
 
