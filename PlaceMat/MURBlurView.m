@@ -8,54 +8,65 @@
 
 #import "MURBlurView.h"
 
-@implementation MURBlurView
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    if ((self = [super initWithFrame:frame])){
-		self.clipsToBounds = YES;
-		self.layer.masksToBounds = YES;
-		// self.layer.rasterizationScale = 0.25;
-		// self.layer.shouldRasterize = YES;
-		self.userInteractionEnabled = NO;
-
-		[self setup];
-    }
-	
-    return self;
+@implementation MURBlurView {
+	UIView *parentView;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame cornerRadius:(CGFloat)radius {
-	if ((self = [super initWithFrame:frame])){
-		self.clipsToBounds = YES;
-		self.layer.masksToBounds = YES;
-		self.layer.cornerRadius = radius;
+- (instancetype)initWithFrame:(CGRect)frame inParentView:(UIView *)view {
+	self = [super initWithFrame:frame];
+	
+	if (self) {
+		self.contentMode = UIViewContentModeCenter;
 		self.userInteractionEnabled = NO;
-
-		[self setup];
+		parentView = view;
 	}
 	
-    return self;
+	return self;
 }
 
-- (void)setup {
-    if (!_toolbar) {
-        _toolbar = [[UIToolbar alloc] initWithFrame:self.bounds];
-        _toolbar.translatesAutoresizingMaskIntoConstraints = NO;
-        [self insertSubview:_toolbar atIndex:0];
-        
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_toolbar]|"
-                                                                     options:0
-                                                                     metrics:0
-                                                                       views:NSDictionaryOfVariableBindings(_toolbar)]];
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_toolbar]|"
-                                                                     options:0
-                                                                     metrics:0
-                                                                       views:NSDictionaryOfVariableBindings(_toolbar)]];
-    }
+- (void)applyLightBlur {
+	UIGraphicsBeginImageContext(self.frame.size);
+	[parentView drawViewHierarchyInRect:self.frame afterScreenUpdates:YES];
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	self.image = [image applyLightEffect];
 }
 
-- (void)setBlurTintColor:(UIColor *)blurTintColor {
-    [self.toolbar setBarTintColor:blurTintColor];
+- (void)applyDarkBlur {
+	UIGraphicsBeginImageContext(self.frame.size);
+	[parentView drawViewHierarchyInRect:self.frame afterScreenUpdates:YES];
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	self.image = [image applyDarkEffect];
+}
+
+- (void)applyLightBlurWithRadius:(CGFloat)radius {
+	UIGraphicsBeginImageContext(self.frame.size);
+	[parentView drawViewHierarchyInRect:self.frame afterScreenUpdates:YES];
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	self.image = [image applyBlurWithRadius:radius tintColor:[UIColor colorWithWhite:1.0 alpha:0.3] saturationDeltaFactor:1.8 maskImage:nil];
+}
+
+- (void)applyDarkBlurWithRadius:(CGFloat)radius {
+	UIGraphicsBeginImageContext(self.frame.size);
+	[parentView drawViewHierarchyInRect:self.frame afterScreenUpdates:YES];
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	self.image = [image applyBlurWithRadius:radius tintColor:[UIColor colorWithWhite:0.11 alpha:0.73] saturationDeltaFactor:1.8 maskImage:nil];
+}
+
+- (void)applyBlurWithColor:(UIColor *)color andRadius:(CGFloat)radius {
+	UIGraphicsBeginImageContext(self.frame.size);
+	[parentView drawViewHierarchyInRect:self.frame afterScreenUpdates:YES];
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	self.image = [image applyBlurWithRadius:radius tintColor:color saturationDeltaFactor:1.8 maskImage:nil];
 }
 
 @end

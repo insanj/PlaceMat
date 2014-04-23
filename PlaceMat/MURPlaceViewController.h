@@ -8,7 +8,6 @@
 
 #import "MURTableViewController.h"
 #import "MURPlace.h"
-#import "BLRView.h"
 
 @interface MURPlaceViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

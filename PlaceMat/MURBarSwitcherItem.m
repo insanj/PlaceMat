@@ -81,11 +81,10 @@
 	CGRect switcherBackSnapFrame = switcherBackFrame;
 	switcherBackSnapFrame.size.height = (settingsSnapFrame.origin.y + settingsSnapFrame.size.height) - frame.origin.y + 10.0;
 
-	_switcherBack = [[MURBlurView alloc] initWithFrame:switcherBackFrame];
-	_switcherBack.backgroundColor = [UIColor whiteColor];
+	_switcherBack = [[UIView alloc] initWithFrame:switcherBackFrame];
+	_switcherBack.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.85];
 	_switcherBack.layer.masksToBounds = YES;
 	_switcherBack.layer.cornerRadius = 7.0;
-	_switcherBack.userInteractionEnabled = NO;
 	_switcherBack.hidden = YES;
 	[_overlay addSubview:_switcherBack];
 	
@@ -128,7 +127,6 @@
 		_social.frame = socialSnapFrame;
 		_settings.frame = settingsSnapFrame;
 	} completion:^(BOOL finished){
-		// air
 	}];
 	
 	[(MURSwitcherButton *)self.customView addTarget:self action:@selector(suckBalloons) forControlEvents:UIControlEventTouchUpInside];

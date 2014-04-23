@@ -18,9 +18,8 @@
 		9E34BEB519005DCB004F46A1 /* Louise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEAF19005DCB004F46A1 /* Louise@2x.png */; };
 		9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEB019005DCB004F46A1 /* Maggie@2x.png */; };
 		9E34BEB819006328004F46A1 /* Regina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E34BEB719006328004F46A1 /* Regina@2x.png */; };
-		9E3C8EE21908548D00244C01 /* BLRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C8EDD1908548D00244C01 /* BLRView.m */; };
-		9E3C8EE41908548D00244C01 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C8EE11908548D00244C01 /* UIImage+ImageEffects.m */; };
-		9E3C8EE81908579900244C01 /* BLRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C8EE71908579900244C01 /* BLRView.xib */; };
+		9E3C8EEB190860AE00244C01 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C8EEA190860AE00244C01 /* UIImage+ImageEffects.m */; };
+		9E3C8EED190860D200244C01 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3C8EEC190860D200244C01 /* Accelerate.framework */; };
 		9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A218F8494100359C18 /* MURSwitcherButton.m */; };
 		9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A518F8501700359C18 /* MURSocialViewController.m */; };
 		9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C69A818F8505C00359C18 /* MURSettingsViewController.m */; };
@@ -135,11 +134,9 @@
 		9E34BEAF19005DCB004F46A1 /* Louise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Louise@2x.png"; sourceTree = "<group>"; };
 		9E34BEB019005DCB004F46A1 /* Maggie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Maggie@2x.png"; sourceTree = "<group>"; };
 		9E34BEB719006328004F46A1 /* Regina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Regina@2x.png"; sourceTree = "<group>"; };
-		9E3C8EDC1908548D00244C01 /* BLRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRView.h; sourceTree = "<group>"; };
-		9E3C8EDD1908548D00244C01 /* BLRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLRView.m; sourceTree = "<group>"; };
-		9E3C8EE01908548D00244C01 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		9E3C8EE11908548D00244C01 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		9E3C8EE71908579900244C01 /* BLRView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLRView.xib; sourceTree = "<group>"; };
+		9E3C8EE9190860AE00244C01 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		9E3C8EEA190860AE00244C01 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		9E3C8EEC190860D200244C01 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		9E4C69A118F8494100359C18 /* MURSwitcherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSwitcherButton.h; sourceTree = "<group>"; };
 		9E4C69A218F8494100359C18 /* MURSwitcherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURSwitcherButton.m; sourceTree = "<group>"; };
 		9E4C69A418F8501700359C18 /* MURSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURSocialViewController.h; sourceTree = "<group>"; };
@@ -248,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3C8EED190860D200244C01 /* Accelerate.framework in Frameworks */,
 				9E6DE50C18E614B700E27AC2 /* CoreGraphics.framework in Frameworks */,
 				9E6DE50E18E614B700E27AC2 /* UIKit.framework in Frameworks */,
 				9E6DE50A18E614B700E27AC2 /* Foundation.framework in Frameworks */,
@@ -272,7 +270,6 @@
 			children = (
 				9E2CA14518FB1191009B5991 /* MURBlurView.h */,
 				9E2CA14618FB1191009B5991 /* MURBlurView.m */,
-				9E3C8EDB1908548D00244C01 /* BLR */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -288,6 +285,8 @@
 				9E34BEA41900538A004F46A1 /* MURUser.m */,
 				9E6602D31901CC0B00299A8E /* MURPlace.h */,
 				9E6602D41901CC0B00299A8E /* MURPlace.m */,
+				9E3C8EE9190860AE00244C01 /* UIImage+ImageEffects.h */,
+				9E3C8EEA190860AE00244C01 /* UIImage+ImageEffects.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -325,26 +324,6 @@
 				9E6602E21901D71A00299A8E /* Starbucks@2x.png */,
 			);
 			path = Avatars;
-			sourceTree = "<group>";
-		};
-		9E3C8EDB1908548D00244C01 /* BLR */ = {
-			isa = PBXGroup;
-			children = (
-				9E3C8EDC1908548D00244C01 /* BLRView.h */,
-				9E3C8EDD1908548D00244C01 /* BLRView.m */,
-				9E3C8EE71908579900244C01 /* BLRView.xib */,
-				9E3C8EDF1908548D00244C01 /* Categories */,
-			);
-			path = BLR;
-			sourceTree = "<group>";
-		};
-		9E3C8EDF1908548D00244C01 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				9E3C8EE01908548D00244C01 /* UIImage+ImageEffects.h */,
-				9E3C8EE11908548D00244C01 /* UIImage+ImageEffects.m */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		9E4C69AA18F8517100359C18 /* ViewControllers */ = {
@@ -432,6 +411,7 @@
 		9E6DE50818E614B700E27AC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E3C8EEC190860D200244C01 /* Accelerate.framework */,
 				9E6DE50918E614B700E27AC2 /* Foundation.framework */,
 				9E6DE50B18E614B700E27AC2 /* CoreGraphics.framework */,
 				9E6DE50D18E614B700E27AC2 /* UIKit.framework */,
@@ -674,7 +654,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6602E51901D71A00299A8E /* Douglass@2x.png in Resources */,
-				9E3C8EE81908579900244C01 /* BLRView.xib in Resources */,
 				9E9E148F1906F85B00403B9A /* Tofu and Veggie Teriyaki.png in Resources */,
 				9E34BEB219005DCB004F46A1 /* Erin@2x.png in Resources */,
 				9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */,
@@ -766,13 +745,11 @@
 			files = (
 				9E6DE51618E614B700E27AC2 /* main.m in Sources */,
 				9E9F3CF21906C37F002B80E0 /* MURPlaceViewController.m in Sources */,
-				9E3C8EE41908548D00244C01 /* UIImage+ImageEffects.m in Sources */,
 				9E34BEA51900538A004F46A1 /* MURUser.m in Sources */,
 				9E6602D51901CC0B00299A8E /* MURPlace.m in Sources */,
 				9EFA649518E617E200B9A095 /* MURProfileViewController.m in Sources */,
 				9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */,
 				9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */,
-				9E3C8EE21908548D00244C01 /* BLRView.m in Sources */,
 				9EC81F361905D9720016B822 /* MURFirstRunViewController.m in Sources */,
 				9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */,
 				9EFA649818E6180300B9A095 /* MURTheme.m in Sources */,
@@ -780,6 +757,7 @@
 				9E2CA13F18FB0A1A009B5991 /* MURCheckinButtonItem.m in Sources */,
 				9E2CA14718FB1191009B5991 /* MURBlurView.m in Sources */,
 				9E6DE51A18E614B700E27AC2 /* MURAppDelegate.m in Sources */,
+				9E3C8EEB190860AE00244C01 /* UIImage+ImageEffects.m in Sources */,
 				9E4C69A918F8505C00359C18 /* MURSettingsViewController.m in Sources */,
 				9E2CA14D18FB158C009B5991 /* MURTableViewController.m in Sources */,
 				9E4C69A318F8494100359C18 /* MURSwitcherButton.m in Sources */,

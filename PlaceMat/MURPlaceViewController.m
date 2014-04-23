@@ -150,9 +150,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 	UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+		
 	UIButton *giantNutrition = [[UIButton alloc] initWithFrame:[self collectionView:collectionView cellForItemAtIndexPath:indexPath].frame];
 	[giantNutrition addTarget:self action:@selector(dismissGiantView:) forControlEvents:UIControlEventTouchUpInside];
 	giantNutrition.backgroundColor = [UIColor clearColor];
+	
+	MURBlurView *blurBacking = [[MURBlurView alloc] initWithFrame:self.view.bounds inParentView:self.view];
+	[blurBacking applyLightBlur];
 	
 	UIImageView *nutritionImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Nutrition"]];
 	nutritionImage.contentMode = UIViewContentModeCenter;
@@ -170,30 +174,20 @@
 	group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
 	[nutritionImage addMotionEffect:group];
 	
-	[giantNutrition addSubview:nutritionImage];
 	[keyWindow addSubview:giantNutrition];
+	[giantNutrition addSubview:blurBacking];
+	[giantNutrition addSubview:nutritionImage];
 	
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
 		giantNutrition.frame = keyWindow.bounds;
 		nutritionImage.center = giantNutrition.center;
-	} completion:^(BOOL finished){
-		BLRView *blurBacking = [BLRView load:self.view];
-		blurBacking.userInteractionEnabled = NO;
-		blurBacking.tag = 10;
-		
-		[giantNutrition addSubview:blurBacking];
-		[blurBacking blurWithColor:[BLRColorComponents lightEffect] updateInterval:1.0];
-		blurBacking.frame = giantNutrition.frame;
-	}];
+	} completion:nil];
 }
 
 - (void)dismissGiantView:(UIButton *)giantNutrition {
 	[UIView animateWithDuration:0.25 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
 		giantNutrition.alpha = 0.0;
 	} completion:^(BOOL finished) {
-		BLRView *blurBacking = (BLRView *)[giantNutrition viewWithTag:10];
-		[blurBacking unload];
-		
 		[giantNutrition removeFromSuperview];
 	}];
 }

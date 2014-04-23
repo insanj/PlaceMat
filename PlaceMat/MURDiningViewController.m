@@ -105,7 +105,7 @@
 		imageView.tag = 1;
 		
 		CGFloat side = imageViewFrame.size.height / 3.0;
-		UILabel *peopleLabel = [[UILabel alloc] initWithFrame:CGRectMake(imageViewFrame.origin.x, imageViewFrame.origin.y + (side * 2), imageViewFrame.size.width, side)];
+		UILabel *peopleLabel = [[UILabel alloc] initWithFrame:CGRectMake(imageViewFrame.origin.x, imageViewFrame.origin.y + (side * 2.1), imageViewFrame.size.width - 2.0, side)];
 		peopleLabel.text = [NSString stringWithFormat:@"%i👤", (int)(arc4random_uniform(6) + 1)];
 		peopleLabel.textAlignment = NSTextAlignmentRight;
 		peopleLabel.textColor = [UIColor blackColor];
@@ -118,9 +118,11 @@
 		cornerFrame.origin.x += removed;
 		cornerFrame.origin.y -= 2.0;
 		
-		MURBlurView *peopleLabelBacking = [[MURBlurView alloc] initWithFrame:cornerFrame cornerRadius:6.0];
-		peopleLabelBacking.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+		MURBlurView *peopleLabelBacking = [[MURBlurView alloc] initWithFrame:cornerFrame inParentView:imageView];
+		peopleLabelBacking.layer.masksToBounds = YES;
+		peopleLabelBacking.layer.cornerRadius = 6.0;
 		peopleLabelBacking.tag = 6;
+		[peopleLabelBacking applyBlurWithColor:[UIColor colorWithWhite:1.0 alpha:0.8] andRadius:20];
 		
 		CGRect nameLabelFrame = CGRectMake(imageViewFrame.origin.x + imageViewFrame.size.width + (padding * 2), padding * 2, 0.0, 20.0);
 		nameLabelFrame.size.width = cell.frame.size.width - nameLabelFrame.origin.x;
