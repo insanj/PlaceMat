@@ -114,6 +114,11 @@
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:SNAP_DAMPING initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
 		_switcherBack.hidden = NO;
 		
+		CAFilter* filter = [CAFilter filterWithName:@"gaussianBlur"];
+		[filter setValue:@(20.0) forKey:@"inputRadius"];
+		[filter setValue:@(YES) forKey:@"inputHardEdges"];
+		_switcherBack.layer.filters = @[filter];
+		
 		_overlay.alpha = 0.75;
 		_profile.alpha = _dining.alpha = _social.alpha = _settings.alpha = 1.0;
 		

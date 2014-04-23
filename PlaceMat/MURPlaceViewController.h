@@ -10,6 +10,10 @@
 #import "MURPlace.h"
 #import "MURTheme.h"
 
+@interface CAFilter : NSObject
++ (id)filterWithName:(NSString *)arg1;
+@end
+
 @interface MURPlaceViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, retain) MURPlace *place;
@@ -18,3 +22,4 @@
 - (instancetype)initWithPlace:(MURPlace *)given;
 
 @end
+

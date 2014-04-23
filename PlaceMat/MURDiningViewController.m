@@ -105,6 +105,31 @@
 		imageView.layer.cornerRadius = 7.0;
 		imageView.tag = 1;
 		
+		CGFloat side = imageViewFrame.size.height / 3.0;
+		UILabel *peopleLabel = [[UILabel alloc] initWithFrame:CGRectMake(imageViewFrame.origin.x, imageViewFrame.origin.y + (side * 2), imageViewFrame.size.width, side)];
+		peopleLabel.text = [NSString stringWithFormat:@"%i👤", (int)(arc4random_uniform(6) + 1)];
+		peopleLabel.textAlignment = NSTextAlignmentRight;
+		peopleLabel.textColor = [UIColor blackColor];
+		peopleLabel.font = [UIFont systemFontOfSize:12.0];
+		peopleLabel.tag = 5;
+		
+		CGRect slice = peopleLabel.frame;
+		CGFloat removed = slice.size.width / 1.8;
+		slice.size.width -= removed;
+		slice.origin.x += removed;
+		slice.origin.y -= 2.0;
+		
+		UIView *blurFuckerViewYeah = [[UIView alloc] initWithFrame:slice];
+		blurFuckerViewYeah.layer.masksToBounds = YES;
+		blurFuckerViewYeah.layer.cornerRadius = 6.0;
+		blurFuckerViewYeah.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+		blurFuckerViewYeah.tag = 6;
+		
+		CAFilter* filter = [CAFilter filterWithName:@"gaussianBlur"];
+		[filter setValue:@(10.0) forKey:@"inputRadius"];
+		[filter setValue:@(YES) forKey:@"inputHardEdges"];
+		blurFuckerViewYeah.layer.filters = @[filter];
+		
 		CGRect nameLabelFrame = CGRectMake(imageViewFrame.origin.x + imageViewFrame.size.width + (padding * 2), padding * 2, 0.0, 20.0);
 		nameLabelFrame.size.width = cell.frame.size.width - nameLabelFrame.origin.x;
 		UILabel *nameLabel = [[UILabel alloc] initWithFrame:nameLabelFrame];
@@ -132,6 +157,8 @@
 		cell.accessoryView = friendsAmount;*/
 		
 		[cell.contentView addSubview:imageView];
+		[imageView addSubview:blurFuckerViewYeah];
+		[cell.contentView addSubview:peopleLabel];
 		[cell.contentView addSubview:nameLabel];
 		[cell.contentView addSubview:detailLabel];
 		[cell.contentView addSubview:evenMoreLabel];
@@ -149,15 +176,14 @@
 	imageView.image = place.avatar;
 	
 	UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
-	nameLabel.text = [NSString stringWithFormat:@"%@ (%@ 👤)", place.name, [@(arc4random_uniform(5)+1) stringValue]];
+	nameLabel.text = place.name;
 	
 	UILabel *detailLabel = (UILabel *)[cell viewWithTag:3];
 	detailLabel.text = place.description;
 	
 	UILabel *evenMoreLabel = (UILabel *)[cell viewWithTag:4];
 	evenMoreLabel.text = [place.serving stringByAppendingString:[@" from " stringByAppendingString:place.time]];
-
-	
+			
 	return cell;
 }
 
