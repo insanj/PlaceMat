@@ -49,11 +49,9 @@
 	backingFrame.size.height = self.view.bounds.size.height - backingFrame.origin.y;
 	
 	_backingView = [[UIToolbar alloc] initWithFrame:backingFrame];
-	// _backingView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.9];
 	[self.view insertSubview:_backingView aboveSubview:_collectionView];
 	
 	CGFloat side = fabs((self.view.bounds.size.height / 2.0) - (_collectionView.frame.size.height + 100.0));
-	NSLog(@"%f", side);
 	UIImageView *bigPlaceImage = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, self.view.frame.size.height - (side * 1.55), side, side)];
 	bigPlaceImage.contentMode = UIViewContentModeScaleAspectFill;
 	bigPlaceImage.layer.masksToBounds = YES;
