@@ -10,6 +10,11 @@
 #import "MURPlace.h"
 #import "MURBlurView.h"
 
+@interface UIView (Private)
+- (NSString *)recursiveDescription;
+@end
+
+
 @interface MURPlaceViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, retain) MURPlace *place;

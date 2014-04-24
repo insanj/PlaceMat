@@ -17,28 +17,6 @@
 	self.title = _place.name;
 	self.view.backgroundColor = [MURTheme backgroundColor];
 	
-	CGRect collectionFrame = self.view.bounds;
-	collectionFrame.size.height /= 1.75;
-	
-	UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-	layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-	
-	_collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
-	[_collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"PlaceCell"];
-	_collectionView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
-	_collectionView.contentInset = UIEdgeInsetsMake(-20.0, 0.0, 0.0, 0.0);
-	_collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(0.0, 0.0, 10.0, 0.0);
-	_collectionView.delegate = self;
-	_collectionView.dataSource = self;
-	[self.view addSubview:_collectionView];
-	
-	CGRect backingFrame = self.view.bounds;
-	backingFrame.origin.y += collectionFrame.origin.y + (self.view.bounds.size.height / 1.8);
-	backingFrame.size.height = self.view.bounds.size.height - backingFrame.origin.y;
-	
-	_backingView = [[UIToolbar alloc] initWithFrame:backingFrame];
-	[self.view addSubview:_backingView];
-	
 	return self;
 }
 
@@ -48,37 +26,64 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	
 	self.navigationItem.rightBarButtonItem = [[MURCheckinButtonItem alloc] initWithName:_place.name];
+		
+	//UIView *trueParent = _backingView; //self.navigationController.topViewController.view;// [UIApplication sharedApplication].keyWindow.rootViewController.view;
+	CGRect collectionFrame = self.view.bounds;
+	collectionFrame.size.height /= 1.75;
 	
-	CGFloat side = (_backingView.frame.size.height / 2.0);
-	UIImageView *bigPlaceImage = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, 20.0, side, side)];
+	UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+	layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+	
+	_collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
+	[_collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"PlaceCell"];
+	_collectionView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
+	_collectionView.contentInset = UIEdgeInsetsMake(-20.0, 0.0, 20.0, 0.0);
+	_collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(0.0, 0.0, 10.0, 0.0);
+	_collectionView.delegate = self;
+	_collectionView.dataSource = self;
+	[self.view addSubview:_collectionView];
+	
+	CGRect backingFrame = self.view.bounds;
+	backingFrame.origin.y += _collectionView.frame.origin.y + (self.view.bounds.size.height / 1.9);
+	backingFrame.size.height = self.view.bounds.size.height - backingFrame.origin.y;
+	
+	_backingView = [[UIToolbar alloc] initWithFrame:backingFrame];
+	// _backingView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.9];
+	[self.view insertSubview:_backingView aboveSubview:_collectionView];
+	
+	CGFloat side = fabs((self.view.bounds.size.height / 2.0) - (_collectionView.frame.size.height + 100.0));
+	NSLog(@"%f", side);
+	UIImageView *bigPlaceImage = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, self.view.frame.size.height - (side * 1.55), side, side)];
 	bigPlaceImage.contentMode = UIViewContentModeScaleAspectFill;
 	bigPlaceImage.layer.masksToBounds = YES;
 	bigPlaceImage.layer.cornerRadius = 10.0;
 	bigPlaceImage.image = _place.avatar;
-	[_backingView addSubview:bigPlaceImage];
+	[self.view addSubview:bigPlaceImage];
 	
-	UITextView *bigPlaceText = [[UITextView alloc] initWithFrame:CGRectMake(bigPlaceImage.frame.origin.x + bigPlaceImage.frame.size.width + 10.0, bigPlaceImage.frame.origin.y, _backingView.frame.size.width - (20.0 + bigPlaceImage.frame.size.width + 20.0), bigPlaceImage.frame.size.height)];
-	bigPlaceText.editable = NO;
+	UILabel *bigPlaceText = [[UILabel alloc] initWithFrame:CGRectMake(bigPlaceImage.frame.origin.x + bigPlaceImage.frame.size.width + 10.0, bigPlaceImage.frame.origin.y, self.view.bounds.size.width - (20.0 + bigPlaceImage.frame.size.width + 20.0), bigPlaceImage.frame.size.height)];
 	bigPlaceText.backgroundColor = [UIColor clearColor];
 	bigPlaceText.textColor = [UIColor blackColor];
-	bigPlaceText.font = [UIFont systemFontOfSize:14.0];
+	bigPlaceText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0];
 	bigPlaceText.text = [NSString stringWithFormat:@"Welcome to %@. You can use %@ to buy %@ during %@.", [_place.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" "]], _place.description, _place.serving, _place.time];
-	[_backingView addSubview:bigPlaceText];
+	bigPlaceText.numberOfLines = 0;
+	bigPlaceText.minimumScaleFactor = 0.1;
+	bigPlaceText.adjustsFontSizeToFitWidth = YES;
+	[self.view addSubview:bigPlaceText]; // aboveSubview:_backingView];
 	
-	UILabel *legend = [[UILabel alloc] initWithFrame:CGRectMake(0.0, _backingView.frame.size.height - 50.0, _backingView.frame.size.width, 50.0)];
+	UILabel *legend = [[UILabel alloc] initWithFrame:CGRectMake(0.0, self.view.frame.size.height - 50.0, self.view.frame.size.width, 50.0)];
 	legend.textAlignment = NSTextAlignmentCenter;
 	legend.font = [UIFont systemFontOfSize:13.0];
 	legend.textColor = [UIColor lightGrayColor];
 	legend.text = @"Vegan: *     Vegetarian: ✭     Gluten-free: ✝";
-	[_backingView addSubview:legend];
-
+	[self.view addSubview:legend]; //aboveSubview:_backingView];
+	
+	[super viewDidLoad];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
+//	NSLog(@"%@", [[UIApplication sharedApplication].keyWindow.rootViewController.view recursiveDescription]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -165,7 +170,7 @@
 	
 	MURBlurView *blurBacking = [[MURBlurView alloc] initWithFrame:self.view.bounds inParentView:self.view];
 	[blurBacking applyLightBlur];
-	
+		
 	UIImageView *nutritionImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Nutrition"]];
 	nutritionImage.contentMode = UIViewContentModeCenter;
 	
@@ -182,13 +187,22 @@
 	group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
 	[nutritionImage addMotionEffect:group];
 	
+	UILabel *nameCaption = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 60.0, self.view.bounds.size.width, 50.0)];
+	nameCaption.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0];
+	nameCaption.textAlignment = NSTextAlignmentCenter;
+	nameCaption.textColor = [UIColor darkTextColor];
+	nameCaption.text = [_place.dishes[indexPath.row] componentsSeparatedByString:@"; "][0];
+	nameCaption.alpha = 0.0;
+	
 	[keyWindow addSubview:giantNutrition];
 	[giantNutrition addSubview:blurBacking];
 	[giantNutrition addSubview:nutritionImage];
+	[giantNutrition addSubview:nameCaption];
 	
 	[UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
 		giantNutrition.frame = keyWindow.bounds;
-		nutritionImage.center = giantNutrition.center;
+		nutritionImage.center = CGPointMake(giantNutrition.center.x, giantNutrition.center.y + 30.0);
+		nameCaption.alpha = 1.0;
 	} completion:nil];
 }
 
