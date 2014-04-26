@@ -15,7 +15,7 @@
 	
 	self.title = @"PlaceMat";
 	self.view.backgroundColor = [MURTheme backgroundColor];
-	
+
 	CGFloat padding = 20.0;
 	UILabel *welcome = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, 50.0)];
 	welcome.center = CGPointMake(self.view.center.x, self.view.center.y - welcome.frame.size.height - padding);

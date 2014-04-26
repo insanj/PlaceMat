@@ -388,6 +388,7 @@
 	// Log out
 	else if (indexPath.section == 4 && indexPath.row == 0) {
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		[defaults removeObjectForKey:@"PlaceMatRan"];
 		[defaults removeObjectForKey:@"Vegetarian"];
 		[defaults removeObjectForKey:@"Vegan"];
 		[defaults removeObjectForKey:@"Pescatarian"];

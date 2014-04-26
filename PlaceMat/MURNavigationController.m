@@ -13,12 +13,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.navigationBar.barTintColor = [MURTheme tintColor];
-	self.navigationBar.tintColor = [UIColor blackColor];
+	self.navigationBar.barTintColor = [MURTheme barTintColor];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+	return UIStatusBarStyleLightContent;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	if (YES || ![[NSUserDefaults standardUserDefaults] boolForKey:@"PlaceMatRan"]) {
+	if (![[NSUserDefaults standardUserDefaults] boolForKey:@"PlaceMatRan"]) {
 		NSLog(@"Detected user hasn't run before...");		
 		[self pushViewController:[[MURFirstRunViewController alloc] init] animated:YES];
 	}

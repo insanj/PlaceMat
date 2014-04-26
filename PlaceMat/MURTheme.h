@@ -12,8 +12,9 @@
 
 + (UIImage *)imageFromColor:(UIColor *)color withSize:(CGSize)size;
 
-// Main tint color for app. Used in NavigationBars.
+// Main tint colors for app. Used in NavigationBars.
 + (UIColor *)tintColor;
++ (UIColor *)barTintColor;
 
 // Main background color for app. Used in ViewControllers.
 + (UIColor *)backgroundColor;

@@ -52,7 +52,7 @@
 	[self.view insertSubview:_backingView aboveSubview:_collectionView];
 	
 	CGFloat side = fabs((self.view.bounds.size.height / 2.0) - (_collectionView.frame.size.height + 100.0));
-	UIImageView *bigPlaceImage = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, self.view.frame.size.height - (side * 1.55), side, side)];
+	UIImageView *bigPlaceImage = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, self.view.frame.size.height - (side * 1.5), side, side)];
 	bigPlaceImage.contentMode = UIViewContentModeScaleAspectFill;
 	bigPlaceImage.layer.masksToBounds = YES;
 	bigPlaceImage.layer.cornerRadius = 10.0;
@@ -185,7 +185,11 @@
 	group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
 	[nutritionImage addMotionEffect:group];
 	
-	UILabel *nameCaption = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 60.0, self.view.bounds.size.width, 50.0)];
+	// NSLog(@"%f", nutritionImage.frame.origin.y - 20.0);
+
+	UILabel *nameCaption = [[UILabel alloc] initWithFrame:CGRectMake(0.0, keyWindow.center.y - ((nutritionImage.frame.size.height / 2.0) + (50.0 / 2.0)), self.view.bounds.size.width, 50.0)];
+	nameCaption.adjustsFontSizeToFitWidth = YES;
+	nameCaption.minimumScaleFactor = 0.1;
 	nameCaption.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0];
 	nameCaption.textAlignment = NSTextAlignmentCenter;
 	nameCaption.textColor = [UIColor darkTextColor];

@@ -11,6 +11,8 @@
 @implementation MURProfileViewController
 
 - (void)viewDidLoad{
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     [super viewDidLoad];
 
 	if ([_name isEqualToString:@"Profile"]) {

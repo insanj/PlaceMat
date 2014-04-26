@@ -13,6 +13,7 @@
 - (instancetype)initWithName:(NSString *)name {
 	self = [super initWithCustomView:[[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"CheckIn"]]];
 	if (self) {
+		self.tintColor = [UIColor whiteColor];
 		overrideName = name;
 		[self.button addTarget:self action:@selector(showSpecificCheckIn) forControlEvents:UIControlEventTouchUpInside];
 	}

@@ -22,6 +22,10 @@
 }
 
 + (UIColor *)tintColor {
+	return [UIColor whiteColor];
+}
+
++ (UIColor *)barTintColor {
 	return [UIColor colorWithRed:100/255.0 green:157/255.0 blue:213/255.0 alpha:1.0];
 }
 
@@ -30,7 +34,7 @@
 }
 
 + (UIColor *)buttonTintColor {
-	return [UIColor blackColor];
+	return [UIColor whiteColor];
 }
 
 + (UIColor *)buttonTouchTintColor {
