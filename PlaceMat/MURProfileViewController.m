@@ -49,15 +49,17 @@
 
 - (void)refreshTable:(UIRefreshControl *)sender {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-	
-	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-		[sender endRefreshing];
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+	[self performSelector:@selector(didFinishLoadingTableData:) withObject:sender afterDelay:1.0];
+}
 
-		NSIndexSet *allSections = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, [self.tableView numberOfSections])];
-		[self.tableView reloadSections:allSections withRowAnimation:UITableViewRowAnimationAutomatic];
-		[self.tableView reloadData];
-	});
+- (void) didFinishLoadingTableData:(UIRefreshControl*)sender {
+    [sender endRefreshing];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    
+    [self.tableView beginUpdates];
+    NSIndexSet *allSections = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, [self.tableView numberOfSections])];
+    [self.tableView reloadSections:allSections withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,8 +18,6 @@
 	self.window.rootViewController = _navigationController;
     [self.window makeKeyAndVisible];
 	
-	NSDictionary *attributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-	[[UINavigationBar appearance] setTitleTextAttributes:attributes];
     return YES;
 }
 

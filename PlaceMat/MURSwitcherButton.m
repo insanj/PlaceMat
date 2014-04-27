@@ -14,12 +14,18 @@
 
 -(instancetype)initWithImage:(UIImage *)image {
 	UIImage *sized = [self sizeImageToDefault:image];
+    
+    // This will make the buttons always tint to the global tint color.
+    sized = [sized imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+
 	
 	if ((self = [super initWithFrame:CGRectMake(0.0, 0.0, sized.size.width + 5.0, sized.size.height + 5.0)])) {
 		[self setImage:sized forState:UIControlStateNormal];
 		self.contentMode = UIViewContentModeCenter;
 	}
-	
+    
+    self.tintColor = [MURTheme tintColor];
+    
 	return self;
 }
 

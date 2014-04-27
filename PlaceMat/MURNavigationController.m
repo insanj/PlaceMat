@@ -14,6 +14,10 @@
     [super viewDidLoad];
 	
 	self.navigationBar.barTintColor = [MURTheme barTintColor];
+    self.navigationBar.tintColor = [MURTheme tintColor];
+    
+	NSDictionary *attributes = @{NSForegroundColorAttributeName : [MURTheme tintColor]};
+    self.navigationBar.titleTextAttributes = attributes;
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{

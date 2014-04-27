@@ -11,10 +11,9 @@
 @implementation MURCheckinButtonItem
 
 - (instancetype)initWithName:(NSString *)name {
-	self = [super initWithCustomView:[[MURSwitcherButton alloc] initWithImage:[UIImage imageNamed:@"CheckIn"]]];
+	self = [self initWithDefaults];
 	if (self) {
-		self.tintColor = [UIColor whiteColor];
-		overrideName = name;
+        overrideName = name;
 		[self.button addTarget:self action:@selector(showSpecificCheckIn) forControlEvents:UIControlEventTouchUpInside];
 	}
 	
