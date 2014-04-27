@@ -7,6 +7,7 @@
 //
 
 #import "MURProfileViewController.h"
+#import "MURActivity.h"
 
 @implementation MURProfileViewController
 
@@ -35,7 +36,7 @@
 	self = [super init];
 	
 	_name = @"Profile";
-	_user = [[MURUser alloc] initWithPath:[MURUser pathForDebugUser]];
+	self.user = [[MURUser alloc] initWithPath:[MURUser pathForDebugUser]];
 	return self;
 }
 
@@ -43,7 +44,7 @@
 	self = [super init];
 	
 	_name = name;
-	_user = [[MURUser alloc] initWithPath:[MURUser pathForName:name]];
+	self.user = [[MURUser alloc] initWithPath:[MURUser pathForName:name]];
 	return self;
 }
 
@@ -112,11 +113,11 @@
 		case 0:
 			return 1;
 		case 1:
-			return _user.activities.count;
+			return self.user.activities.count;
 		case 2:
-			return _user.friends.count;
+			return self.user.friends.count;
 		case 3:
-			return _user.dishes.count;
+			return self.user.dishes.count;
 	}
 }
 
@@ -136,7 +137,7 @@
 			CGFloat padding = (cellHeight - avatarHeight) / 2.0;
 			
 			UIImageView *avatar = [[UIImageView alloc] initWithFrame:CGRectMake(padding, padding, avatarHeight, avatarHeight)];
-			avatar.image = _user.avatar;
+			avatar.image = self.user.avatar;
 			avatar.layer.masksToBounds = YES;
 			avatar.layer.cornerRadius = 10.0;
 			avatar.contentMode = UIViewContentModeScaleAspectFill;
@@ -144,21 +145,21 @@
 			CGFloat xPadding = avatar.frame.origin.x + avatar.frame.size.width + padding;
 
 			UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:28.0];
-			CGSize nameSize = [_user.name sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			CGSize nameSize = [self.user.name sizeWithAttributes:@{NSFontAttributeName : nameFont}];
 			CGRect nameRect = CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, padding + 15.0, 0, nameSize.height);
 			nameRect.size.width = cell.frame.size.width - nameRect.origin.x - padding;
 			UILabel *nameLabel = [[UILabel alloc] initWithFrame:nameRect];
 			nameLabel.font = nameFont;
-			nameLabel.text = _user.name;
+			nameLabel.text = self.user.name;
 			nameLabel.adjustsFontSizeToFitWidth = YES;
 			nameLabel.minimumScaleFactor = 0.5;
 			
 			UIFont *classYearFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
-			CGSize classYearSize = [_user.classOf sizeWithAttributes:@{NSFontAttributeName : nameFont}];
+			CGSize classYearSize = [self.user.classOf sizeWithAttributes:@{NSFontAttributeName : nameFont}];
 			UILabel *classYearLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatar.frame.origin.x + avatar.frame.size.width + padding, nameSize.height + 15.0, classYearSize.width, classYearSize.height)];
 			classYearLabel.font = classYearFont;
 			classYearLabel.textColor = [UIColor darkGrayColor];
-			classYearLabel.text = _user.classOf;
+			classYearLabel.text = self.user.classOf;
 			
 			CGFloat buttonHeight = 30.0;
 			UIButton *actionButton = [[UIButton alloc] initWithFrame:CGRectMake(xPadding, cellHeight - (buttonHeight * 2), cell.frame.size.width / 2.0, buttonHeight)];
@@ -201,8 +202,8 @@
 		}
 		
 		//CGFloat labelWidth = self.view.frame.size.width - 50.0;
-		NSArray *activity = [_user.activities[indexPath.row] componentsSeparatedByString:@"; "];
-		NSString *labelText = activity[0];
+		MURActivity *activity = self.user.activities[indexPath.row];
+		NSString *labelText = activity.activityDescription;
 		
 		UILabel *wrapping = (UILabel *)[cell.contentView viewWithTag:1];
 		wrapping.text = labelText;
@@ -212,8 +213,8 @@
 		wrapping.minimumScaleFactor = 0.1;
 		wrapping.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
 		
-		if (activity.count > 1) {
-			cell.detailTextLabel.text = activity[1];
+		if (activity.relativeTime) {
+			cell.detailTextLabel.text = activity.relativeTime;
 			cell.detailTextLabel.adjustsFontSizeToFitWidth = YES;
 		}
 	} // activity cell
@@ -224,7 +225,7 @@
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FriendsCell"];
 		}
 		
-		NSString *friend = _user.friends[indexPath.row];
+		NSString *friend = self.user.friends[indexPath.row];
 		cell.textLabel.text = friend;
 		cell.textLabel.numberOfLines = 1;
 		cell.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
@@ -253,9 +254,9 @@
 			[cell.contentView addSubview:wrapping];
 		}
 		
-		NSArray *dish = [_user.dishes[indexPath.row] componentsSeparatedByString:@"; "];
+		NSDictionary *dish = self.user.dishes[indexPath.row];
 		
-		NSString *labelText = dish[0];
+		NSString *labelText = dish[@"name"];
 		
 		UILabel *wrapping = (UILabel *)[cell.contentView viewWithTag:1];
 		wrapping.text = labelText;
@@ -265,10 +266,13 @@
 		wrapping.minimumScaleFactor = 0.1;
 		wrapping.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
 		
-		if (dish.count > 1) {
-			cell.detailTextLabel.text = dish[1];
-			cell.detailTextLabel.adjustsFontSizeToFitWidth = YES;
-		}
+        NSNumber *rating = dish[@"rating"];
+        
+        cell.detailTextLabel.text = [@"" stringByPaddingToLength:rating.integerValue
+                                                      withString:@"✭"
+                                                 startingAtIndex:0];
+        
+        cell.detailTextLabel.adjustsFontSizeToFitWidth = YES;
 	} // dishes cell
 	
 	for (id obj in cell.subviews) {

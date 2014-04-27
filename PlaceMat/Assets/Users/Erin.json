@@ -1,0 +1,47 @@
+{
+    "name": "Erin Cherry",
+    "class": "PD Associate",
+    "checked in": null,
+    "activity": [
+        {
+            "description": "Said: \"Dinner with Louise Lu Yi was delicious\"",
+            "time": "12 hr"
+        },
+        {
+            "description": "Rated Meat Lover's Calzone: ★★★★",
+            "time": "12 hr"
+        },
+        {
+            "description": "Checked into Douglass",
+            "time": "12 hr"
+        },
+        {
+            "description": "Maggie Curtis forked Erin",
+            "time": "13.5 hr"
+        },
+        {
+            "description": "Checked into The Commons",
+            "time": "17 hr"
+        }
+    ],
+    "friends": [
+        "Jessica Sheng",
+        "Joel Seligman",
+        "Regina George",
+        "David Libbey"
+    ],
+    "dishes": [
+        {
+            "name": "Barley and Vegetable Ragout",
+            "rating": 4
+        },
+        {
+            "name": "Orange Chicken Panda Bowl",
+            "rating": 4
+        },
+        {
+            "name": "Buffalo Chicken Flatbread",
+            "rating": 3
+        }
+    ]
+}
