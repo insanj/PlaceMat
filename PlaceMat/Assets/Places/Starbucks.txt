@@ -1,9 +1,0 @@
-name = Starbucks
-money = declining
-serving = all-day
-time = 7:30 - 0:00
-Dish 1 = Caramel Macchiato; v ; gf
-Dish 2 = Green Tea Latte; v ; gf
-Dish 3 = Cheesecake Brownie; v
-Dish 4 = Chocolate Marble Cake; v
-Dish 5 = Ham & Swiss Panini

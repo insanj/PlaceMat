@@ -35,10 +35,10 @@
 		9E6602D11901C32D00299A8E /* Erin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602CE1901C32D00299A8E /* Erin.txt */; };
 		9E6602D21901C32D00299A8E /* Regina.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602CF1901C32D00299A8E /* Regina.txt */; };
 		9E6602D51901CC0B00299A8E /* MURPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6602D41901CC0B00299A8E /* MURPlace.m */; };
-		9E6602DB1901D70F00299A8E /* Commons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602D71901D70F00299A8E /* Commons.txt */; };
-		9E6602DC1901D70F00299A8E /* Danforth.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602D81901D70F00299A8E /* Danforth.txt */; };
-		9E6602DD1901D70F00299A8E /* Douglass.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602D91901D70F00299A8E /* Douglass.txt */; };
-		9E6602DE1901D70F00299A8E /* Starbucks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602DA1901D70F00299A8E /* Starbucks.txt */; };
+		9E6602DB1901D70F00299A8E /* Commons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602D71901D70F00299A8E /* Commons.json */; };
+		9E6602DC1901D70F00299A8E /* Danforth.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602D81901D70F00299A8E /* Danforth.json */; };
+		9E6602DD1901D70F00299A8E /* Douglass.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602D91901D70F00299A8E /* Douglass.json */; };
+		9E6602DE1901D70F00299A8E /* Starbucks.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602DA1901D70F00299A8E /* Starbucks.json */; };
 		9E6602E31901D71A00299A8E /* Commons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602DF1901D71A00299A8E /* Commons@2x.png */; };
 		9E6602E41901D71A00299A8E /* Danforth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E01901D71A00299A8E /* Danforth@2x.png */; };
 		9E6602E51901D71A00299A8E /* Douglass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6602E11901D71A00299A8E /* Douglass@2x.png */; };
@@ -63,9 +63,9 @@
 		9E9E148E1906F85B00403B9A /* Seasoned Roast Beef.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */; };
 		9E9E148F1906F85B00403B9A /* Tofu and Veggie Teriyaki.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E14891906F85B00403B9A /* Tofu and Veggie Teriyaki.png */; };
 		9E9E1491190724FF00403B9A /* Nutrition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E1490190724FF00403B9A /* Nutrition@2x.png */; };
-		9E9F3CDF1906BA0A002B80E0 /* Connections.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CDE1906BA0A002B80E0 /* Connections.txt */; };
-		9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE01906BA0F002B80E0 /* Meliora.txt */; };
-		9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */; };
+		9E9F3CDF1906BA0A002B80E0 /* Connections.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CDE1906BA0A002B80E0 /* Connections.json */; };
+		9E9F3CE11906BA0F002B80E0 /* Meliora.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE01906BA0F002B80E0 /* Meliora.json */; };
+		9E9F3CE31906BA12002B80E0 /* Pura Vida.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE21906BA12002B80E0 /* Pura Vida.json */; };
 		9E9F3CE51906BA1C002B80E0 /* Connections@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE41906BA1C002B80E0 /* Connections@2x.png */; };
 		9E9F3CE81906BA21002B80E0 /* Pura Vida@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE61906BA21002B80E0 /* Pura Vida@2x.png */; };
 		9E9F3CE91906BA21002B80E0 /* Meliora@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F3CE71906BA21002B80E0 /* Meliora@2x.png */; };
@@ -106,6 +106,7 @@
 		9EFA649818E6180300B9A095 /* MURTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649718E6180300B9A095 /* MURTheme.m */; };
 		9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */; };
 		9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFA64A518E61E7100B9A095 /* Images.xcassets */; };
+		C97A0BAD190D8D53006E9A08 /* MURDish.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A0BAC190D8D53006E9A08 /* MURDish.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,10 +157,10 @@
 		9E6602CF1901C32D00299A8E /* Regina.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Regina.txt; sourceTree = "<group>"; };
 		9E6602D31901CC0B00299A8E /* MURPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURPlace.h; sourceTree = "<group>"; };
 		9E6602D41901CC0B00299A8E /* MURPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURPlace.m; sourceTree = "<group>"; };
-		9E6602D71901D70F00299A8E /* Commons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Commons.txt; sourceTree = "<group>"; };
-		9E6602D81901D70F00299A8E /* Danforth.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Danforth.txt; sourceTree = "<group>"; };
-		9E6602D91901D70F00299A8E /* Douglass.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Douglass.txt; sourceTree = "<group>"; };
-		9E6602DA1901D70F00299A8E /* Starbucks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Starbucks.txt; sourceTree = "<group>"; };
+		9E6602D71901D70F00299A8E /* Commons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Commons.json; sourceTree = "<group>"; };
+		9E6602D81901D70F00299A8E /* Danforth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Danforth.json; sourceTree = "<group>"; };
+		9E6602D91901D70F00299A8E /* Douglass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Douglass.json; sourceTree = "<group>"; };
+		9E6602DA1901D70F00299A8E /* Starbucks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Starbucks.json; sourceTree = "<group>"; };
 		9E6602DF1901D71A00299A8E /* Commons@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Commons@2x.png"; sourceTree = "<group>"; };
 		9E6602E01901D71A00299A8E /* Danforth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Danforth@2x.png"; sourceTree = "<group>"; };
 		9E6602E11901D71A00299A8E /* Douglass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Douglass@2x.png"; sourceTree = "<group>"; };
@@ -189,9 +190,9 @@
 		9E9E14881906F85B00403B9A /* Seasoned Roast Beef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seasoned Roast Beef.png"; sourceTree = "<group>"; };
 		9E9E14891906F85B00403B9A /* Tofu and Veggie Teriyaki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tofu and Veggie Teriyaki.png"; sourceTree = "<group>"; };
 		9E9E1490190724FF00403B9A /* Nutrition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nutrition@2x.png"; sourceTree = "<group>"; };
-		9E9F3CDE1906BA0A002B80E0 /* Connections.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Connections.txt; sourceTree = "<group>"; };
-		9E9F3CE01906BA0F002B80E0 /* Meliora.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Meliora.txt; sourceTree = "<group>"; };
-		9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pura Vida.txt"; sourceTree = "<group>"; };
+		9E9F3CDE1906BA0A002B80E0 /* Connections.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Connections.json; sourceTree = "<group>"; };
+		9E9F3CE01906BA0F002B80E0 /* Meliora.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meliora.json; sourceTree = "<group>"; };
+		9E9F3CE21906BA12002B80E0 /* Pura Vida.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Pura Vida.json"; sourceTree = "<group>"; };
 		9E9F3CE41906BA1C002B80E0 /* Connections@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Connections@2x.png"; sourceTree = "<group>"; };
 		9E9F3CE61906BA21002B80E0 /* Pura Vida@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pura Vida@2x.png"; sourceTree = "<group>"; };
 		9E9F3CE71906BA21002B80E0 /* Meliora@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Meliora@2x.png"; sourceTree = "<group>"; };
@@ -238,6 +239,8 @@
 		9EFA649918E61B2200B9A095 /* MURBarSwitcherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURBarSwitcherItem.h; sourceTree = "<group>"; };
 		9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURBarSwitcherItem.m; sourceTree = "<group>"; };
 		9EFA64A518E61E7100B9A095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C97A0BAB190D8D53006E9A08 /* MURDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURDish.h; sourceTree = "<group>"; };
+		C97A0BAC190D8D53006E9A08 /* MURDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURDish.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +288,8 @@
 				9E34BEA41900538A004F46A1 /* MURUser.m */,
 				9E6602D31901CC0B00299A8E /* MURPlace.h */,
 				9E6602D41901CC0B00299A8E /* MURPlace.m */,
+				C97A0BAB190D8D53006E9A08 /* MURDish.h */,
+				C97A0BAC190D8D53006E9A08 /* MURDish.m */,
 				9E3C8EE9190860AE00244C01 /* UIImage+ImageEffects.h */,
 				9E3C8EEA190860AE00244C01 /* UIImage+ImageEffects.m */,
 			);
@@ -378,13 +383,13 @@
 		9E6602D61901D70F00299A8E /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				9E6602D71901D70F00299A8E /* Commons.txt */,
-				9E9F3CDE1906BA0A002B80E0 /* Connections.txt */,
-				9E6602D81901D70F00299A8E /* Danforth.txt */,
-				9E6602D91901D70F00299A8E /* Douglass.txt */,
-				9E9F3CE01906BA0F002B80E0 /* Meliora.txt */,
-				9E9F3CE21906BA12002B80E0 /* Pura Vida.txt */,
-				9E6602DA1901D70F00299A8E /* Starbucks.txt */,
+				9E6602D71901D70F00299A8E /* Commons.json */,
+				9E9F3CDE1906BA0A002B80E0 /* Connections.json */,
+				9E6602D81901D70F00299A8E /* Danforth.json */,
+				9E6602D91901D70F00299A8E /* Douglass.json */,
+				9E9F3CE01906BA0F002B80E0 /* Meliora.json */,
+				9E9F3CE21906BA12002B80E0 /* Pura Vida.json */,
+				9E6602DA1901D70F00299A8E /* Starbucks.json */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -656,14 +661,14 @@
 				9E6602E51901D71A00299A8E /* Douglass@2x.png in Resources */,
 				9E9E148F1906F85B00403B9A /* Tofu and Veggie Teriyaki.png in Resources */,
 				9E34BEB219005DCB004F46A1 /* Erin@2x.png in Resources */,
-				9E9F3CE11906BA0F002B80E0 /* Meliora.txt in Resources */,
+				9E9F3CE11906BA0F002B80E0 /* Meliora.json in Resources */,
 				9E9F3D281906C76B002B80E0 /* Mel Burger.png in Resources */,
 				9E6602C51901C32900299A8E /* CheckIn@2x.png in Resources */,
 				9E5EB71B190604FE009691A0 /* Joel@2x.png in Resources */,
 				9E9F3D221906C76B002B80E0 /* California Turkey Sandwich.png in Resources */,
 				9E9F3D2E1906C76B002B80E0 /* Bold Roast Coffee.png in Resources */,
 				9E9F3D241906C76B002B80E0 /* Egg Salsa Burrito.png in Resources */,
-				9E6602DC1901D70F00299A8E /* Danforth.txt in Resources */,
+				9E6602DC1901D70F00299A8E /* Danforth.json in Resources */,
 				9E9F3D261906C76B002B80E0 /* Vegetarian Parmesan Wheat Pita.png in Resources */,
 				9E9F3D341906C76B002B80E0 /* Green Tea Latte.png in Resources */,
 				9E9F3D1B1906C76B002B80E0 /* Pepperoni Pizza.png in Resources */,
@@ -677,19 +682,19 @@
 				9E9E148A1906F85B00403B9A /* Cheeseburger Pie.png in Resources */,
 				9E6602E41901D71A00299A8E /* Danforth@2x.png in Resources */,
 				9E34BEB619005DCB004F46A1 /* Maggie@2x.png in Resources */,
-				9E9F3CDF1906BA0A002B80E0 /* Connections.txt in Resources */,
-				9E6602DD1901D70F00299A8E /* Douglass.txt in Resources */,
+				9E9F3CDF1906BA0A002B80E0 /* Connections.json in Resources */,
+				9E6602DD1901D70F00299A8E /* Douglass.json in Resources */,
 				9E6602E31901D71A00299A8E /* Commons@2x.png in Resources */,
 				9E9F3D181906C76B002B80E0 /* Cheese Pizza.png in Resources */,
 				9E6602D01901C32D00299A8E /* David.txt in Resources */,
-				9E6602DE1901D70F00299A8E /* Starbucks.txt in Resources */,
+				9E6602DE1901D70F00299A8E /* Starbucks.json in Resources */,
 				9E6602EB1901DD8200299A8E /* Jessica.txt in Resources */,
 				9E9F3D231906C76B002B80E0 /* Chicken Quesadillas.png in Resources */,
 				9E6602C81901C32900299A8E /* Menu@2x.png in Resources */,
 				9E6DE51418E614B700E27AC2 /* InfoPlist.strings in Resources */,
 				9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */,
 				9E9F3D271906C76B002B80E0 /* Italian Sausage.png in Resources */,
-				9E6602DB1901D70F00299A8E /* Commons.txt in Resources */,
+				9E6602DB1901D70F00299A8E /* Commons.json in Resources */,
 				9E9E148E1906F85B00403B9A /* Seasoned Roast Beef.png in Resources */,
 				9E9F3D2F1906C76B002B80E0 /* Egg & Cheese Muffin.png in Resources */,
 				9E9F3D321906C76B002B80E0 /* Cheesecake Brownie.png in Resources */,
@@ -722,7 +727,7 @@
 				9E9E148C1906F85B00403B9A /* Loaded Potato Soup.png in Resources */,
 				9E6602C61901C32900299A8E /* Dining@2x.png in Resources */,
 				9E9F3D351906C76B002B80E0 /* Ham & Swiss Panini.png in Resources */,
-				9E9F3CE31906BA12002B80E0 /* Pura Vida.txt in Resources */,
+				9E9F3CE31906BA12002B80E0 /* Pura Vida.json in Resources */,
 				9E6602D21901C32D00299A8E /* Regina.txt in Resources */,
 				9E6602CB1901C32900299A8E /* Social@2x.png in Resources */,
 			);
@@ -752,6 +757,7 @@
 				9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */,
 				9EC81F361905D9720016B822 /* MURFirstRunViewController.m in Sources */,
 				9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */,
+				C97A0BAD190D8D53006E9A08 /* MURDish.m in Sources */,
 				9EFA649818E6180300B9A095 /* MURTheme.m in Sources */,
 				9EFA649218E6174300B9A095 /* MURNavigationController.m in Sources */,
 				9E2CA13F18FB0A1A009B5991 /* MURCheckinButtonItem.m in Sources */,

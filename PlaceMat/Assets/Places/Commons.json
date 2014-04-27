@@ -1,0 +1,38 @@
+{
+    "name": "Commons",
+    "money": "declining",
+    "serving": "all-day",
+    "time": "8:30 - 23:00",
+    "dishes": [
+        {
+            "name": "Cheese Pizza",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Hot Dog",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        },
+        {
+            "name": "Greek Chicken Pita",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        },
+        {
+            "name": "Pepperoni Pizza",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        },
+        {
+            "name": "Italian Sausage",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        }
+    ]
+}

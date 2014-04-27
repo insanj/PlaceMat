@@ -1,0 +1,38 @@
+{
+    "name": "Meliora Restaurant",
+    "money": "declining",
+    "serving": "lunch",
+    "time": "11:00 - 14:00",
+    "dishes": [
+        {
+            "name": "Mel Burger",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        },
+        {
+            "name": "Meliora Veggie Burger",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Italian Sausage",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        },
+        {
+            "name": "Toasted Cheese & Tomato",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Poutine",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        }
+    ]
+}

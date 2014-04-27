@@ -1,0 +1,38 @@
+{
+    "name": "Pura Vida Cafè",
+    "money": "declining",
+    "serving": "breakfast and lunch",
+    "time": "7:30 - 18:30",
+    "dishes": [
+        {
+            "name": "Bold Roast Coffee",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": true,
+        },
+        {
+            "name": "Blueberry Cheese Croissant",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Egg & Cheese Muffin",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        },
+        {
+            "name": "Homestyle M&M Cookie",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Blueberry Scone",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        }
+    ]
+}

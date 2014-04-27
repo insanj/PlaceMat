@@ -176,7 +176,7 @@
 	nameLabel.text = place.name;
 	
 	UILabel *detailLabel = (UILabel *)[cell viewWithTag:3];
-	detailLabel.text = place.description;
+	detailLabel.text = place.money;
 	
 	UILabel *evenMoreLabel = (UILabel *)[cell viewWithTag:4];
 	evenMoreLabel.text = [place.serving stringByAppendingString:[@" from " stringByAppendingString:place.time]];

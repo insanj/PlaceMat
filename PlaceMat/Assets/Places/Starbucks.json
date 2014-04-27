@@ -1,0 +1,38 @@
+{
+    "name": "Starbucks",
+    "money": "declining",
+    "serving": "all-day",
+    "time": "11:00 - 0:00",
+    "dishes": [
+        {
+            "name": "Caramel Macchiato",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": true,
+        },
+        {
+            "name": "Green Tea Latte",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": true,
+        },
+        {
+            "name": "Cheesecake Brownie",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Chocolate Marble Cake",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Ham & Swiss Panini",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        }
+    ]
+}

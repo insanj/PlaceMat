@@ -7,6 +7,7 @@
 //
 
 #import "MURPlaceViewController.h"
+#import "MURDish.h"
 
 @implementation MURPlaceViewController
 
@@ -63,7 +64,7 @@
 	bigPlaceText.backgroundColor = [UIColor clearColor];
 	bigPlaceText.textColor = [UIColor blackColor];
 	bigPlaceText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0];
-	bigPlaceText.text = [NSString stringWithFormat:@"Welcome to %@. You can use %@ to buy %@ during %@.", [_place.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" "]], _place.description, _place.serving, _place.time];
+	bigPlaceText.text = [NSString stringWithFormat:@"Welcome to %@. You can use %@ to buy %@ during %@.", [_place.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" "]], _place.money, _place.serving, _place.time];
 	bigPlaceText.numberOfLines = 0;
 	bigPlaceText.minimumScaleFactor = 0.1;
 	bigPlaceText.adjustsFontSizeToFitWidth = YES;
@@ -105,15 +106,21 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    const NSInteger THUMB_TAG = 1;
+    const NSInteger CAPTION_TAG = 2;
 	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PlaceCell" forIndexPath:indexPath];
 	
-	if (![cell viewWithTag:1]) {
+    if (!cell) {
+        cell = [[UICollectionViewCell alloc] init];
+    }
+    
+	if (![cell viewWithTag:THUMB_TAG]) {
 		CGSize labelSize = CGSizeMake(cell.frame.size.width, 20.0);
 		UIImageView *foodThumb = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, cell.frame.size.width, cell.frame.size.height - (labelSize.height + 5.0))];
 		foodThumb.contentMode = UIViewContentModeScaleAspectFill;
 		foodThumb.layer.masksToBounds = YES;
 		foodThumb.layer.cornerRadius = 10.0;
-		foodThumb.tag = 1;
+		foodThumb.tag = THUMB_TAG;
 	
 		UILabel *foodCaption = [[UILabel alloc] initWithFrame:(CGRect){CGPointMake(0.0, foodThumb.frame.size.height), labelSize}];
 		foodCaption.font = [UIFont fontWithName:@"Helvetica-Light" size:18.0];
@@ -121,40 +128,19 @@
 		foodCaption.textColor = [UIColor blackColor];
 		foodCaption.adjustsFontSizeToFitWidth = YES;
 		foodCaption.minimumScaleFactor = 0.25;
-		foodCaption.tag = 2;
+		foodCaption.tag = CAPTION_TAG;
 	
 		[cell.contentView addSubview:foodThumb];
 		[cell.contentView addSubview:foodCaption];
 	}
 	
-	UIImageView *foodThumb = (UIImageView *)[cell.contentView viewWithTag:1];
-	UILabel *foodCaption = (UILabel *)[cell.contentView viewWithTag:2];
+	UIImageView *foodThumb = (UIImageView *)[cell.contentView viewWithTag:THUMB_TAG];
+	UILabel *foodCaption = (UILabel *)[cell.contentView viewWithTag:CAPTION_TAG];
 
-	NSArray *dishComponents = [_place.dishes[indexPath.row] componentsSeparatedByString:@"; "];
-	NSString *name = dishComponents[0];
-	foodCaption.text = name;
-
-	for (int i = 1; i < dishComponents.count; i++) {
-		if ([dishComponents[i] rangeOfString:@"vin"].location != NSNotFound) {
-			//if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Vegan"]) {
-				foodCaption.text = [foodCaption.text stringByAppendingString:@" *"];
-			//}
-		}
-		
-		else if ([dishComponents[i] rangeOfString:@"v"].location != NSNotFound) {
-			//if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Vegetarian"]) {
-				foodCaption.text = [foodCaption.text stringByAppendingString:@" ✭"];
-			//}
-		}
-		
-		else if ([dishComponents[i] rangeOfString:@"gf"].location != NSNotFound) {
-			//if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Gluten"]) {
-				foodCaption.text = [foodCaption.text stringByAppendingString:@" ✝"];
-			//}
-		}
-	}
+	MURDish *dish = self.place.dishes[indexPath.row];
+    foodCaption.text = [dish descriptionWithFoodTypes];
 	
-	foodThumb.image = [UIImage imageNamed:name];
+	foodThumb.image = dish.thumbnail;
 
 	return cell;
 }

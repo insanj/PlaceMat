@@ -1,9 +1,0 @@
-name = Commons
-money = declining
-serving = all-day
-time = 8:30 - 23:00
-Dish 1 = Cheese Pizza; v
-Dish 2 = Hot Dog
-Dish 3 = Greek Chicken Pita
-Dish 4 = Pepperoni Pizza
-Dish 5 = Italian Sausage

@@ -1,9 +1,0 @@
-name = Danforth 
-money = unlimited, declining ($7.50)
-serving = lunch
-time = 11:00 - 13:30
-Dish 1 = Southwest Sweet Potatoes; v; gf
-Dish 2 = Chicken Quesadillas
-Dish 3 = Egg Salsa Burrito; v
-Dish 4 = Vegetarian Parmesan Wheat Pita; vin
-Dish 5 = California Turkey Sandwich
