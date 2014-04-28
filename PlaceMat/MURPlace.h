@@ -10,9 +10,9 @@
 
 @interface MURPlace : NSObject
 
-@property(nonatomic, retain) NSString *name, *description, *serving, *time;
-@property(nonatomic, retain) NSMutableArray *dishes;
-@property(nonatomic, retain) UIImage *avatar;
+@property (nonatomic, readonly) NSString *name, *money, *serving, *time;
+@property (nonatomic, readonly) NSArray *dishes;
+@property (nonatomic, readonly) UIImage *avatar;
 
 - (instancetype)initWithName:(NSString *)given;
 

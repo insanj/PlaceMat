@@ -1,0 +1,38 @@
+{
+    "name": "Connections",
+    "money": "declining",
+    "serving": "all-day",
+    "time": "7:00 - 22:00",
+    "dishes": [
+        {
+            "name": "Hot Cocoa",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": true,
+        },
+        {
+            "name": "Strawberry Smoothie",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": true,
+        },
+        {
+            "name": "Beef Barley Soup",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        },
+        {
+            "name": "Cheddar Scallion Bagel",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Chocolate Chunk Scone",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        }
+    ]
+}

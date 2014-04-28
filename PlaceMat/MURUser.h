@@ -10,9 +10,9 @@
 
 @interface MURUser : NSObject
 
-@property(nonatomic, retain) NSString *name, *classOf, *checkedIn;
-@property(nonatomic, retain) NSMutableArray *activities, *friends, *dishes, *places;
-@property(nonatomic, retain) UIImage *avatar;
+@property (nonatomic, readonly) NSString *name, *classOf, *checkedIn;
+@property (nonatomic, readonly) NSArray *activities, *friends, *dishes, *places;
+@property (nonatomic, readonly) UIImage *avatar;
 
 + (NSArray *)chronologicalListOfUserActivitiesForSocialViewControllerTableViewControllerTableViewCellForRowAtIndexPath;
 + (NSString *)pathForDebugUser;

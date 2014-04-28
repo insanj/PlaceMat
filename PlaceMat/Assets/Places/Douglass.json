@@ -1,0 +1,38 @@
+{
+    "name": "Douglass",
+    "money": "unlimited, declining ($7.50)",
+    "serving": "lunch",
+    "time": "11:00 - 14:30",
+    "dishes": [
+        {
+            "name": "Seasoned Roast Beef",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": true,
+        },
+        {
+            "name": "Quinoa and Red Pepper Slider",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": true,
+        },
+        {
+            "name": "Loaded Potato Soup",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": false,
+        },
+        {
+            "name": "Tofu and Veggie Teriyaki",
+            "vegan": false,
+            "vegetarian": true,
+            "gluten-free": true,
+        },
+        {
+            "name": "Cheeseburger Pie",
+            "vegan": false,
+            "vegetarian": false,
+            "gluten-free": false,
+        }
+    ]
+}

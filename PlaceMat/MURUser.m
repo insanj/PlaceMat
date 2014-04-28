@@ -7,6 +7,15 @@
 //
 
 #import "MURUser.h"
+#import "MURActivity.h"
+
+@interface MURUser ()
+
+@property (nonatomic, readwrite) NSString *name, *classOf, *checkedIn;
+@property (nonatomic, readwrite) NSArray *activities, *friends, *dishes, *places;
+@property (nonatomic, readwrite) UIImage *avatar;
+
+@end
 
 @implementation MURUser
 
@@ -90,60 +99,47 @@
 			break;
 	}*/
 	
-	return [[NSBundle mainBundle] pathForResource:@"Erin" ofType:@"txt"];
+	return [[NSBundle mainBundle] pathForResource:@"Erin" ofType:@"json"];
 }
 
 
 + (NSString *)pathForName:(NSString *)name {
-	return [[NSBundle mainBundle] pathForResource:[name componentsSeparatedByString:@" "][0] ofType:@"txt"];
+	return [[NSBundle mainBundle] pathForResource:[name componentsSeparatedByString:@" "][0] ofType:@"json"];
 }
 
 - (instancetype)initWithPath:(NSString *)path {
 	self = [super init];
 	if (self) {
-		_activities = [[NSMutableArray alloc] init];
-		_friends = [[NSMutableArray alloc] init];
-		_dishes = [[NSMutableArray alloc] init];
 		
 		NSError *error;
-		NSString *raw = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+        NSData *jsonData = [NSData dataWithContentsOfFile:path];
+        
+        NSDictionary *userDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                       options:NSJSONReadingAllowFragments
+                                                                         error:&error];
+        NSArray *dictionaries = userDictionary[@"activity"];
+        self.activities = [self activitiesFromDictionaries:dictionaries];
+        self.checkedIn = userDictionary[@"checkedIn"];
+        self.friends = userDictionary[@"friends"];
+        self.dishes = userDictionary[@"dishes"];
+        self.places = userDictionary[@"places"];
+        self.classOf = userDictionary[@"class"];
+        self.name = userDictionary[@"name"];
 		
-		NSArray *lines = [raw componentsSeparatedByString:@"\n"];
-		for (NSString *line in lines) {
-			NSArray *components = [line componentsSeparatedByString:@" = "];
-			NSString *key = components[0];
-			NSString *val = components[1];
-			
-			if ([key isEqualToString:@"name"]) {
-				_name = val;
-			}
-			
-			else if ([key isEqualToString:@"class"]) {
-				_classOf = val;
-			}
-			
-			else if ([key isEqualToString:@"checked in"]) {
-				_checkedIn = val;
-			}
-			
-			else if ([key rangeOfString:@"Activity "].location != NSNotFound) {
-				[_activities addObject:val];
-			}
-			
-			else if ([key rangeOfString:@"Friend "].location != NSNotFound) {
-				[_friends addObject:val];
-			}
-			
-			else if ([key rangeOfString:@"Dish "].location != NSNotFound) {
-				[_dishes addObject:val];
-			}
-		}
-		
-		NSString *imagePath = [[path substringWithRange:NSMakeRange(0, path.length - 4)] stringByAppendingString:@".png"];
-		_avatar = [UIImage imageWithContentsOfFile:imagePath];
+		NSString *imagePath = [path stringByReplacingOccurrencesOfString:@".json" withString:@".png"];
+		self.avatar = [UIImage imageWithContentsOfFile:imagePath];
 	}
 	
 	return self;
+}
+
+- (NSArray*) activitiesFromDictionaries:(NSArray*)dictionaries {
+    NSMutableArray *activities = [NSMutableArray array];
+    for (NSDictionary *dictionary in dictionaries) {
+        MURActivity *activity = [MURActivity activityFromDictionary:dictionary];
+        [activities addObject:activity];
+    }
+    return activities;
 }
 
 @end
