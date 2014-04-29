@@ -1,47 +1,52 @@
 {
-    "name": "Erin Cherry",
-    "class": "PD Associate",
-    "checked in": null,
-    "activity": [
-        {
-            "description": "Said: \"Dinner with Louise Lu Yi was delicious\"",
-            "time": "12 hr"
-        },
-        {
-            "description": "Rated Meat Lover's Calzone: ★★★★",
-            "time": "12 hr"
-        },
-        {
-            "description": "Checked into Douglass",
-            "time": "12 hr"
-        },
-        {
-            "description": "Maggie Curtis forked Erin",
-            "time": "13.5 hr"
-        },
-        {
-            "description": "Checked into The Commons",
-            "time": "17 hr"
-        }
-    ],
-    "friends": [
-        "Jessica Sheng",
-        "Joel Seligman",
-        "Regina George",
-        "David Libbey"
-    ],
-    "dishes": [
-        {
-            "name": "Barley and Vegetable Ragout",
-            "rating": 4
-        },
-        {
-            "name": "Orange Chicken Panda Bowl",
-            "rating": 4
-        },
-        {
-            "name": "Buffalo Chicken Flatbread",
-            "rating": 3
-        }
-    ]
+  "name": "Erin Cherry",
+  "class": "PD Associate",
+  "checked in": null,
+  "activity": [
+    {
+      "description": "Said: \"Dinner with Louise Lu Yi was delicious\"",
+      "extra": null,
+      "time": "12 hr"
+    },
+    {
+      "description": "Rated Meat Lover's Calzone",
+      "extra": "\u2605\u2605\u2605\u2605",
+      "time": "12 hr"
+    },
+    {
+      "description": "Checked into Douglass",
+      "extra": null,
+      "time": "12 hr"
+    },
+    {
+      "description": "Maggie Curtis forked Erin",
+      "extra": null,
+      "time": "13.5 hr"
+    },
+    {
+      "description": "Checked into The Commons",
+      "extra": null,
+      "time": "17 hr"
+    }
+  ],
+  "friends": [
+    "Jessica Sheng",
+    "Joel Seligman",
+    "Regina George",
+    "David Libbey"
+  ],
+  "dishes": [
+    {
+      "name": "Barley and Vegetable Ragout",
+      "rating": 4
+    },
+    {
+      "name": "Orange Chicken Panda Bowl",
+      "rating": 4
+    },
+    {
+      "name": "Buffalo Chicken Flatbread",
+      "rating": 3
+    }
+  ]
 }

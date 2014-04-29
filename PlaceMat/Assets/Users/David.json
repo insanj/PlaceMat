@@ -1,47 +1,51 @@
 {
-    "name": "David Libbey",
-    "class": "2016",
-    "checked in": "Danforth",
-    "activity": [
-        {
-            "description": "David checked into Danforth",
-            "time": "10 min"
-        },
-        {
-            "description": "Maggie Curtis spooned David",
-            "time": "5 hr"
-        },
-        {
-            "description": "David rated Chicken Vera Cruz ★★★",
-            "time": "8 hr"
-        },
-        {
-            "description": "Said: \"Had a great time in Danforth tonight!\"",
-            "time": "10 hr"
-        },
-        {
-            "description": "Checked Into Danforth",
-            "time": "10 hr"
-        }
-    ],
-    "friends": [
-        "Jessica Sheng",
-        "Joel Seligman",
-        "Regina George",
-        "Erin Cherry"
-    ],
-    "dishes": [
-        {
-            "name": "Falafel and Salad",
-            "rating": 5
-        },
-        {
-            "name": "Curried Turkey Wrap",
-            "rating": 5
-        },
-        {
-            "name": "Turkey with Orange Sauce",
-            "rating": 4
-        }
-    ]
+  "name": "David Libbey",
+  "class": "2016",
+  "checked in": "Danforth",
+  "activity": [
+    {
+      "description": "David checked into Danforth",
+      "extra": null,
+      "time": "10 min"
+    },
+    {
+      "description": "Maggie Curtis spooned David",
+      "time": "5 hr"
+    },
+    {
+      "description": "David rated Chicken Vera Cruz",
+      "extra": "\u2605\u2605\u2605",
+      "time": "8 hr"
+    },
+    {
+      "description": "Said: \"Had a great time in Danforth tonight!\"",
+      "extra": null,
+      "time": "10 hr"
+    },
+    {
+      "description": "Checked Into Danforth",
+      "extra": null,
+      "time": "10 hr"
+    }
+  ],
+  "friends": [
+    "Jessica Sheng",
+    "Joel Seligman",
+    "Regina George",
+    "Erin Cherry"
+  ],
+  "dishes": [
+    {
+      "name": "Falafel and Salad",
+      "rating": 5
+    },
+    {
+      "name": "Curried Turkey Wrap",
+      "rating": 5
+    },
+    {
+      "name": "Turkey with Orange Sauce",
+      "rating": 4
+    }
+  ]
 }

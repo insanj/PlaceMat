@@ -106,6 +106,7 @@
 		9EFA649818E6180300B9A095 /* MURTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649718E6180300B9A095 /* MURTheme.m */; };
 		9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */; };
 		9EFA64A618E61E7100B9A095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFA64A518E61E7100B9A095 /* Images.xcassets */; };
+		C974DD1F190FEDE000CD278C /* MURJSONValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C974DD1E190FEDE000CD278C /* MURJSONValidator.m */; };
 		C97A0BAD190D8D53006E9A08 /* MURDish.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A0BAC190D8D53006E9A08 /* MURDish.m */; };
 		C97A0BB0190DA32A006E9A08 /* MURActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A0BAF190DA32A006E9A08 /* MURActivity.m */; };
 /* End PBXBuildFile section */
@@ -240,6 +241,8 @@
 		9EFA649918E61B2200B9A095 /* MURBarSwitcherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURBarSwitcherItem.h; sourceTree = "<group>"; };
 		9EFA649A18E61B2200B9A095 /* MURBarSwitcherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURBarSwitcherItem.m; sourceTree = "<group>"; };
 		9EFA64A518E61E7100B9A095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C974DD1D190FEDE000CD278C /* MURJSONValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURJSONValidator.h; sourceTree = "<group>"; };
+		C974DD1E190FEDE000CD278C /* MURJSONValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURJSONValidator.m; sourceTree = "<group>"; };
 		C97A0BAB190D8D53006E9A08 /* MURDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURDish.h; sourceTree = "<group>"; };
 		C97A0BAC190D8D53006E9A08 /* MURDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURDish.m; sourceTree = "<group>"; };
 		C97A0BAE190DA32A006E9A08 /* MURActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURActivity.h; sourceTree = "<group>"; };
@@ -291,6 +294,8 @@
 				9E34BEA41900538A004F46A1 /* MURUser.m */,
 				C97A0BAE190DA32A006E9A08 /* MURActivity.h */,
 				C97A0BAF190DA32A006E9A08 /* MURActivity.m */,
+				C974DD1D190FEDE000CD278C /* MURJSONValidator.h */,
+				C974DD1E190FEDE000CD278C /* MURJSONValidator.m */,
 				9E6602D31901CC0B00299A8E /* MURPlace.h */,
 				9E6602D41901CC0B00299A8E /* MURPlace.m */,
 				C97A0BAB190D8D53006E9A08 /* MURDish.h */,
@@ -761,6 +766,7 @@
 				C97A0BB0190DA32A006E9A08 /* MURActivity.m in Sources */,
 				9EFA649B18E61B2200B9A095 /* MURBarSwitcherItem.m in Sources */,
 				9E9D9C5C18EF611900E3713F /* MURDiningViewController.m in Sources */,
+				C974DD1F190FEDE000CD278C /* MURJSONValidator.m in Sources */,
 				9EC81F361905D9720016B822 /* MURFirstRunViewController.m in Sources */,
 				9E4C69A618F8501700359C18 /* MURSocialViewController.m in Sources */,
 				C97A0BAD190D8D53006E9A08 /* MURDish.m in Sources */,

@@ -12,6 +12,9 @@
 
 @property (nonatomic, readonly) NSString *activityDescription;
 @property (nonatomic, readonly) NSString *relativeTime;
+@property (nonatomic, readonly) NSString *extraInformation;
+
+@property (nonatomic, readonly) NSDate *date;
 
 + (instancetype) activityFromDictionary:(NSDictionary*)dictionary;
 

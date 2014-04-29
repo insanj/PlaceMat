@@ -7,6 +7,7 @@
 //
 
 #import "MURSocialViewController.h"
+#import "MURActivity.h"
 
 @implementation MURSocialViewController
 
@@ -68,7 +69,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SocialCell"];
-	NSString *rawActivity = _activity[indexPath.row];
+	MURActivity *rawActivity = _activity[indexPath.row];
 	
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"SocialCell"];
@@ -81,21 +82,22 @@
 	}
 		
 	// CGFloat labelWidth = self.view.frame.size.width - 50.0;
-	NSArray *activity = [rawActivity componentsSeparatedByString:@"; "];
-	NSString *labelText = activity[0];
 
 	UILabel *wrapping = (UILabel *)[cell.contentView viewWithTag:1];
-	wrapping.text = labelText;
+	wrapping.text = rawActivity.activityDescription;
 	wrapping.numberOfLines = 2;
 	wrapping.lineBreakMode = NSLineBreakByWordWrapping;
 	wrapping.adjustsFontSizeToFitWidth = YES;
 	wrapping.minimumScaleFactor = 0.1;
 	wrapping.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
 	
-	if (activity.count > 1) {
-		cell.detailTextLabel.text = activity[1];
+	if (rawActivity.extraInformation) {
+		cell.detailTextLabel.text = rawActivity.extraInformation;
 		cell.detailTextLabel.adjustsFontSizeToFitWidth = YES;
 	}
+    else {
+        cell.detailTextLabel.text = nil;
+    }
 	
 	return cell;
 }

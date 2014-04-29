@@ -1,47 +1,52 @@
 {
-    "name": "Joel Seligman",
-    "class": "1971",
-    "checked in": "Danforth",
-    "activity": [
-        {
-            "description": "Joel checked into Danforth",
-            "time": "1 min"
-        },
-        {
-            "description": "Joel rated the Tilapia Taco: ★★★★★",
-            "time": "4 min"
-        },
-        {
-            "description": "Joel spooned Peter Lennie",
-            "time": "12 min"
-        },
-        {
-            "description": "Joel rated the Six Onion Soup: ★★★★",
-            "time": "32 min"
-        },
-        {
-            "description": "Joel knifed Gretchen Weiner",
-            "time": "2 hr"
-        }
-    ],
-    "friends": [
-        "Regina George",
-        "Joel Seligman",
-        "Erin Cherry",
-        "David Libbey"
-    ],
-    "dishes": [
-        {
-            "name": "Tilapia Taco",
-            "rating": 5
-        },
-        {
-            "name": "Turkey Hotdog",
-            "rating": 1
-        },
-        {
-            "name": "Six Onion Soup",
-            "rating": 4
-        }
-    ]
+  "name": "Joel Seligman",
+  "class": "1971",
+  "checked in": "Danforth",
+  "activity": [
+    {
+      "description": "Joel checked into Danforth",
+      "extra": null,
+      "time": "1 min"
+    },
+    {
+      "description": "Joel rated the Tilapia Taco",
+      "extra": "\u2605\u2605\u2605\u2605\u2605",
+      "time": "4 min"
+    },
+    {
+      "description": "Joel spooned Peter Lennie",
+      "extra": null,
+      "time": "12 min"
+    },
+    {
+      "description": "Joel rated the Six Onion Soup",
+      "extra": "\u2605\u2605\u2605\u2605",
+      "time": "32 min"
+    },
+    {
+      "description": "Joel knifed Gretchen Weiner",
+      "extra": null,
+      "time": "2 hr"
+    }
+  ],
+  "friends": [
+    "Regina George",
+    "Joel Seligman",
+    "Erin Cherry",
+    "David Libbey"
+  ],
+  "dishes": [
+    {
+      "name": "Tilapia Taco",
+      "rating": 5
+    },
+    {
+      "name": "Turkey Hotdog",
+      "rating": 1
+    },
+    {
+      "name": "Six Onion Soup",
+      "rating": 4
+    }
+  ]
 }

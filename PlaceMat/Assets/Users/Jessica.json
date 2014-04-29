@@ -1,47 +1,52 @@
 {
-    "name": "Jessica Sheng",
-    "class": "2016",
-    "checked in": "Connections",
-    "activity": [
-        {
-            "description": "Jessica rated the Turkey Pepperjack Sandwich",
-            "time": "1 min"
-        },
-        {
-            "description": "Jessica spooned Regina George",
-            "time": "4 min"
-        },
-        {
-            "description": "Jessica spooned Louise Graham",
-            "time": "7 min"
-        },
-        {
-            "description": "Jessica rated the Morrocan Lentil Soup",
-            "time": "8 min"
-        },
-        {
-            "description": "Jessica checked into Connections",
-            "time": "14 min"
-        }
-    ],
-    "friends": [
-        "Regina George",
-        "Joel Seligman",
-        "Erin Cherry",
-        "David Libbey"
-    ],
-    "dishes": [
-        {
-            "name": "Moroccan Lentil Soup",
-            "rating": 5
-        },
-        {
-            "name": "Herb Stuffing",
-            "rating": 4
-        },
-        {
-            "name": "Pepperjack Grilled Cheese",
-            "rating": 4
-        }
-    ]
+  "name": "Jessica Sheng",
+  "class": "2016",
+  "checked in": "Connections",
+  "activity": [
+    {
+      "description": "Jessica rated the Turkey Pepperjack Sandwich",
+      "extra": "\u2605\u2605\u2605\u2605",
+      "time": "1 min"
+    },
+    {
+      "description": "Jessica spooned Regina George",
+      "extra": null,
+      "time": "4 min"
+    },
+    {
+      "description": "Jessica spooned Louise Graham",
+      "extra": null,
+      "time": "7 min"
+    },
+    {
+      "description": "Jessica rated the Morrocan Lentil Soup",
+      "extra": null,
+      "time": "8 min"
+    },
+    {
+      "description": "Jessica checked into Connections",
+      "extra": null,
+      "time": "14 min"
+    }
+  ],
+  "friends": [
+    "Regina George",
+    "Joel Seligman",
+    "Erin Cherry",
+    "David Libbey"
+  ],
+  "dishes": [
+    {
+      "name": "Moroccan Lentil Soup",
+      "rating": 5
+    },
+    {
+      "name": "Herb Stuffing",
+      "rating": 4
+    },
+    {
+      "name": "Pepperjack Grilled Cheese",
+      "rating": 4
+    }
+  ]
 }
