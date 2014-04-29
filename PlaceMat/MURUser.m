@@ -8,6 +8,7 @@
 
 #import "MURUser.h"
 #import "MURActivity.h"
+#import "MURJSONValidator.h"
 
 @interface MURUser ()
 
@@ -33,48 +34,24 @@
 		}
 	}*/
 	
-	NSArray *allUsers = @[[[MURUser alloc] initWithPath:[MURUser pathForName:@"David"]],
-						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Erin"]],
-						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Regina"]],
-						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Jessica"]],
-						  [[MURUser alloc] initWithPath:[MURUser pathForName:@"Joel"]]];
-	NSMutableDictionary *datesToActivities = [[NSMutableDictionary alloc] init];
+	NSArray *allUsers = @[[[MURUser alloc] initWithName:@"David"],
+						  [[MURUser alloc] initWithName:@"Erin"],
+						  [[MURUser alloc] initWithName:@"Regina"],
+						  [[MURUser alloc] initWithName:@"Jessica"],
+						  [[MURUser alloc] initWithName:@"Joel"]];
 	
-	//; 1 min
-	for (MURUser *user in allUsers) {
-		for (NSString *rawActivity in user.activities) {
-			NSArray *split = [rawActivity componentsSeparatedByString:@"; "];
-			
-			NSArray *rawTime = [split[1] componentsSeparatedByString:@" "];
-			if (rawTime.count == 2) {
-				CGFloat minutes;
-				if ([rawTime[1] rangeOfString:@"min"].location == NSNotFound) {
-					minutes = [rawTime[0] floatValue] * 60;
-				}
-				
-				else {
-					minutes = [rawTime[0] floatValue];
-				}
-				
-				NSDateComponents *add = [[NSDateComponents alloc] init];
-				add.minute = minutes;
-				
-				NSDate *iterated = [[NSCalendar currentCalendar] dateByAddingComponents:add toDate:[NSDate date] options:0];
-				[datesToActivities setObject:rawActivity forKey:iterated];
-			}
-		}
-	}
+    NSMutableArray *activities = [NSMutableArray array];
+    for (MURUser *user in allUsers) {
+        for (MURActivity *activity in user.activities) {
+            [activities addObject:activity];
+        }
+    }
+    
+    [activities sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 date] compare:[obj2 date]];
+    }];
 	
-	NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"self" ascending:NO];
-	NSArray *descriptors = [NSArray arrayWithObject:descriptor];
-	NSArray *reverseOrder = [datesToActivities.allKeys sortedArrayUsingDescriptors:descriptors];
-	
-	NSMutableArray *ranAround = [[NSMutableArray alloc] init];
-	for (int i = ((int)reverseOrder.count)-1; i >= 0; i--) {
-		[ranAround addObject:[datesToActivities objectForKey:reverseOrder[i]]];
-	}
-	
-	return [NSArray arrayWithArray:ranAround];
+	return [NSArray arrayWithArray:activities];
 }
 
 + (NSString *)pathForDebugUser {
@@ -107,6 +84,10 @@
 	return [[NSBundle mainBundle] pathForResource:[name componentsSeparatedByString:@" "][0] ofType:@"json"];
 }
 
+- (instancetype) initWithName:(NSString*)name {
+    return [self initWithPath:[[self class] pathForName:name]];
+}
+
 - (instancetype)initWithPath:(NSString *)path {
 	self = [super init];
 	if (self) {
@@ -117,14 +98,28 @@
         NSDictionary *userDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                        options:NSJSONReadingAllowFragments
                                                                          error:&error];
-        NSArray *dictionaries = userDictionary[@"activity"];
+        
+        NSArray *dictionaries = [MURJSONValidator validFieldFromDictionary:userDictionary
+                                                                   withKey:@"activity"];
         self.activities = [self activitiesFromDictionaries:dictionaries];
-        self.checkedIn = userDictionary[@"checkedIn"];
-        self.friends = userDictionary[@"friends"];
-        self.dishes = userDictionary[@"dishes"];
-        self.places = userDictionary[@"places"];
-        self.classOf = userDictionary[@"class"];
-        self.name = userDictionary[@"name"];
+        
+        self.checkedIn = [MURJSONValidator validFieldFromDictionary:userDictionary
+                                                            withKey:@"checkedIn"];
+        
+        self.friends = [MURJSONValidator validFieldFromDictionary:userDictionary
+                                                          withKey:@"friends"];
+        
+        self.dishes = [MURJSONValidator validFieldFromDictionary:userDictionary
+                                                         withKey:@"dishes"];
+        
+        self.places = [MURJSONValidator validFieldFromDictionary:userDictionary
+                                                         withKey:@"places"];
+        
+        self.classOf = [MURJSONValidator validFieldFromDictionary:userDictionary
+                                                          withKey:@"class"];
+        
+        self.name = [MURJSONValidator validFieldFromDictionary:userDictionary
+                                                       withKey:@"name"];
 		
 		NSString *imagePath = [path stringByReplacingOccurrencesOfString:@".json" withString:@".png"];
 		self.avatar = [UIImage imageWithContentsOfFile:imagePath];

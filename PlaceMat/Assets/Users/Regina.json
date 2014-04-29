@@ -1,47 +1,52 @@
 {
-    "name": "Regina George",
-    "class": "2014",
-    "checked in": "Starbucks",
-    "activity": [
-        {
-            "description": "Checked into Starbucks",
-            "time": "2 min"
-        },
-        {
-            "description": "Said: \"The barrista at Bucks is so gross.\"",
-            "time": "10 min"
-        },
-        {
-            "description": "Regina spooned Cady",
-            "time": "30 min"
-        },
-        {
-            "description": "Regina rated the Chef's Salad: ★",
-            "time": "1 hr"
-        },
-        {
-            "description": "Regina knifed Gretchen Weiner",
-            "time": "1 hr"
-        }
-    ],
-    "friends": [
-        "Jessica Sheng",
-        "Joel Seligman",
-        "Erin Cherry",
-        "David Libbey"
-    ],
-    "dishes": [
-        {
-            "name": "Cranberry Chicken Salad",
-            "rating": 4
-        },
-        {
-            "name": "Cinnamon Crispin' Sundae",
-            "rating": 5
-        },
-        {
-            "name": "Pork Chop with Mashed Potatoes",
-            "rating": 4
-        }
-    ]
+  "name": "Regina George",
+  "class": "2014",
+  "checked in": "Starbucks",
+  "activity": [
+    {
+      "description": "Checked into Starbucks",
+      "extra": null,
+      "time": "2 min"
+    },
+    {
+      "description": "Said: \"The barrista at Bucks is so gross.\"",
+      "extra": null,
+      "time": "10 min"
+    },
+    {
+      "description": "Regina spooned Cady",
+      "extra": null,
+      "time": "30 min"
+    },
+    {
+      "description": "Regina rated the Chef's Salad",
+      "extra": "\u2605",
+      "time": "1 hr"
+    },
+    {
+      "description": "Regina knifed Gretchen Weiner",
+      "extra": null,
+      "time": "1 hr"
+    }
+  ],
+  "friends": [
+    "Jessica Sheng",
+    "Joel Seligman",
+    "Erin Cherry",
+    "David Libbey"
+  ],
+  "dishes": [
+    {
+      "name": "Cranberry Chicken Salad",
+      "rating": 4
+    },
+    {
+      "name": "Cinnamon Crispin' Sundae",
+      "rating": 5
+    },
+    {
+      "name": "Pork Chop with Mashed Potatoes",
+      "rating": 4
+    }
+  ]
 }
